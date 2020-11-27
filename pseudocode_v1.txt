@@ -1,0 +1,84 @@
+Include required libraries
+Define control and aerodynamic parameters for all system modes
+Define delay time
+
+void setup(){
+	Set system mode to 'OFF' mode
+	Create and configure a new file on the SD card
+	Configure pins
+}
+
+void loop(){
+	flight_data_update()
+	system_mode_check()
+	system_mode_display()
+	control_loop()
+	if(dead_mans_switch==FALSE){
+		Cut power to safety relay 1
+		Set mode to OFF
+	}
+	if(arduino_safety_check==FALSE){
+		Cut power to safety relay 2
+		Set mode to OFF
+	}
+	if(arduino_safety_check==TRUE && dead mans switch is being pressed){
+		if(mode==OFF){
+			SD_card_write()
+		}else{
+			actuator_control()
+			SD_card_write()
+		}
+	}
+	delay()
+}
+
+void system_mode_check(){
+	if(button is pressed){
+		Change system mode by 1
+		Update control and aerodynamic parameters for new system mode
+	}
+}
+
+void system_mode_display(){
+	Light up LED corresponding to the mode in which the system is operating
+}
+	
+	
+void flight_data_update(){
+	Read voltage from differential pressure sensor
+	Read voltage from accelerometer and gyro module
+	Convert voltages to required raw data
+	Apply filtering to raw data
+	return filtered values
+}
+
+void control_loop(){
+	Run control calculations based on current flight data
+	Calculate required new actuator positions
+}
+
+void actuator_control(){
+	Send actuators updated position requirement
+}
+
+void arduino_safety_check(){
+	Calculate if control loop is bringing the aircraft outside the flight envelope
+        if(flight envelope is being breached){
+		return FALSE
+	}else{
+	return TRUE
+	}
+}
+		
+void SD_card_write(){
+	Print new line containing horizontal velocity, vertical velocity, pitch and pitch rate to SD card
+	Flush to SD card
+}
+
+void dead_mans_switch_check(){
+	if(dead mans switch is being pressed){
+		return TRUE
+	}else{
+		return FALSE
+	}
+}
