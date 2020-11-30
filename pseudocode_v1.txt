@@ -6,6 +6,7 @@ void setup(){
 	Set system mode to 'OFF' mode
 	Create and configure a new file on the SD card
 	Configure pins
+	Set baud rate for serial communication
 }
 
 void loop(){
@@ -13,30 +14,22 @@ void loop(){
 	system_mode_check()
 	system_mode_display()
 	control_loop()
-	if(dead_mans_switch==FALSE){
-		Cut power to safety relay 1
-		Set mode to OFF
-	}
-	if(arduino_safety_check==FALSE){
+	if arduino_safety_check==FALSE then
 		Cut power to safety relay 2
 		Set mode to OFF
-	}
-	if(arduino_safety_check==TRUE && dead mans switch is being pressed){
-		if(mode==OFF){
+	if arduino_safety_check==TRUE then
+		if mode==OFF then
 			SD_card_write()
-		}else{
+		else
 			actuator_control()
 			SD_card_write()
-		}
-	}
 	delay()
 }
 
 void system_mode_check(){
-	if(button is pressed){
+	if button is pressed then
 		Change system mode by 1
 		Update control and aerodynamic parameters for new system mode
-	}
 }
 
 void system_mode_display(){
@@ -63,22 +56,13 @@ void actuator_control(){
 
 void arduino_safety_check(){
 	Calculate if control loop is bringing the aircraft outside the flight envelope
-        if(flight envelope is being breached){
+        if flight envelope is being breached then
 		return FALSE
-	}else{
-	return TRUE
-	}
+	else
+		return TRUE
 }
 		
 void SD_card_write(){
 	Print new line containing horizontal velocity, vertical velocity, pitch and pitch rate to SD card
 	Flush to SD card
-}
-
-void dead_mans_switch_check(){
-	if(dead mans switch is being pressed){
-		return TRUE
-	}else{
-		return FALSE
-	}
 }
