@@ -28,8 +28,12 @@ void loop(){
 
 void system_mode_check(){
 	if button is pressed then
-		Change system mode by 1
-		Update control and aerodynamic parameters for new system mode
+		if previous system mode == OFF then
+			Change system mode
+			Update control and aerodynamic parameters for new system mode
+		else
+			Change system mode to OFF
+			actuator_counter=0
 }
 
 void system_mode_display(){
@@ -51,7 +55,11 @@ void control_loop(){
 }
 
 void actuator_control(){
-	Send actuators updated position requirement
+	if actuator_counter==1 then
+		Set actuator position to zero position
+	else
+		Update actuator position from control loop
+	actuator_counter=actuator_counter+1
 }
 
 void arduino_safety_check(){
