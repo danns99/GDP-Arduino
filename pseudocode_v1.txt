@@ -33,7 +33,6 @@ void system_mode_check(){
 			Update control and aerodynamic parameters for new system mode
 		else
 			Change system mode to OFF
-			actuator_counter=0
 }
 
 void system_mode_display(){
@@ -55,11 +54,10 @@ void control_loop(){
 }
 
 void actuator_control(){
-	if actuator_counter==1 then
+	if it is the first loop then
 		Set actuator position to zero position
 	else
 		Update actuator position from control loop
-	actuator_counter=actuator_counter+1
 }
 
 void arduino_safety_check(){
