@@ -9,7 +9,8 @@
 int read_state_space_matrices_from_file(double A[4][4], double B[4],
                                         char* file_dir);
 
-int get_aircraft_state_space_matrices(void);
+int get_aircraft_state_space_matrices(double A_sc[4][4], double *B_sc,
+                                      double A_t[4][4], double *B_t);
 
 int write_sim_data_to_file(int steps, double dt, double **x_sc_store,
                            double **x_t_store, double **x_sc_mod_store);

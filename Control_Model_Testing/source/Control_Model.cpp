@@ -56,17 +56,9 @@ int main(void) {
     double A_t[4][4];
     double B_t[4];
 
-    /* File directories for aircraft data files */
-    char scout_data_relative_dir[] = "aircraft_data//";
-    char target_data_relative_dir[] = "aircraft_data//";
-    char scout_data[] = "scout_state_matrices.txt";
-    char target_data[] = "target_state_matrices.txt";
 
-    /* Get aircraft state space matrices */
-    read_state_space_matrices_from_file(A_sc, B_sc,
-        strcat(scout_data_relative_dir, scout_data));
-    read_state_space_matrices_from_file(A_t, B_t,
-        strcat(target_data_relative_dir, target_data));
+    /* Get the aircraft state matrices from text files */
+    get_aircraft_state_space_matrices(A_sc, B_sc, A_t, B_t);
 
     /* Main time loop */
     while(steps < sim_time*1/dt){

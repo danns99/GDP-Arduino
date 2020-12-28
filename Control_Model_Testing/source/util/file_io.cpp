@@ -35,15 +35,11 @@ int read_state_space_matrices_from_file(double A[4][4], double B[4],
 }
 
 
-int get_aircraft_state_space_matrices(void){
-    /* Aircraft state-space A and B matrices */
-    /* Scout matrices */
-    double A_sc[4][4];
-    double B_sc[4];
-    /* Target aircraft matrices */
-    double A_t[4][4];
-    double B_t[4];
-
+/*
+Gets the aircraft state space matrices for the Scout and the target aircraft.
+*/
+int get_aircraft_state_space_matrices(double A_sc[4][4], double *B_sc,
+                                      double A_t[4][4], double *B_t){
     /* File directories for aircraft data files */
     char scout_data_relative_dir[] = "..//aircraft_data//";
     char target_data_relative_dir[] = "..//aircraft_data//";
@@ -56,8 +52,6 @@ int get_aircraft_state_space_matrices(void){
     read_state_space_matrices_from_file(A_t, B_t,
         strcat(target_data_relative_dir, target_data));
 
-    // printf("%f %f %f %f\n",A_sc[3][0],A_sc[3][1],A_sc[3][2],A_sc[3][3]);
-    // printf("%f %f %f %f\n",B_sc[0],B_sc[1],B_sc[2],B_sc[3]);
     return 0;
 }
 
