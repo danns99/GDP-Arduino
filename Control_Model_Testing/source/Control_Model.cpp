@@ -76,31 +76,12 @@ int main(void) {
             u[0] = u_old + 0.1;
         }
 
-        /* Solve the state-space equations for the target aircraft and the
-        Scout */
-        xdot_solve(xdot_t_store, A_t, B_t, x_t, u, dt);
-        xdot_solve(xdot_sc_store, A_sc, B_sc, x_sc, u, dt);
-
-        /* Get the control input for the modified Scout */
-        /* Get the pitch rate output of the target aircraft */
-        q_out_of_target_aircraft = x_t[2];
-        /* Get the current error as the pitch rate output of the modified Scout
-        aircraft */
-        current_error = x_sc_mod[2];
-        /* Calculate the error between the pitch rate of the target aircraft and
-        the modified Scout */
-        u_from_error_sum = error_signal(q_out_of_target_aircraft,
-                                        current_error);
-        /* Calculate the input to the modified Scout using the PID */
-        u_into_modified_scout[0] = PID_controller(u_from_error_sum,
-                                                  &error_prior, dt);
-
-        /* Solve the state-space equations for the modified scout */
-        xdot_solve(xdot_sc_mod_store, A_sc, B_sc, x_sc_mod,
-                       u_into_modified_scout, dt);
-        // xdot_solve_mod(xdot_sc_mod_store, A_sc, B_sc, x_sc_mod,
-        //                u_into_modified_scout, dt, q_out_of_target_aircraft,
-        //                &error_prior);
+        /* Run the control loop */
+        run_control_loop(dt, u, u_into_modified_scout,
+                         A_sc, B_sc, x_sc,
+                         A_t, B_t, x_t, x_sc_mod, xdot_t_store,
+                         xdot_sc_store, xdot_sc_mod_store,
+                         error_prior);
 
         /* Store data for the states of the target, Scout and modified Scout
         aircraft at the end of the timestep */

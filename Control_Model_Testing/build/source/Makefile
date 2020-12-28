@@ -151,6 +151,33 @@ Control_Model.cpp.s:
 	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/Control_Model.cpp.s
 .PHONY : Control_Model.cpp.s
 
+control_loop/control_loop.obj: control_loop/control_loop.cpp.obj
+
+.PHONY : control_loop/control_loop.obj
+
+# target to build an object file
+control_loop/control_loop.cpp.obj:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/control_loop/control_loop.cpp.obj
+.PHONY : control_loop/control_loop.cpp.obj
+
+control_loop/control_loop.i: control_loop/control_loop.cpp.i
+
+.PHONY : control_loop/control_loop.i
+
+# target to preprocess a source file
+control_loop/control_loop.cpp.i:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/control_loop/control_loop.cpp.i
+.PHONY : control_loop/control_loop.cpp.i
+
+control_loop/control_loop.s: control_loop/control_loop.cpp.s
+
+.PHONY : control_loop/control_loop.s
+
+# target to generate assembly for a file
+control_loop/control_loop.cpp.s:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/control_loop/control_loop.cpp.s
+.PHONY : control_loop/control_loop.cpp.s
+
 controller/PID_controller.obj: controller/PID_controller.cpp.obj
 
 .PHONY : controller/PID_controller.obj
@@ -298,6 +325,9 @@ help:
 	@echo ... Control_Model.obj
 	@echo ... Control_Model.i
 	@echo ... Control_Model.s
+	@echo ... control_loop/control_loop.obj
+	@echo ... control_loop/control_loop.i
+	@echo ... control_loop/control_loop.s
 	@echo ... controller/PID_controller.obj
 	@echo ... controller/PID_controller.i
 	@echo ... controller/PID_controller.s

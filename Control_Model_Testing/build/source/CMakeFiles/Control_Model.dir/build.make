@@ -108,9 +108,22 @@ source/CMakeFiles/Control_Model.dir/controller/PID_controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Control_Model.dir/controller/PID_controller.cpp.s"
 	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build\source" && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\source\controller\PID_controller.cpp" -o CMakeFiles\Control_Model.dir\controller\PID_controller.cpp.s
 
+source/CMakeFiles/Control_Model.dir/control_loop/control_loop.cpp.obj: source/CMakeFiles/Control_Model.dir/flags.make
+source/CMakeFiles/Control_Model.dir/control_loop/control_loop.cpp.obj: ../source/control_loop/control_loop.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object source/CMakeFiles/Control_Model.dir/control_loop/control_loop.cpp.obj"
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build\source" && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Control_Model.dir\control_loop\control_loop.cpp.obj -c "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\source\control_loop\control_loop.cpp"
+
+source/CMakeFiles/Control_Model.dir/control_loop/control_loop.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Control_Model.dir/control_loop/control_loop.cpp.i"
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build\source" && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\source\control_loop\control_loop.cpp" > CMakeFiles\Control_Model.dir\control_loop\control_loop.cpp.i
+
+source/CMakeFiles/Control_Model.dir/control_loop/control_loop.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Control_Model.dir/control_loop/control_loop.cpp.s"
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build\source" && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\source\control_loop\control_loop.cpp" -o CMakeFiles\Control_Model.dir\control_loop\control_loop.cpp.s
+
 source/CMakeFiles/Control_Model.dir/state_space_equations/numerical_ode_solvers.cpp.obj: source/CMakeFiles/Control_Model.dir/flags.make
 source/CMakeFiles/Control_Model.dir/state_space_equations/numerical_ode_solvers.cpp.obj: ../source/state_space_equations/numerical_ode_solvers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object source/CMakeFiles/Control_Model.dir/state_space_equations/numerical_ode_solvers.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object source/CMakeFiles/Control_Model.dir/state_space_equations/numerical_ode_solvers.cpp.obj"
 	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build\source" && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Control_Model.dir\state_space_equations\numerical_ode_solvers.cpp.obj -c "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\source\state_space_equations\numerical_ode_solvers.cpp"
 
 source/CMakeFiles/Control_Model.dir/state_space_equations/numerical_ode_solvers.cpp.i: cmake_force
@@ -123,7 +136,7 @@ source/CMakeFiles/Control_Model.dir/state_space_equations/numerical_ode_solvers.
 
 source/CMakeFiles/Control_Model.dir/state_space_equations/state_space_equation.cpp.obj: source/CMakeFiles/Control_Model.dir/flags.make
 source/CMakeFiles/Control_Model.dir/state_space_equations/state_space_equation.cpp.obj: ../source/state_space_equations/state_space_equation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object source/CMakeFiles/Control_Model.dir/state_space_equations/state_space_equation.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object source/CMakeFiles/Control_Model.dir/state_space_equations/state_space_equation.cpp.obj"
 	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build\source" && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Control_Model.dir\state_space_equations\state_space_equation.cpp.obj -c "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\source\state_space_equations\state_space_equation.cpp"
 
 source/CMakeFiles/Control_Model.dir/state_space_equations/state_space_equation.cpp.i: cmake_force
@@ -140,6 +153,7 @@ Control_Model_OBJECTS = \
 "CMakeFiles/Control_Model.dir/util/file_io.cpp.obj" \
 "CMakeFiles/Control_Model.dir/util/memory_management.cpp.obj" \
 "CMakeFiles/Control_Model.dir/controller/PID_controller.cpp.obj" \
+"CMakeFiles/Control_Model.dir/control_loop/control_loop.cpp.obj" \
 "CMakeFiles/Control_Model.dir/state_space_equations/numerical_ode_solvers.cpp.obj" \
 "CMakeFiles/Control_Model.dir/state_space_equations/state_space_equation.cpp.obj"
 
@@ -150,13 +164,14 @@ source/Control_Model.exe: source/CMakeFiles/Control_Model.dir/Control_Model.cpp.
 source/Control_Model.exe: source/CMakeFiles/Control_Model.dir/util/file_io.cpp.obj
 source/Control_Model.exe: source/CMakeFiles/Control_Model.dir/util/memory_management.cpp.obj
 source/Control_Model.exe: source/CMakeFiles/Control_Model.dir/controller/PID_controller.cpp.obj
+source/Control_Model.exe: source/CMakeFiles/Control_Model.dir/control_loop/control_loop.cpp.obj
 source/Control_Model.exe: source/CMakeFiles/Control_Model.dir/state_space_equations/numerical_ode_solvers.cpp.obj
 source/Control_Model.exe: source/CMakeFiles/Control_Model.dir/state_space_equations/state_space_equation.cpp.obj
 source/Control_Model.exe: source/CMakeFiles/Control_Model.dir/build.make
 source/Control_Model.exe: source/CMakeFiles/Control_Model.dir/linklibs.rsp
 source/Control_Model.exe: source/CMakeFiles/Control_Model.dir/objects1.rsp
 source/Control_Model.exe: source/CMakeFiles/Control_Model.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Control_Model.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Control_Model.exe"
 	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build\source" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Control_Model.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
