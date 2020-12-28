@@ -8,7 +8,7 @@ int main(void) {
     int i;
     FILE *f;
 
-    /* Simulation time settings*/
+    /* Simulation time settings */
     int sim_time = 5;
     double dt = 0.0001;
     int steps = 0;
