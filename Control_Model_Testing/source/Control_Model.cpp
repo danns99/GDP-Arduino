@@ -9,7 +9,8 @@ int main(void) {
     FILE *f;
 
     /* Simulation time settings */
-    int sim_time = 5;
+    double sim_time = 5;
+    double input_time = 1;
     double dt = 0.0001;
     int steps = 0;
 
@@ -70,7 +71,9 @@ int main(void) {
     /* Main time loop */
     while(steps < sim_time*1/dt){
         /* Select time to apply step input */
-        if(steps == 99){
+        float difference = (float) steps - input_time*1/dt;
+        float tol_difference = 0.001;
+        if((-tol_difference <= difference) && (difference <= tol_difference)){
             printf("here\n");
             u_old = u[0];
             u[0] = u_old + 0.1;
