@@ -1,8 +1,10 @@
 #include "file_io.h"
 
 
-/* Reads in the aircraft state space matrix from a text file. Then writes the
-data to arrays A and B which are passed to the function.*/
+/* 
+Reads in the aircraft state space matrix from a text file. Then writes the
+data to arrays A and B which are passed to the function.
+*/
 int read_state_space_matrices_from_file(double A[4][4], double B[4],
                                       char* file_dir){
     int i;
@@ -57,4 +59,25 @@ int get_aircraft_state_space_matrices(void){
     // printf("%f %f %f %f\n",A_sc[3][0],A_sc[3][1],A_sc[3][2],A_sc[3][3]);
     // printf("%f %f %f %f\n",B_sc[0],B_sc[1],B_sc[2],B_sc[3]);
     return 0;
+}
+
+
+/*
+Writes the simulation data to a text file at the end of the simulation.
+*/
+int write_sim_data_to_file(int steps, double dt, double **x_sc_store,
+                           double **x_t_store, double **x_sc_mod_store){
+    int i;
+    FILE *f;
+
+    f=fopen("test_data.txt","w");
+    for(i=0; i<steps; i++){
+        fprintf(f, "%f %f %f %f %f %f %f %f %f %f %f %f %f \n",
+                i*dt, x_sc_store[i][0], x_sc_store[i][1], x_sc_store[i][2],
+                x_sc_store[i][3], x_t_store[i][0], x_t_store[i][1],
+                x_t_store[i][2], x_t_store[i][3], x_sc_mod_store[i][0],
+                x_sc_mod_store[i][1], x_sc_mod_store[i][2],
+                x_sc_mod_store[i][3]);
+    }
+    return 0; 
 }

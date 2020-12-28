@@ -237,16 +237,7 @@ int main(void) {
 
     printf("%f\n", error_prior);
 
-    /* Write the simulation data to a text file at the end of the simulation */
-    f=fopen("test_data.txt","w");
-    for(i=0; i<steps; i++){
-        fprintf(f, "%f %f %f %f %f %f %f %f %f %f %f %f %f \n",
-                i*dt, x_sc_store[i][0], x_sc_store[i][1], x_sc_store[i][2],
-                x_sc_store[i][3], x_t_store[i][0], x_t_store[i][1],
-                x_t_store[i][2], x_t_store[i][3], x_sc_mod_store[i][0],
-                x_sc_mod_store[i][1], x_sc_mod_store[i][2],
-                x_sc_mod_store[i][3]);
-    }
+    write_sim_data_to_file(steps, dt, x_sc_store, x_t_store, x_sc_mod_store);
 
     /* Free memory used by the storage arrays */
     destroy_arrays(x_sc_store);
