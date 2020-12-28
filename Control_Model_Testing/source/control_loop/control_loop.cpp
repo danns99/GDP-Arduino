@@ -1,5 +1,6 @@
 #include "control_loop.h"
 
+
 int run_control_loop(double dt, double *u, double *u_into_modified_scout,
                      double A_sc[4][4], double *B_sc, double *x_sc,
                      double A_t[4][4], double *B_t, double *x_t,
