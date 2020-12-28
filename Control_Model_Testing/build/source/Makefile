@@ -151,6 +151,33 @@ Control_Model.cpp.s:
 	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/Control_Model.cpp.s
 .PHONY : Control_Model.cpp.s
 
+controller/PID_controller.obj: controller/PID_controller.cpp.obj
+
+.PHONY : controller/PID_controller.obj
+
+# target to build an object file
+controller/PID_controller.cpp.obj:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/controller/PID_controller.cpp.obj
+.PHONY : controller/PID_controller.cpp.obj
+
+controller/PID_controller.i: controller/PID_controller.cpp.i
+
+.PHONY : controller/PID_controller.i
+
+# target to preprocess a source file
+controller/PID_controller.cpp.i:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/controller/PID_controller.cpp.i
+.PHONY : controller/PID_controller.cpp.i
+
+controller/PID_controller.s: controller/PID_controller.cpp.s
+
+.PHONY : controller/PID_controller.s
+
+# target to generate assembly for a file
+controller/PID_controller.cpp.s:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/controller/PID_controller.cpp.s
+.PHONY : controller/PID_controller.cpp.s
+
 util/file_io.obj: util/file_io.cpp.obj
 
 .PHONY : util/file_io.obj
@@ -217,6 +244,9 @@ help:
 	@echo ... Control_Model.obj
 	@echo ... Control_Model.i
 	@echo ... Control_Model.s
+	@echo ... controller/PID_controller.obj
+	@echo ... controller/PID_controller.i
+	@echo ... controller/PID_controller.s
 	@echo ... util/file_io.obj
 	@echo ... util/file_io.i
 	@echo ... util/file_io.s

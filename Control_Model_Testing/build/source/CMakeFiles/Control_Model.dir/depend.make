@@ -3,8 +3,12 @@
 
 source/CMakeFiles/Control_Model.dir/Control_Model.cpp.obj: ../source/Control_Model.cpp
 source/CMakeFiles/Control_Model.dir/Control_Model.cpp.obj: ../source/Control_Model.h
+source/CMakeFiles/Control_Model.dir/Control_Model.cpp.obj: ../source/controller/PID_controller.h
 source/CMakeFiles/Control_Model.dir/Control_Model.cpp.obj: ../source/util/file_io.h
 source/CMakeFiles/Control_Model.dir/Control_Model.cpp.obj: ../source/util/memory_management.h
+
+source/CMakeFiles/Control_Model.dir/controller/PID_controller.cpp.obj: ../source/controller/PID_controller.cpp
+source/CMakeFiles/Control_Model.dir/controller/PID_controller.cpp.obj: ../source/controller/PID_controller.h
 
 source/CMakeFiles/Control_Model.dir/util/file_io.cpp.obj: ../source/util/file_io.cpp
 source/CMakeFiles/Control_Model.dir/util/file_io.cpp.obj: ../source/util/file_io.h

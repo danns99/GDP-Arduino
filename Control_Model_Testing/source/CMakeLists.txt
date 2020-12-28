@@ -5,4 +5,8 @@ set(CMAKE_CXX_STANDARD 14)
 file(GLOB_RECURSE util_SOURCE_FILES
         "util/*.h" "util/*.cpp")
 
-add_executable(Control_Model Control_Model.cpp ${util_SOURCE_FILES})
+file(GLOB_RECURSE controller_SOURCE_FILES
+        "controller/*.h" "controller/*.cpp")
+
+add_executable(Control_Model Control_Model.cpp ${util_SOURCE_FILES}
+                ${controller_SOURCE_FILES})

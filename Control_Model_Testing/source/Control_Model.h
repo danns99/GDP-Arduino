@@ -6,6 +6,7 @@
 #include <math.h>
 #include "util\\file_io.h"
 #include "util\\memory_management.h"
+#include "controller\\PID_controller.h"
 
 
 double error_signal(double target_input, double error_from_system_output);
