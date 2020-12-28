@@ -5,6 +5,7 @@ source/CMakeFiles/Control_Model.dir/Control_Model.cpp.obj: ../source/Control_Mod
 source/CMakeFiles/Control_Model.dir/Control_Model.cpp.obj: ../source/Control_Model.h
 source/CMakeFiles/Control_Model.dir/Control_Model.cpp.obj: ../source/control_loop/control_loop.h
 source/CMakeFiles/Control_Model.dir/Control_Model.cpp.obj: ../source/controller/PID_controller.h
+source/CMakeFiles/Control_Model.dir/Control_Model.cpp.obj: ../source/sim/sim_init_full_longitudinal_model.h
 source/CMakeFiles/Control_Model.dir/Control_Model.cpp.obj: ../source/state_space_equations/numerical_ode_solvers.h
 source/CMakeFiles/Control_Model.dir/Control_Model.cpp.obj: ../source/state_space_equations/state_space_equation.h
 source/CMakeFiles/Control_Model.dir/Control_Model.cpp.obj: ../source/util/file_io.h
@@ -18,6 +19,16 @@ source/CMakeFiles/Control_Model.dir/control_loop/control_loop.cpp.obj: ../source
 
 source/CMakeFiles/Control_Model.dir/controller/PID_controller.cpp.obj: ../source/controller/PID_controller.cpp
 source/CMakeFiles/Control_Model.dir/controller/PID_controller.cpp.obj: ../source/controller/PID_controller.h
+
+source/CMakeFiles/Control_Model.dir/sim/sim_init_full_logitudinal_model.cpp.obj: ../source/Control_Model.h
+source/CMakeFiles/Control_Model.dir/sim/sim_init_full_logitudinal_model.cpp.obj: ../source/control_loop/control_loop.h
+source/CMakeFiles/Control_Model.dir/sim/sim_init_full_logitudinal_model.cpp.obj: ../source/controller/PID_controller.h
+source/CMakeFiles/Control_Model.dir/sim/sim_init_full_logitudinal_model.cpp.obj: ../source/sim/sim_init_full_logitudinal_model.cpp
+source/CMakeFiles/Control_Model.dir/sim/sim_init_full_logitudinal_model.cpp.obj: ../source/sim/sim_init_full_longitudinal_model.h
+source/CMakeFiles/Control_Model.dir/sim/sim_init_full_logitudinal_model.cpp.obj: ../source/state_space_equations/numerical_ode_solvers.h
+source/CMakeFiles/Control_Model.dir/sim/sim_init_full_logitudinal_model.cpp.obj: ../source/state_space_equations/state_space_equation.h
+source/CMakeFiles/Control_Model.dir/sim/sim_init_full_logitudinal_model.cpp.obj: ../source/util/file_io.h
+source/CMakeFiles/Control_Model.dir/sim/sim_init_full_logitudinal_model.cpp.obj: ../source/util/memory_management.h
 
 source/CMakeFiles/Control_Model.dir/state_space_equations/numerical_ode_solvers.cpp.obj: ../source/controller/PID_controller.h
 source/CMakeFiles/Control_Model.dir/state_space_equations/numerical_ode_solvers.cpp.obj: ../source/state_space_equations/numerical_ode_solvers.cpp

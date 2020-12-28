@@ -205,6 +205,33 @@ controller/PID_controller.cpp.s:
 	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/controller/PID_controller.cpp.s
 .PHONY : controller/PID_controller.cpp.s
 
+sim/sim_init_full_logitudinal_model.obj: sim/sim_init_full_logitudinal_model.cpp.obj
+
+.PHONY : sim/sim_init_full_logitudinal_model.obj
+
+# target to build an object file
+sim/sim_init_full_logitudinal_model.cpp.obj:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/sim/sim_init_full_logitudinal_model.cpp.obj
+.PHONY : sim/sim_init_full_logitudinal_model.cpp.obj
+
+sim/sim_init_full_logitudinal_model.i: sim/sim_init_full_logitudinal_model.cpp.i
+
+.PHONY : sim/sim_init_full_logitudinal_model.i
+
+# target to preprocess a source file
+sim/sim_init_full_logitudinal_model.cpp.i:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/sim/sim_init_full_logitudinal_model.cpp.i
+.PHONY : sim/sim_init_full_logitudinal_model.cpp.i
+
+sim/sim_init_full_logitudinal_model.s: sim/sim_init_full_logitudinal_model.cpp.s
+
+.PHONY : sim/sim_init_full_logitudinal_model.s
+
+# target to generate assembly for a file
+sim/sim_init_full_logitudinal_model.cpp.s:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/sim/sim_init_full_logitudinal_model.cpp.s
+.PHONY : sim/sim_init_full_logitudinal_model.cpp.s
+
 state_space_equations/numerical_ode_solvers.obj: state_space_equations/numerical_ode_solvers.cpp.obj
 
 .PHONY : state_space_equations/numerical_ode_solvers.obj
@@ -331,6 +358,9 @@ help:
 	@echo ... controller/PID_controller.obj
 	@echo ... controller/PID_controller.i
 	@echo ... controller/PID_controller.s
+	@echo ... sim/sim_init_full_logitudinal_model.obj
+	@echo ... sim/sim_init_full_logitudinal_model.i
+	@echo ... sim/sim_init_full_logitudinal_model.s
 	@echo ... state_space_equations/numerical_ode_solvers.obj
 	@echo ... state_space_equations/numerical_ode_solvers.i
 	@echo ... state_space_equations/numerical_ode_solvers.s

@@ -2,63 +2,25 @@
 
 
 /*
+Stops the compiler not building with "undefined reference to `WinMain@16'".
+*/
+int main(void){
+    return 0;
+}
+
+
+/*
 Runs the simulation
 */
-int main(void) {
-    int i;
-    FILE *f;
-
-    /* Simulation time settings */
-    double sim_time = 5;
-    double input_time = 1;
-    double dt = 0.0001;
-    int steps = 0;
-
-    /* Control vectors */
-    double u[4] = {0};
-    double u_old=0;
-
-    /* x vectors */
-    double x_sc[4] = {0};
-    double x_t[4] = {0};
-    double x_sc_mod[4] = {0};
-    double x_sc_old;
-    double x_t_old;
-    double x_sc_mod_old;
-
-    /* x dot vectors */
-    /* For storing data at the end of each timestep */
-    double xdot_sc_store[4] = {0};
-    double xdot_t_store[4] = {0};
-    double xdot_sc_mod_store[4] = {0};
-    /* For use during the timestep */
-    double *xdot_sc;
-    double *xdot_t;
-    double *xdot_sc_mod;
-
-    /* Arrays for storing the aircraft data for all timesteps */
-    double** x_sc_store = memory_allocation_for_storage_arrays(sim_time, dt); 
-    double** x_t_store = memory_allocation_for_storage_arrays(sim_time, dt);
-    double** x_sc_mod_store = memory_allocation_for_storage_arrays(sim_time,
-                                                                   dt);
-    /* Variables for the modified Scout control */
-    double q_out_of_target_aircraft;
-    double u_from_error_sum;
-    double u_into_modified_scout[4] = {0};
-    double current_error = 0;
-    double error_prior = 0;
-
-    /* Aircraft state-space A and B matrices */
-    /* Scout matrices */
-    double A_sc[4][4];
-    double B_sc[4];
-    /* Target aircraft matrices */
-    double A_t[4][4];
-    double B_t[4];
-
-
-    /* Get the aircraft state matrices from text files */
-    get_aircraft_state_space_matrices(A_sc, B_sc, A_t, B_t);
+int run_sim(double sim_time, double input_time, double dt, int steps,
+            double *u, double u_old, double *x_sc, double *x_t,
+            double *x_sc_mod, double x_sc_old, double x_t_old,
+            double x_sc_mod_old, double *xdot_sc_store, double *xdot_t_store,
+            double *xdot_sc_mod_store, double *xdot_sc, double *xdot_t,
+            double *xdot_sc_mod, double **x_sc_store, double **x_t_store,
+            double **x_sc_mod_store, double *u_into_modified_scout,
+            double error_prior, double A_sc[4][4], double *B_sc,
+            double A_t[4][4], double *B_t) {
 
     /* Main time loop */
     while(steps < sim_time*1/dt){
