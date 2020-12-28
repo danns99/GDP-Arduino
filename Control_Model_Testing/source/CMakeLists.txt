@@ -8,5 +8,8 @@ file(GLOB_RECURSE util_SOURCE_FILES
 file(GLOB_RECURSE controller_SOURCE_FILES
         "controller/*.h" "controller/*.cpp")
 
+file(GLOB_RECURSE state_space_equations_SOURCE_FILES
+        "state_space_equations/*.h" "state_space_equations/*.cpp")
+
 add_executable(Control_Model Control_Model.cpp ${util_SOURCE_FILES}
-                ${controller_SOURCE_FILES})
+                ${controller_SOURCE_FILES} ${state_space_equations_SOURCE_FILES})
