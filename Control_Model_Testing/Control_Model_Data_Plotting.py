@@ -9,15 +9,6 @@ import subprocess
 
 # Functions
 # --------------------------------------------------------------------------- #
-def build_simulation_code(source_file):
-    '''Builds the C++ code for the simulation. And returns the name of the
-    exectuable for the simulation. Requires the GNU C++ compiler to be
-    installed.'''
-    source_file_with_no_extensions = source_file.strip('.cpp')
-    subprocess.call(["g++", source_file, "-o", source_file_with_no_extensions])
-    return(source_file_with_no_extensions)
-
-
 def run_simulation(simulation_executable):
     '''Runs the simulation executable.'''
     subprocess.run(["./" + simulation_executable])
@@ -76,14 +67,9 @@ def file_read(filename):
            vertical_velocity_sc_mod, pitch_rate_sc_mod, pitch_angle_sc_mod)
 # --------------------------------------------------------------------------- #
 
-# Compile and run the external simulation code
+# Run the external simulation code
 # --------------------------------------------------------------------------- #
-rebuild_opt = int(input("Recompile the simulation code before running? \
-                        \n1 for yes/0 for no: "))
-if rebuild_opt == 1:
-    sim_code = build_simulation_code("Control_Model.cpp")
-else:
-    run_simulation(sim_code)
+run_simulation(".//build//source//Control_model")
 # --------------------------------------------------------------------------- #
 
 # Read in the data from the simulation run
