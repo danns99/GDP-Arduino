@@ -86,13 +86,11 @@ int main(void) {
                          xdot_sc_store, xdot_sc_mod_store,
                          error_prior);
 
-        /* Store data for the states of the target, Scout and modified Scout
-        aircraft at the end of the timestep */
-        for (i=0; i<4; i++){
-            x_sc_store[steps][i] = x_sc[i];
-            x_t_store[steps][i] = x_t[i];
-            x_sc_mod_store[steps][i] = x_sc_mod[i];
-        }
+        /* Store the aircraft data from the timestep */
+        store_timestep_data(steps, x_sc, x_t, x_sc_mod, x_sc_store, x_t_store,
+                            x_sc_mod_store);
+
+        /* Increment the step counter */
         steps += 1;
     }
 

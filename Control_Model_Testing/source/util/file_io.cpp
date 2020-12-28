@@ -81,3 +81,21 @@ int write_sim_data_to_file(int steps, double dt, double **x_sc_store,
     }
     return 0; 
 }
+
+
+/*
+Stores data for the states of the target, Scout and modified Scout
+aircraft at the end of the timestep
+*/
+int store_timestep_data(int steps, double *x_sc, double *x_t, double *x_sc_mod,
+                        double **x_sc_store, double **x_t_store,
+                        double **x_sc_mod_store){
+    int i;
+
+    for (i=0; i<4; i++){
+        x_sc_store[steps][i] = x_sc[i];
+        x_t_store[steps][i] = x_t[i];
+        x_sc_mod_store[steps][i] = x_sc_mod[i];
+    }
+    return 0;
+}
