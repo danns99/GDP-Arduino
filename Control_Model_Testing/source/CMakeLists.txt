@@ -6,4 +6,3 @@ file(GLOB_RECURSE util_SOURCE_FILES
         "util/*.h" "util/*.cpp")
 
 add_executable(Control_Model Control_Model.cpp ${util_SOURCE_FILES})
-#add_executable(Control_Model Control_Model.cpp)
