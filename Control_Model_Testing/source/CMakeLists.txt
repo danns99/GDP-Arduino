@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 3.15)
 project(Control_Model_testing)
 set(CMAKE_CXX_STANDARD 14)
 
+# Set to 4 for the full longitudinal model or 2 for the SPO approximation
+add_compile_definitions(STATE_SPACE_MATRIX_SIZE="4")
+
 file(GLOB_RECURSE util_SOURCE_FILES
         "util/*.h" "util/*.cpp")
 
