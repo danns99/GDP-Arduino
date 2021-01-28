@@ -41,16 +41,15 @@ Gets the aircraft state space matrices for the Scout and the target aircraft.
 int get_aircraft_state_space_matrices(double A_sc[4][4], double *B_sc,
                                       double A_t[4][4], double *B_t){
     /* File directories for aircraft data files */
-    char scout_data_relative_dir[] = "..//aircraft_data//";
-    char target_data_relative_dir[] = "..//aircraft_data//";
+    char data_relative_dir[] = "..//aircraft_data//";
     char scout_data[] = "scout_state_matrices.txt";
     char target_data[] = "target_state_matrices.txt";
 
     /* Get aircraft state space matrices */
     read_state_space_matrices_from_file(A_sc, B_sc,
-        strcat(scout_data_relative_dir, scout_data));
+        strcpy(data_relative_dir, scout_data));
     read_state_space_matrices_from_file(A_t, B_t,
-        strcat(target_data_relative_dir, target_data));
+        strcpy(data_relative_dir, target_data));
 
     return 0;
 }
