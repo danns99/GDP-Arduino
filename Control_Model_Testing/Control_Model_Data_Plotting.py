@@ -10,14 +10,18 @@ import subprocess
 # Functions
 # --------------------------------------------------------------------------- #
 def run_simulation(simulation_executable):
-    '''Runs the simulation executable.'''
+    '''
+    Runs the simulation executable.
+    '''
     subprocess.run(["./" + simulation_executable])
 
 
 def file_read(filename):
-    '''Takes as input a filename and reads the data from the file line by
+    '''
+    Takes as input a filename and reads the data from the file line by
     line. Data from the file is read into arrays for storing the simulation
-    results for the Scout, a target aircraft and the modified Scout.'''
+    results for the Scout, a target aircraft and the modified Scout.
+    '''
 
     # Initialse arrays for storing data
     time = []

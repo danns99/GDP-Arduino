@@ -38,10 +38,6 @@ D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Test
 
 D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Testing/source/controller/PID_controller.h
 
-D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Testing/source/sim/sim_init_full_logitudinal_model.cpp
-sim_init_full_longitudinal_model.h
-D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Testing/source/sim/sim_init_full_longitudinal_model.h
-
 D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Testing/source/sim/sim_init_full_longitudinal_model.h
 ../util/memory_management.h
 D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Testing/source/util/memory_management.h
@@ -63,6 +59,10 @@ stdlib.h
 -
 string.h
 -
+
+D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Testing/source/util/memory_management.cpp
+memory_management.h
+D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Testing/source/util/memory_management.h
 
 D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Testing/source/util/memory_management.h
 stdio.h
