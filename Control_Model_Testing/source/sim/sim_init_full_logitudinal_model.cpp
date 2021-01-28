@@ -42,11 +42,11 @@ int init_sim(void){
 
     /* Aircraft state-space A and B matrices */
     /* Scout matrices */
-    double A_sc[4][4];
-    double B_sc[4];
+    double A_sc[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE];
+    double B_sc[STATE_SPACE_MATRIX_SIZE];
     /* Target aircraft matrices */
-    double A_t[4][4];
-    double B_t[4];
+    double A_t[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE];
+    double B_t[STATE_SPACE_MATRIX_SIZE];
 
     /* Get the aircraft state matrices from text files */
     get_aircraft_state_space_matrices(A_sc, B_sc, A_t, B_t);

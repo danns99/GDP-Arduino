@@ -4,7 +4,7 @@
 # compile CXX with C:/MinGW/bin/g++.exe
 CXX_FLAGS = -g   -std=gnu++14
 
-CXX_DEFINES = 
+CXX_DEFINES = -DSTATE_SPACE_MATRIX_SIZE=4
 
 CXX_INCLUDES = 
 

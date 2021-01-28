@@ -20,7 +20,10 @@ int run_sim(double sim_time, double input_time, double dt, int steps,
             double *xdot_sc_mod_store, double *xdot_sc, double *xdot_t,
             double *xdot_sc_mod, double **x_sc_store, double **x_t_store,
             double **x_sc_mod_store, double *u_into_modified_scout,
-            double error_prior, double A_sc[4][4], double *B_sc,
-            double A_t[4][4], double *B_t);
+            double error_prior,
+            double A_sc[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
+            double *B_sc,
+            double A_t[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
+            double *B_t);
 
 #endif

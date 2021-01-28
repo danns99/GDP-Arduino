@@ -5,7 +5,7 @@
 Reads in the aircraft state space matrix from a text file. Then writes the
 data to arrays A and B which are passed to the function.
 */
-int read_state_space_matrices_from_file(double A[4][4], double B[4],
+int read_state_space_matrices_from_file(double A[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE], double B[STATE_SPACE_MATRIX_SIZE],
                                       char* file_dir){
     int i;
     FILE *f;
@@ -38,8 +38,10 @@ int read_state_space_matrices_from_file(double A[4][4], double B[4],
 /*
 Gets the aircraft state space matrices for the Scout and the target aircraft.
 */
-int get_aircraft_state_space_matrices(double A_sc[4][4], double *B_sc,
-                                      double A_t[4][4], double *B_t){
+int get_aircraft_state_space_matrices(double A_sc[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
+                                      double *B_sc,
+                                      double A_t[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
+                                      double *B_t){
     /* File directories for aircraft data files */
     char data_relative_dir[] = "..//aircraft_data//";
     char scout_data[] = "scout_state_matrices.txt";

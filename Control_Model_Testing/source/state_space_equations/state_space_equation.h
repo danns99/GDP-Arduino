@@ -2,7 +2,10 @@
 #define STATE_SPACE_EQUATION_H
 
 
-double state_space_function(int i, double y_option, double A[4][4], double B[4],
-                            double x[4], double u[4]);
+double state_space_function(int i, double y_option,
+                            double A[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
+                            double B[STATE_SPACE_MATRIX_SIZE],
+                            double x[STATE_SPACE_MATRIX_SIZE],
+                            double u[STATE_SPACE_MATRIX_SIZE]);
 
 #endif
