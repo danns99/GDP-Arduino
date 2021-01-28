@@ -18,7 +18,7 @@ double** memory_allocation_for_storage_arrays(int sim_time, double dt){
     }
 
     /* Allocate memory for each sub array */
-    for(i=0; i<5*1/dt; i++){
+    for(i=0; i<sim_time*1/dt; i++){
         x_store[i] = (double *) malloc(4*sizeof(double));
         /* If memory could not be allocated */
         if(x_store[i] == NULL){
