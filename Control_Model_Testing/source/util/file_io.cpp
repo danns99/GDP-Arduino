@@ -31,17 +31,21 @@ int read_state_space_matrices_from_file(double A[STATE_SPACE_MATRIX_SIZE][STATE_
             }
         }
     }
-    else if (STATE_SPACE_MATRIX_SIZE == 2){
+    if (STATE_SPACE_MATRIX_SIZE == 2){
         for (i=0; i<8; i++) {
             if (feof(f))
                 break;
-            if (0<i<3){
-                fscanf(f, "%lf %lf %lf %lf", buffer, &(A[i-1][1]),
-                                            &(A[i-1][2]), buffer);
+            if(i==0 || i==3){
+                fscanf(f, "%*lf %*lf %*lf %*lf");
+            }
+            if (i==1){
+                fscanf(f, "%*lf %lf %lf %*lf", &(A[0][0]), &(A[0][1]));
+            }
+            if (i==2){
+                fscanf(f, "%*lf %lf %lf %*lf", &(A[1][0]), &(A[1][1]));
             }
             if (i>6){
-                fscanf(f, "%lf %lf %lf %lf", buffer, &(B[0]),
-                                            &(B[1]), buffer);
+                fscanf(f, "%*lf %lf %lf %*lf", &(B[0]), &(B[1]));
             }
         }
     }
@@ -101,10 +105,9 @@ int write_sim_data_to_file(int steps, double dt, double **x_sc_store,
                     x_sc_mod_store[i][3]);
         }
     }
-    else if(STATE_SPACE_MATRIX_SIZE == 2){
-        printf("here");
+    if(STATE_SPACE_MATRIX_SIZE == 2){
         for(i=0; i<steps; i++){
-            fprintf(f, "%f %f %f %f %f %f %f %f %f %f %f %f %f \n",
+            fprintf(f, "%f %f %f %f %f %f %f \n",
                     i*dt, x_sc_store[i][0], x_sc_store[i][1], x_t_store[i][0],
                     x_t_store[i][1], x_sc_mod_store[i][0],
                     x_sc_mod_store[i][1]);
