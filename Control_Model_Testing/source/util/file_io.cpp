@@ -124,7 +124,7 @@ int store_timestep_data(int steps, double *x_sc, double *x_t, double *x_sc_mod,
                         double **x_sc_mod_store){
     int i;
 
-    for (i=0; i<4; i++){
+    for (i=0; i<STATE_SPACE_MATRIX_SIZE; i++){
         x_sc_store[steps][i] = x_sc[i];
         x_t_store[steps][i] = x_t[i];
         x_sc_mod_store[steps][i] = x_sc_mod[i];
