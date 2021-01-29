@@ -63,18 +63,18 @@ int read_state_space_matrices_from_file(double A[STATE_SPACE_MATRIX_SIZE][STATE_
 /*
 Gets the aircraft state space matrices for the Scout and the target aircraft.
 */
-int get_aircraft_state_space_matrices(double A_scout[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
-                                      double B_scout[STATE_SPACE_MATRIX_SIZE],
-                                      double A_target[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
-                                      double B_target[STATE_SPACE_MATRIX_SIZE]){
+int get_aircraft_state_space_matrices(double A_sc[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
+                                      double B_sc[STATE_SPACE_MATRIX_SIZE],
+                                      double A_t[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
+                                      double B_t[STATE_SPACE_MATRIX_SIZE]){
     /* File directories for aircraft data files */
     char data_relative_dir_scout[] = "aircraft_data//scout_state_matrices.txt";
     char data_relative_dir_target[] = "aircraft_data//target_state_matrices.txt"; 
 
     /* Get aircraft state space matrices */
-    read_state_space_matrices_from_file(A_scout, B_scout,
+    read_state_space_matrices_from_file(A_sc, B_sc,
         data_relative_dir_scout);
-    read_state_space_matrices_from_file(A_target, B_target,
+    read_state_space_matrices_from_file(A_t, B_t,
         data_relative_dir_target);
 
     return 0;
@@ -102,6 +102,7 @@ int write_sim_data_to_file(int steps, double dt, double **x_sc_store,
         }
     }
     else if(STATE_SPACE_MATRIX_SIZE == 2){
+        printf("here");
         for(i=0; i<steps; i++){
             fprintf(f, "%f %f %f %f %f %f %f %f %f %f %f %f %f \n",
                     i*dt, x_sc_store[i][0], x_sc_store[i][1], x_t_store[i][0],
