@@ -19,10 +19,21 @@ int run_control_loop(double dt, double *u, double *u_into_modified_scout,
 
     /* Get the control input for the modified Scout */
     /* Get the pitch rate output of the target aircraft */
-    q_out_of_target_aircraft = x_t[2];
+    if(STATE_SPACE_MATRIX_SIZE == 4){
+        q_out_of_target_aircraft = x_t[2];
+    }
+    else if(STATE_SPACE_MATRIX_SIZE == 2){
+        q_out_of_target_aircraft = x_t[1];
+    }
+    
     /* Get the current error as the pitch rate output of the modified Scout
     aircraft */
-    current_error = x_sc_mod[2];
+    if(STATE_SPACE_MATRIX_SIZE == 4){
+        current_error = x_sc_mod[2];
+    }
+    else if(STATE_SPACE_MATRIX_SIZE == 2){
+        q_out_of_target_aircraft = x_sc_mod[1];
+    }
     /* Calculate the error between the pitch rate of the target aircraft and
     the modified Scout */
     u_from_error_sum = error_signal(q_out_of_target_aircraft,
