@@ -73,7 +73,7 @@ def file_read(filename):
 
 # Run the external simulation code
 # --------------------------------------------------------------------------- #
-run_simulation(".//build//source//Control_model")
+run_simulation(".//build//source//sim_runner")  # Control_model
 # --------------------------------------------------------------------------- #
 
 # Read in the data from the simulation run

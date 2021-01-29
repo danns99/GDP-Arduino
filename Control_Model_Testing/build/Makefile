@@ -110,17 +110,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Control_Model
+# Target rules for targets named sim_runner
 
 # Build rule for target.
-Control_Model: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 Control_Model
-.PHONY : Control_Model
+sim_runner: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 sim_runner
+.PHONY : sim_runner
 
 # fast build rule for target.
-Control_Model/fast:
-	$(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/build
-.PHONY : Control_Model/fast
+sim_runner/fast:
+	$(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/build
+.PHONY : sim_runner/fast
 
 # Help Target
 help:
@@ -130,7 +130,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... Control_Model
+	@echo ... sim_runner
 .PHONY : help
 
 

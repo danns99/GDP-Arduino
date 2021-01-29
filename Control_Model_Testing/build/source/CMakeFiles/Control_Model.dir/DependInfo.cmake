@@ -17,7 +17,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
-  "STATE_SPACE_MATRIX_SIZE=4"
+  "STATE_SPACE_MATRIX_SIZE=2"
   )
 
 # The include file search paths:

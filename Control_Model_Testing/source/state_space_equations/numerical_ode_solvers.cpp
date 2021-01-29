@@ -20,7 +20,7 @@ double* xdot_solve(double* x_dot,
     double K4;
     
     /* Solve the state-space equations */
-    for (i=0; i<4; i++){
+    for (i=0; i<STATE_SPACE_MATRIX_SIZE; i++){
         /* K1 = dt*(A*x+B*u) */
         K1 = dt*state_space_function(i, 0.0, A, B, x, u);
         /* K2 = dt*(A*(x+K1/2)+B*u) */
@@ -55,8 +55,13 @@ double* xdot_solve(double* x_dot,
     return x;
 }
 
-double* xdot_solve_mod(double* x_dot, double A[4][4], double B[4],
-                       double x[4], double u[4], double dt,
+
+double* xdot_solve_mod(double* x_dot,
+                       double A[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
+                       double B[STATE_SPACE_MATRIX_SIZE],
+                       double x[STATE_SPACE_MATRIX_SIZE],
+                       double u[STATE_SPACE_MATRIX_SIZE],
+                       double dt,
                        double q_out_of_target_aircraft, double *error_prior){
     int i;
     double error;
@@ -69,7 +74,7 @@ double* xdot_solve_mod(double* x_dot, double A[4][4], double B[4],
     double u_from_error_sum;
     
     /* Solve the state-space equations */
-    for (i=0; i<4; i++){
+    for (i=0; i<STATE_SPACE_MATRIX_SIZE; i++){
         /* K1 = dt*(A*x+B*u) */
         K1 = dt*state_space_function(i, 0.0, A, B, x, u);
         if (i==2){

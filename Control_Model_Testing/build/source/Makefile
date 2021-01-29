@@ -110,46 +110,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-source/CMakeFiles/Control_Model.dir/rule:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f CMakeFiles\Makefile2 source/CMakeFiles/Control_Model.dir/rule
-.PHONY : source/CMakeFiles/Control_Model.dir/rule
+source/CMakeFiles/sim_runner.dir/rule:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f CMakeFiles\Makefile2 source/CMakeFiles/sim_runner.dir/rule
+.PHONY : source/CMakeFiles/sim_runner.dir/rule
 
 # Convenience name for target.
-Control_Model: source/CMakeFiles/Control_Model.dir/rule
+sim_runner: source/CMakeFiles/sim_runner.dir/rule
 
-.PHONY : Control_Model
+.PHONY : sim_runner
 
 # fast build rule for target.
-Control_Model/fast:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/build
-.PHONY : Control_Model/fast
-
-Control_Model.obj: Control_Model.cpp.obj
-
-.PHONY : Control_Model.obj
-
-# target to build an object file
-Control_Model.cpp.obj:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/Control_Model.cpp.obj
-.PHONY : Control_Model.cpp.obj
-
-Control_Model.i: Control_Model.cpp.i
-
-.PHONY : Control_Model.i
-
-# target to preprocess a source file
-Control_Model.cpp.i:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/Control_Model.cpp.i
-.PHONY : Control_Model.cpp.i
-
-Control_Model.s: Control_Model.cpp.s
-
-.PHONY : Control_Model.s
-
-# target to generate assembly for a file
-Control_Model.cpp.s:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/Control_Model.cpp.s
-.PHONY : Control_Model.cpp.s
+sim_runner/fast:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/build
+.PHONY : sim_runner/fast
 
 control_loop/control_loop.obj: control_loop/control_loop.cpp.obj
 
@@ -157,7 +130,7 @@ control_loop/control_loop.obj: control_loop/control_loop.cpp.obj
 
 # target to build an object file
 control_loop/control_loop.cpp.obj:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/control_loop/control_loop.cpp.obj
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control_loop/control_loop.cpp.obj
 .PHONY : control_loop/control_loop.cpp.obj
 
 control_loop/control_loop.i: control_loop/control_loop.cpp.i
@@ -166,7 +139,7 @@ control_loop/control_loop.i: control_loop/control_loop.cpp.i
 
 # target to preprocess a source file
 control_loop/control_loop.cpp.i:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/control_loop/control_loop.cpp.i
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control_loop/control_loop.cpp.i
 .PHONY : control_loop/control_loop.cpp.i
 
 control_loop/control_loop.s: control_loop/control_loop.cpp.s
@@ -175,8 +148,35 @@ control_loop/control_loop.s: control_loop/control_loop.cpp.s
 
 # target to generate assembly for a file
 control_loop/control_loop.cpp.s:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/control_loop/control_loop.cpp.s
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control_loop/control_loop.cpp.s
 .PHONY : control_loop/control_loop.cpp.s
+
+control_model/Control_Model.obj: control_model/Control_Model.cpp.obj
+
+.PHONY : control_model/Control_Model.obj
+
+# target to build an object file
+control_model/Control_Model.cpp.obj:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control_model/Control_Model.cpp.obj
+.PHONY : control_model/Control_Model.cpp.obj
+
+control_model/Control_Model.i: control_model/Control_Model.cpp.i
+
+.PHONY : control_model/Control_Model.i
+
+# target to preprocess a source file
+control_model/Control_Model.cpp.i:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control_model/Control_Model.cpp.i
+.PHONY : control_model/Control_Model.cpp.i
+
+control_model/Control_Model.s: control_model/Control_Model.cpp.s
+
+.PHONY : control_model/Control_Model.s
+
+# target to generate assembly for a file
+control_model/Control_Model.cpp.s:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control_model/Control_Model.cpp.s
+.PHONY : control_model/Control_Model.cpp.s
 
 controller/PID_controller.obj: controller/PID_controller.cpp.obj
 
@@ -184,7 +184,7 @@ controller/PID_controller.obj: controller/PID_controller.cpp.obj
 
 # target to build an object file
 controller/PID_controller.cpp.obj:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/controller/PID_controller.cpp.obj
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/controller/PID_controller.cpp.obj
 .PHONY : controller/PID_controller.cpp.obj
 
 controller/PID_controller.i: controller/PID_controller.cpp.i
@@ -193,7 +193,7 @@ controller/PID_controller.i: controller/PID_controller.cpp.i
 
 # target to preprocess a source file
 controller/PID_controller.cpp.i:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/controller/PID_controller.cpp.i
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/controller/PID_controller.cpp.i
 .PHONY : controller/PID_controller.cpp.i
 
 controller/PID_controller.s: controller/PID_controller.cpp.s
@@ -202,7 +202,7 @@ controller/PID_controller.s: controller/PID_controller.cpp.s
 
 # target to generate assembly for a file
 controller/PID_controller.cpp.s:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/controller/PID_controller.cpp.s
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/controller/PID_controller.cpp.s
 .PHONY : controller/PID_controller.cpp.s
 
 sim/sim_init_full_logitudinal_model.obj: sim/sim_init_full_logitudinal_model.cpp.obj
@@ -211,7 +211,7 @@ sim/sim_init_full_logitudinal_model.obj: sim/sim_init_full_logitudinal_model.cpp
 
 # target to build an object file
 sim/sim_init_full_logitudinal_model.cpp.obj:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/sim/sim_init_full_logitudinal_model.cpp.obj
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/sim/sim_init_full_logitudinal_model.cpp.obj
 .PHONY : sim/sim_init_full_logitudinal_model.cpp.obj
 
 sim/sim_init_full_logitudinal_model.i: sim/sim_init_full_logitudinal_model.cpp.i
@@ -220,7 +220,7 @@ sim/sim_init_full_logitudinal_model.i: sim/sim_init_full_logitudinal_model.cpp.i
 
 # target to preprocess a source file
 sim/sim_init_full_logitudinal_model.cpp.i:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/sim/sim_init_full_logitudinal_model.cpp.i
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/sim/sim_init_full_logitudinal_model.cpp.i
 .PHONY : sim/sim_init_full_logitudinal_model.cpp.i
 
 sim/sim_init_full_logitudinal_model.s: sim/sim_init_full_logitudinal_model.cpp.s
@@ -229,8 +229,35 @@ sim/sim_init_full_logitudinal_model.s: sim/sim_init_full_logitudinal_model.cpp.s
 
 # target to generate assembly for a file
 sim/sim_init_full_logitudinal_model.cpp.s:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/sim/sim_init_full_logitudinal_model.cpp.s
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/sim/sim_init_full_logitudinal_model.cpp.s
 .PHONY : sim/sim_init_full_logitudinal_model.cpp.s
+
+sim_runner.obj: sim_runner.cpp.obj
+
+.PHONY : sim_runner.obj
+
+# target to build an object file
+sim_runner.cpp.obj:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/sim_runner.cpp.obj
+.PHONY : sim_runner.cpp.obj
+
+sim_runner.i: sim_runner.cpp.i
+
+.PHONY : sim_runner.i
+
+# target to preprocess a source file
+sim_runner.cpp.i:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/sim_runner.cpp.i
+.PHONY : sim_runner.cpp.i
+
+sim_runner.s: sim_runner.cpp.s
+
+.PHONY : sim_runner.s
+
+# target to generate assembly for a file
+sim_runner.cpp.s:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/sim_runner.cpp.s
+.PHONY : sim_runner.cpp.s
 
 state_space_equations/numerical_ode_solvers.obj: state_space_equations/numerical_ode_solvers.cpp.obj
 
@@ -238,7 +265,7 @@ state_space_equations/numerical_ode_solvers.obj: state_space_equations/numerical
 
 # target to build an object file
 state_space_equations/numerical_ode_solvers.cpp.obj:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/state_space_equations/numerical_ode_solvers.cpp.obj
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/state_space_equations/numerical_ode_solvers.cpp.obj
 .PHONY : state_space_equations/numerical_ode_solvers.cpp.obj
 
 state_space_equations/numerical_ode_solvers.i: state_space_equations/numerical_ode_solvers.cpp.i
@@ -247,7 +274,7 @@ state_space_equations/numerical_ode_solvers.i: state_space_equations/numerical_o
 
 # target to preprocess a source file
 state_space_equations/numerical_ode_solvers.cpp.i:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/state_space_equations/numerical_ode_solvers.cpp.i
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/state_space_equations/numerical_ode_solvers.cpp.i
 .PHONY : state_space_equations/numerical_ode_solvers.cpp.i
 
 state_space_equations/numerical_ode_solvers.s: state_space_equations/numerical_ode_solvers.cpp.s
@@ -256,7 +283,7 @@ state_space_equations/numerical_ode_solvers.s: state_space_equations/numerical_o
 
 # target to generate assembly for a file
 state_space_equations/numerical_ode_solvers.cpp.s:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/state_space_equations/numerical_ode_solvers.cpp.s
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/state_space_equations/numerical_ode_solvers.cpp.s
 .PHONY : state_space_equations/numerical_ode_solvers.cpp.s
 
 state_space_equations/state_space_equation.obj: state_space_equations/state_space_equation.cpp.obj
@@ -265,7 +292,7 @@ state_space_equations/state_space_equation.obj: state_space_equations/state_spac
 
 # target to build an object file
 state_space_equations/state_space_equation.cpp.obj:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/state_space_equations/state_space_equation.cpp.obj
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/state_space_equations/state_space_equation.cpp.obj
 .PHONY : state_space_equations/state_space_equation.cpp.obj
 
 state_space_equations/state_space_equation.i: state_space_equations/state_space_equation.cpp.i
@@ -274,7 +301,7 @@ state_space_equations/state_space_equation.i: state_space_equations/state_space_
 
 # target to preprocess a source file
 state_space_equations/state_space_equation.cpp.i:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/state_space_equations/state_space_equation.cpp.i
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/state_space_equations/state_space_equation.cpp.i
 .PHONY : state_space_equations/state_space_equation.cpp.i
 
 state_space_equations/state_space_equation.s: state_space_equations/state_space_equation.cpp.s
@@ -283,7 +310,7 @@ state_space_equations/state_space_equation.s: state_space_equations/state_space_
 
 # target to generate assembly for a file
 state_space_equations/state_space_equation.cpp.s:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/state_space_equations/state_space_equation.cpp.s
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/state_space_equations/state_space_equation.cpp.s
 .PHONY : state_space_equations/state_space_equation.cpp.s
 
 util/file_io.obj: util/file_io.cpp.obj
@@ -292,7 +319,7 @@ util/file_io.obj: util/file_io.cpp.obj
 
 # target to build an object file
 util/file_io.cpp.obj:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/util/file_io.cpp.obj
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/util/file_io.cpp.obj
 .PHONY : util/file_io.cpp.obj
 
 util/file_io.i: util/file_io.cpp.i
@@ -301,7 +328,7 @@ util/file_io.i: util/file_io.cpp.i
 
 # target to preprocess a source file
 util/file_io.cpp.i:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/util/file_io.cpp.i
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/util/file_io.cpp.i
 .PHONY : util/file_io.cpp.i
 
 util/file_io.s: util/file_io.cpp.s
@@ -310,7 +337,7 @@ util/file_io.s: util/file_io.cpp.s
 
 # target to generate assembly for a file
 util/file_io.cpp.s:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/util/file_io.cpp.s
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/util/file_io.cpp.s
 .PHONY : util/file_io.cpp.s
 
 util/memory_management.obj: util/memory_management.cpp.obj
@@ -319,7 +346,7 @@ util/memory_management.obj: util/memory_management.cpp.obj
 
 # target to build an object file
 util/memory_management.cpp.obj:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/util/memory_management.cpp.obj
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/util/memory_management.cpp.obj
 .PHONY : util/memory_management.cpp.obj
 
 util/memory_management.i: util/memory_management.cpp.i
@@ -328,7 +355,7 @@ util/memory_management.i: util/memory_management.cpp.i
 
 # target to preprocess a source file
 util/memory_management.cpp.i:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/util/memory_management.cpp.i
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/util/memory_management.cpp.i
 .PHONY : util/memory_management.cpp.i
 
 util/memory_management.s: util/memory_management.cpp.s
@@ -337,7 +364,7 @@ util/memory_management.s: util/memory_management.cpp.s
 
 # target to generate assembly for a file
 util/memory_management.cpp.s:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\Control_Model.dir\build.make source/CMakeFiles/Control_Model.dir/util/memory_management.cpp.s
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/util/memory_management.cpp.s
 .PHONY : util/memory_management.cpp.s
 
 # Help Target
@@ -346,21 +373,24 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
+	@echo ... sim_runner
 	@echo ... edit_cache
-	@echo ... Control_Model
 	@echo ... rebuild_cache
-	@echo ... Control_Model.obj
-	@echo ... Control_Model.i
-	@echo ... Control_Model.s
 	@echo ... control_loop/control_loop.obj
 	@echo ... control_loop/control_loop.i
 	@echo ... control_loop/control_loop.s
+	@echo ... control_model/Control_Model.obj
+	@echo ... control_model/Control_Model.i
+	@echo ... control_model/Control_Model.s
 	@echo ... controller/PID_controller.obj
 	@echo ... controller/PID_controller.i
 	@echo ... controller/PID_controller.s
 	@echo ... sim/sim_init_full_logitudinal_model.obj
 	@echo ... sim/sim_init_full_logitudinal_model.i
 	@echo ... sim/sim_init_full_logitudinal_model.s
+	@echo ... sim_runner.obj
+	@echo ... sim_runner.i
+	@echo ... sim_runner.s
 	@echo ... state_space_equations/numerical_ode_solvers.obj
 	@echo ... state_space_equations/numerical_ode_solvers.i
 	@echo ... state_space_equations/numerical_ode_solvers.s

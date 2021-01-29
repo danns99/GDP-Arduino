@@ -2,6 +2,9 @@
 
 
 int init_sim(void){
+    int i;
+    FILE *f;
+
     /* Simulation time settings */
     double sim_time = 5;
     double input_time = 1;
@@ -9,22 +12,22 @@ int init_sim(void){
     int steps = 0;
 
     /* Control vectors */
-    double u[4] = {0};
+    double u[STATE_SPACE_MATRIX_SIZE] = {0};
     double u_old=0;
 
     /* x vectors */
-    double x_sc[4] = {0};
-    double x_t[4] = {0};
-    double x_sc_mod[4] = {0};
+    double x_sc[STATE_SPACE_MATRIX_SIZE] = {0};
+    double x_t[STATE_SPACE_MATRIX_SIZE] = {0};
+    double x_sc_mod[STATE_SPACE_MATRIX_SIZE] = {0};
     double x_sc_old;
     double x_t_old;
     double x_sc_mod_old;
 
     /* x dot vectors */
     /* For storing data at the end of each timestep */
-    double xdot_sc_store[4] = {0};
-    double xdot_t_store[4] = {0};
-    double xdot_sc_mod_store[4] = {0};
+    double xdot_sc_store[STATE_SPACE_MATRIX_SIZE] = {0};
+    double xdot_t_store[STATE_SPACE_MATRIX_SIZE] = {0};
+    double xdot_sc_mod_store[STATE_SPACE_MATRIX_SIZE] = {0};
     /* For use during the timestep */
     double *xdot_sc;
     double *xdot_t;
@@ -37,7 +40,7 @@ int init_sim(void){
                                                                    dt);
 
     /* Variables for the modified Scout control */
-    double u_into_modified_scout[4] = {0};
+    double u_into_modified_scout[STATE_SPACE_MATRIX_SIZE] = {0};
     double error_prior = 0;
 
     /* Aircraft state-space A and B matrices */
@@ -51,6 +54,7 @@ int init_sim(void){
     /* Get the aircraft state matrices from text files */
     get_aircraft_state_space_matrices(A_sc, B_sc, A_t, B_t);
 
+    /* Run the simulation */
     run_sim(sim_time, input_time, dt, steps, u, u_old, x_sc, x_t, x_sc_mod,
             x_sc_old, x_t_old, x_sc_mod_old, xdot_sc_store, xdot_t_store,
             xdot_sc_mod_store, xdot_sc, xdot_t, xdot_sc_mod, x_sc_store,
