@@ -6,7 +6,7 @@
 #include <math.h>
 #include "..\\util\\file_io.h"
 #include "..\\util\\memory_management.h"
-#include "sim_init_full_longitudinal_model.h"
+#include "sim_init.h"
 #include "..\\control\\PID_controller.h"
 #include "..\\control\\control_loop.h"
 #include "..\\state_space_equations\\state_space_equation.h"

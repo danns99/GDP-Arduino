@@ -1,5 +1,5 @@
-#ifndef SIM_INIT_FULL_LONGITUDINAL_MODEL_H
-#define SIM_INIT_FULL_LONGITUDINAL_MODEL_H
+#ifndef SIM_INIT_H
+#define SIM_INIT_H
 
 #include "..//util//memory_management.h"
 #include "sim.h"

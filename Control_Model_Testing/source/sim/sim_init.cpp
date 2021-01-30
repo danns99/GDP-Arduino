@@ -1,4 +1,4 @@
-#include "sim_init_full_longitudinal_model.h"
+#include "sim_init.h"
 
 
 int init_sim(void){

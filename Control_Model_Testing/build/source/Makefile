@@ -205,32 +205,32 @@ sim/sim.cpp.s:
 	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/sim/sim.cpp.s
 .PHONY : sim/sim.cpp.s
 
-sim/sim_init_full_logitudinal_model.obj: sim/sim_init_full_logitudinal_model.cpp.obj
+sim/sim_init.obj: sim/sim_init.cpp.obj
 
-.PHONY : sim/sim_init_full_logitudinal_model.obj
+.PHONY : sim/sim_init.obj
 
 # target to build an object file
-sim/sim_init_full_logitudinal_model.cpp.obj:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/sim/sim_init_full_logitudinal_model.cpp.obj
-.PHONY : sim/sim_init_full_logitudinal_model.cpp.obj
+sim/sim_init.cpp.obj:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/sim/sim_init.cpp.obj
+.PHONY : sim/sim_init.cpp.obj
 
-sim/sim_init_full_logitudinal_model.i: sim/sim_init_full_logitudinal_model.cpp.i
+sim/sim_init.i: sim/sim_init.cpp.i
 
-.PHONY : sim/sim_init_full_logitudinal_model.i
+.PHONY : sim/sim_init.i
 
 # target to preprocess a source file
-sim/sim_init_full_logitudinal_model.cpp.i:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/sim/sim_init_full_logitudinal_model.cpp.i
-.PHONY : sim/sim_init_full_logitudinal_model.cpp.i
+sim/sim_init.cpp.i:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/sim/sim_init.cpp.i
+.PHONY : sim/sim_init.cpp.i
 
-sim/sim_init_full_logitudinal_model.s: sim/sim_init_full_logitudinal_model.cpp.s
+sim/sim_init.s: sim/sim_init.cpp.s
 
-.PHONY : sim/sim_init_full_logitudinal_model.s
+.PHONY : sim/sim_init.s
 
 # target to generate assembly for a file
-sim/sim_init_full_logitudinal_model.cpp.s:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/sim/sim_init_full_logitudinal_model.cpp.s
-.PHONY : sim/sim_init_full_logitudinal_model.cpp.s
+sim/sim_init.cpp.s:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/sim/sim_init.cpp.s
+.PHONY : sim/sim_init.cpp.s
 
 sim/sim_runner.obj: sim/sim_runner.cpp.obj
 
@@ -385,9 +385,9 @@ help:
 	@echo ... sim/sim.obj
 	@echo ... sim/sim.i
 	@echo ... sim/sim.s
-	@echo ... sim/sim_init_full_logitudinal_model.obj
-	@echo ... sim/sim_init_full_logitudinal_model.i
-	@echo ... sim/sim_init_full_logitudinal_model.s
+	@echo ... sim/sim_init.obj
+	@echo ... sim/sim_init.i
+	@echo ... sim/sim_init.s
 	@echo ... sim/sim_runner.obj
 	@echo ... sim/sim_runner.i
 	@echo ... sim/sim_runner.s

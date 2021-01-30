@@ -36,8 +36,8 @@
 },
 {
   "directory": "D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Testing/build/source",
-  "command": "C:\\MinGW\\bin\\g++.exe  -DSTATE_SPACE_MATRIX_SIZE=4  -g   -std=gnu++14 -o CMakeFiles\\sim_runner.dir\\sim\\sim_init_full_logitudinal_model.cpp.obj -c \"D:\\Andrew\\Documents\\Andrew University\\Part IV\\GDP\\GDP-Arduino\\Control_Model_Testing\\source\\sim\\sim_init_full_logitudinal_model.cpp\"",
-  "file": "D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Testing/source/sim/sim_init_full_logitudinal_model.cpp"
+  "command": "C:\\MinGW\\bin\\g++.exe  -DSTATE_SPACE_MATRIX_SIZE=4  -g   -std=gnu++14 -o CMakeFiles\\sim_runner.dir\\sim\\sim_init.cpp.obj -c \"D:\\Andrew\\Documents\\Andrew University\\Part IV\\GDP\\GDP-Arduino\\Control_Model_Testing\\source\\sim\\sim_init.cpp\"",
+  "file": "D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Testing/source/sim/sim_init.cpp"
 },
 {
   "directory": "D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Testing/build/source",
