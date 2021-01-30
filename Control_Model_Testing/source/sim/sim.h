@@ -1,5 +1,5 @@
-#ifndef CONTROL_MODEL_TESTING_H
-#define CONTROL_MODEL_TESTING_H
+#ifndef SIM_H
+#define SIM_H
 
 #include <stdio.h>
 #include <stdlib.h>
