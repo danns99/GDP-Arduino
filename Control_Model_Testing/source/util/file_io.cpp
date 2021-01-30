@@ -1,6 +1,43 @@
 #include "file_io.h"
 
 
+/*
+Reads in the simulation settings from sim_settings.txt. The text file should be
+placed in the same folder as the executable.
+*/
+int read_sim_settings(int* sim_time, double* dt, double* input_time){
+    int i;
+    FILE *f;
+
+    if((f=fopen("sim_settings.txt","r"))==NULL){
+        printf("Cannot open file for reading.\n");
+        return -1;
+    }
+
+    for(i=0; i<4; i++){
+        if(i==0){
+            fscanf(f, "%*s %*s %*s %d", sim_time);
+        }
+        if(i==1){
+            fscanf(f, "%*s %*s %*s %lf", dt);
+        }
+        if(i==2){
+            fscanf(f, "%*s %*s %*s %*s %*s %*s %lf", input_time);
+        }
+        // if(i==3){
+        //     fscanf(f, "%*s %s", &aircraft_data_folder);
+        // }
+    }
+
+    if (fclose(f) != 0 ) {
+        printf("File could not be closed.\n");
+        return -1;
+    }
+
+    return 0;
+}
+
+
 /* 
 Reads in the aircraft state space matrix from a text file. Then writes the
 data to arrays A and B which are passed to the function.
@@ -98,7 +135,7 @@ int write_sim_data_to_file(int steps, double dt, double **x_sc_store,
     if(STATE_SPACE_MATRIX_SIZE == 4){
         for(i=0; i<steps; i++){
             fprintf(f, "%f %f %f %f %f %f %f %f %f %f %f %f %f \n",
-                    i*dt, x_sc_store[i][0], x_sc_store[i][1], x_sc_store[i][2],
+                    i*(dt), x_sc_store[i][0], x_sc_store[i][1], x_sc_store[i][2],
                     x_sc_store[i][3], x_t_store[i][0], x_t_store[i][1],
                     x_t_store[i][2], x_t_store[i][3], x_sc_mod_store[i][0],
                     x_sc_mod_store[i][1], x_sc_mod_store[i][2],
@@ -108,7 +145,7 @@ int write_sim_data_to_file(int steps, double dt, double **x_sc_store,
     if(STATE_SPACE_MATRIX_SIZE == 2){
         for(i=0; i<steps; i++){
             fprintf(f, "%f %f %f %f %f %f %f \n",
-                    i*dt, x_sc_store[i][0], x_sc_store[i][1], x_t_store[i][0],
+                    i*(dt), x_sc_store[i][0], x_sc_store[i][1], x_t_store[i][0],
                     x_t_store[i][1], x_sc_mod_store[i][0],
                     x_sc_mod_store[i][1]);
         }

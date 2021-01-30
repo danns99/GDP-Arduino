@@ -10,7 +10,6 @@ int run_control_loop(double dt, double *u, double *u_into_modified_scout,
     double q_out_of_target_aircraft;
     double current_error;
     double u_from_error_sum;
-
     
     /* Solve the state-space equations for the target aircraft and the
     Scout */

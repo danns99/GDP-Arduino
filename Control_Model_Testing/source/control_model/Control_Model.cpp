@@ -4,7 +4,7 @@
 /*
 Runs the simulation
 */
-int run_sim(double sim_time, double input_time, double dt, int steps,
+int run_sim(int sim_time, double input_time, double dt, int steps,
             double *u, double u_old, double *x_sc, double *x_t,
             double *x_sc_mod, double x_sc_old, double x_t_old,
             double x_sc_mod_old, double *xdot_sc_store, double *xdot_t_store,
@@ -18,7 +18,7 @@ int run_sim(double sim_time, double input_time, double dt, int steps,
     /* Main time loop */
     while(steps < sim_time*1/dt){
         /* Select time to apply step input */
-        float difference = (float) steps - input_time*1/dt;
+        float difference = (float) steps - (input_time)*1/(dt);
         float tol_difference = 0.001;
         if((-tol_difference <= difference) && (difference <= tol_difference)){
             printf("here\n");

@@ -6,6 +6,8 @@
 #include <string.h>
 
 
+int read_sim_settings(int* sim_time, double* dt, double* input_time);
+
 int read_state_space_matrices_from_file(double A[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
                                         double B[STATE_SPACE_MATRIX_SIZE],
                                         char* file_dir);

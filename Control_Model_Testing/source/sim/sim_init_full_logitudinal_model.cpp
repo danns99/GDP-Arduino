@@ -5,11 +5,13 @@ int init_sim(void){
     int i;
     FILE *f;
 
-    /* Simulation time settings */
-    double sim_time = 5;
-    double input_time = 1;
-    double dt = 0.0001;
+    /* Declare and Initialise variable for simulation time settings */
     int steps = 0;
+    int sim_time = 0;
+    double input_time = 0;
+    double dt = 0;
+    /* Read in the simulation time settings */
+    read_sim_settings(&sim_time, &dt, &input_time);
 
     /* Control vectors */
     double u[STATE_SPACE_MATRIX_SIZE] = {0};
