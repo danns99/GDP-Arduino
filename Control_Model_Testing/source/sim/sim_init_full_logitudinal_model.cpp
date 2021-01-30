@@ -5,13 +5,14 @@ int init_sim(void){
     int i;
     FILE *f;
 
-    /* Declare and Initialise variable for simulation time settings */
+    /* Variables for simulation settings */
     int steps = 0;
     int sim_time = 0;
     double input_time = 0;
     double dt = 0;
-    /* Read in the simulation time settings */
-    read_sim_settings(&sim_time, &dt, &input_time);
+    char aircraft_data_folder_dir[100];
+    /* Read in the simulation settings */
+    read_sim_settings(&sim_time, &dt, &input_time, aircraft_data_folder_dir);
 
     /* Control vectors */
     double u[STATE_SPACE_MATRIX_SIZE] = {0};
@@ -54,7 +55,8 @@ int init_sim(void){
     double B_t[STATE_SPACE_MATRIX_SIZE];
 
     /* Get the aircraft state matrices from text files */
-    get_aircraft_state_space_matrices(A_sc, B_sc, A_t, B_t);
+    get_aircraft_state_space_matrices(A_sc, B_sc, A_t, B_t,
+                                      aircraft_data_folder_dir);
 
     /* Run the simulation */
     run_sim(sim_time, input_time, dt, steps, u, u_old, x_sc, x_t, x_sc_mod,

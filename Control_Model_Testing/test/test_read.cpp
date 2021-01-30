@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 
-int read_file(int* sim_time, double* dt, double* input_time){
+int read_file(int* sim_time, double* dt, double* input_time, char aircraft_data_folder[100]){
     int i;
     FILE *f;
     int test;
@@ -22,9 +23,9 @@ int read_file(int* sim_time, double* dt, double* input_time){
         if(i==2){
             fscanf(f, "%*s %*s %*s %*s %*s %*s %lf", input_time);
         }
-        // if(i==3){
-        //     fscanf(f, "%*s %s", &aircraft_data_folder);
-        // }
+        if(i==3){
+            fscanf(f, "%*s %*s %*s %*s %*s %*s %*s %*s %*s %s", aircraft_data_folder);
+        }
     }
 
     if (fclose(f) != 0 ) {
@@ -36,10 +37,16 @@ int read_file(int* sim_time, double* dt, double* input_time){
 }
 
 
-int print_test(int sim_time, double dt, double input_time){
+int print_test(int sim_time, double dt, double input_time, char aircraft_data_folder[100]){
     printf("%d\n", sim_time);
     printf("%f\n", dt);
     printf("%f\n", input_time);
+    printf("%s\n", aircraft_data_folder);
+
+    char scout_data[] = "scout_state_matrices.txt";
+
+    strcat(aircraft_data_folder, scout_data);
+    printf("%s\n", aircraft_data_folder);
 
     return 0;
 }
@@ -49,14 +56,11 @@ int main(void){
     int sim_time=0;
     double dt=0;
     double input_time=0;
+    char aircraft_data_folder[100];
 
-    read_file(&sim_time, &dt, &input_time);
+    read_file(&sim_time, &dt, &input_time, aircraft_data_folder);
 
-    printf("%d\n", sim_time);
-    printf("%f\n", dt);
-    printf("%f\n", input_time);
-
-    print_test(sim_time, dt, input_time);
+    print_test(sim_time, dt, input_time, aircraft_data_folder);
 
     return 0;
 }

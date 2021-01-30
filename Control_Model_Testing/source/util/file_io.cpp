@@ -5,7 +5,8 @@
 Reads in the simulation settings from sim_settings.txt. The text file should be
 placed in the same folder as the executable.
 */
-int read_sim_settings(int* sim_time, double* dt, double* input_time){
+int read_sim_settings(int* sim_time, double* dt, double* input_time,
+                      char aircraft_data_folder_dir[200]){
     int i;
     FILE *f;
 
@@ -24,9 +25,10 @@ int read_sim_settings(int* sim_time, double* dt, double* input_time){
         if(i==2){
             fscanf(f, "%*s %*s %*s %*s %*s %*s %lf", input_time);
         }
-        // if(i==3){
-        //     fscanf(f, "%*s %s", &aircraft_data_folder);
-        // }
+        if(i==3){
+            fscanf(f, "%*s %*s %*s %*s %*s %*s %*s %*s %*s %s",
+                   aircraft_data_folder_dir);
+        }
     }
 
     if (fclose(f) != 0 ) {
@@ -107,16 +109,28 @@ Gets the aircraft state space matrices for the Scout and the target aircraft.
 int get_aircraft_state_space_matrices(double A_sc[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
                                       double B_sc[STATE_SPACE_MATRIX_SIZE],
                                       double A_t[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
-                                      double B_t[STATE_SPACE_MATRIX_SIZE]){
+                                      double B_t[STATE_SPACE_MATRIX_SIZE],
+                                      char aircraft_data_folder_dir[200]){
     /* File directories for aircraft data files */
-    char data_relative_dir_scout[] = "aircraft_data//scout_state_matrices.txt";
-    char data_relative_dir_target[] = "aircraft_data//target_state_matrices.txt"; 
+    char data_dir_scout[200];
+    char data_dir_target[200];
+    /* File names for aircraft data files */
+    char scout_file[] = "scout_state_matrices.txt";
+    char target_file[] = "target_state_matrices.txt";
 
-    /* Get aircraft state space matrices */
-    read_state_space_matrices_from_file(A_sc, B_sc,
-        data_relative_dir_scout);
-    read_state_space_matrices_from_file(A_t, B_t,
-        data_relative_dir_target);
+    /* Copy the aircraft data folder directory */
+    strcpy(data_dir_scout, aircraft_data_folder_dir);
+    strcpy(data_dir_target, aircraft_data_folder_dir);
+
+    /* Create the directory to each aircraft data file by concatenating the
+    file directory to the aircraft data files and the name of the aircraft data
+    file */
+    strcat(data_dir_scout, scout_file);
+    strcat(data_dir_target, target_file);
+
+    /* Get the aircraft state space matrices */
+    read_state_space_matrices_from_file(A_sc, B_sc, data_dir_scout);
+    read_state_space_matrices_from_file(A_t, B_t, data_dir_target);
 
     return 0;
 }
