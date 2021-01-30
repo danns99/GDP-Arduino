@@ -2,7 +2,7 @@
 #define NUMERICAL_ODE_SOLVERS_H
 
 #include "state_space_equation.h"
-#include "..\\controller\\PID_controller.h"
+#include "..\\control\\PID_controller.h"
 
 
 double* xdot_solve(double* x_dot,

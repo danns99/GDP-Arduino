@@ -16,18 +16,18 @@
 },
 {
   "directory": "D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Testing/build/source",
-  "command": "C:\\MinGW\\bin\\g++.exe  -DSTATE_SPACE_MATRIX_SIZE=4  -g   -std=gnu++14 -o CMakeFiles\\sim_runner.dir\\control_model\\Control_Model.cpp.obj -c \"D:\\Andrew\\Documents\\Andrew University\\Part IV\\GDP\\GDP-Arduino\\Control_Model_Testing\\source\\control_model\\Control_Model.cpp\"",
-  "file": "D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Testing/source/control_model/Control_Model.cpp"
+  "command": "C:\\MinGW\\bin\\g++.exe  -DSTATE_SPACE_MATRIX_SIZE=4  -g   -std=gnu++14 -o CMakeFiles\\sim_runner.dir\\control\\Control_Model.cpp.obj -c \"D:\\Andrew\\Documents\\Andrew University\\Part IV\\GDP\\GDP-Arduino\\Control_Model_Testing\\source\\control\\Control_Model.cpp\"",
+  "file": "D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Testing/source/control/Control_Model.cpp"
 },
 {
   "directory": "D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Testing/build/source",
-  "command": "C:\\MinGW\\bin\\g++.exe  -DSTATE_SPACE_MATRIX_SIZE=4  -g   -std=gnu++14 -o CMakeFiles\\sim_runner.dir\\controller\\PID_controller.cpp.obj -c \"D:\\Andrew\\Documents\\Andrew University\\Part IV\\GDP\\GDP-Arduino\\Control_Model_Testing\\source\\controller\\PID_controller.cpp\"",
-  "file": "D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Testing/source/controller/PID_controller.cpp"
+  "command": "C:\\MinGW\\bin\\g++.exe  -DSTATE_SPACE_MATRIX_SIZE=4  -g   -std=gnu++14 -o CMakeFiles\\sim_runner.dir\\control\\PID_controller.cpp.obj -c \"D:\\Andrew\\Documents\\Andrew University\\Part IV\\GDP\\GDP-Arduino\\Control_Model_Testing\\source\\control\\PID_controller.cpp\"",
+  "file": "D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Testing/source/control/PID_controller.cpp"
 },
 {
   "directory": "D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Testing/build/source",
-  "command": "C:\\MinGW\\bin\\g++.exe  -DSTATE_SPACE_MATRIX_SIZE=4  -g   -std=gnu++14 -o CMakeFiles\\sim_runner.dir\\control_loop\\control_loop.cpp.obj -c \"D:\\Andrew\\Documents\\Andrew University\\Part IV\\GDP\\GDP-Arduino\\Control_Model_Testing\\source\\control_loop\\control_loop.cpp\"",
-  "file": "D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Testing/source/control_loop/control_loop.cpp"
+  "command": "C:\\MinGW\\bin\\g++.exe  -DSTATE_SPACE_MATRIX_SIZE=4  -g   -std=gnu++14 -o CMakeFiles\\sim_runner.dir\\control\\control_loop.cpp.obj -c \"D:\\Andrew\\Documents\\Andrew University\\Part IV\\GDP\\GDP-Arduino\\Control_Model_Testing\\source\\control\\control_loop.cpp\"",
+  "file": "D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Testing/source/control/control_loop.cpp"
 },
 {
   "directory": "D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Testing/build/source",

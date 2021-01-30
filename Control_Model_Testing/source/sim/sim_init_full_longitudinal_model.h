@@ -2,7 +2,7 @@
 #define SIM_INIT_FULL_LONGITUDINAL_MODEL_H
 
 #include "..//util//memory_management.h"
-#include "..//control_model/Control_Model.h"
+#include "..//control/Control_Model.h"
 #include "..//util//file_io.h"
 
 

@@ -124,86 +124,86 @@ sim_runner/fast:
 	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/build
 .PHONY : sim_runner/fast
 
-control_loop/control_loop.obj: control_loop/control_loop.cpp.obj
+control/Control_Model.obj: control/Control_Model.cpp.obj
 
-.PHONY : control_loop/control_loop.obj
-
-# target to build an object file
-control_loop/control_loop.cpp.obj:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control_loop/control_loop.cpp.obj
-.PHONY : control_loop/control_loop.cpp.obj
-
-control_loop/control_loop.i: control_loop/control_loop.cpp.i
-
-.PHONY : control_loop/control_loop.i
-
-# target to preprocess a source file
-control_loop/control_loop.cpp.i:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control_loop/control_loop.cpp.i
-.PHONY : control_loop/control_loop.cpp.i
-
-control_loop/control_loop.s: control_loop/control_loop.cpp.s
-
-.PHONY : control_loop/control_loop.s
-
-# target to generate assembly for a file
-control_loop/control_loop.cpp.s:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control_loop/control_loop.cpp.s
-.PHONY : control_loop/control_loop.cpp.s
-
-control_model/Control_Model.obj: control_model/Control_Model.cpp.obj
-
-.PHONY : control_model/Control_Model.obj
+.PHONY : control/Control_Model.obj
 
 # target to build an object file
-control_model/Control_Model.cpp.obj:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control_model/Control_Model.cpp.obj
-.PHONY : control_model/Control_Model.cpp.obj
+control/Control_Model.cpp.obj:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control/Control_Model.cpp.obj
+.PHONY : control/Control_Model.cpp.obj
 
-control_model/Control_Model.i: control_model/Control_Model.cpp.i
+control/Control_Model.i: control/Control_Model.cpp.i
 
-.PHONY : control_model/Control_Model.i
+.PHONY : control/Control_Model.i
 
 # target to preprocess a source file
-control_model/Control_Model.cpp.i:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control_model/Control_Model.cpp.i
-.PHONY : control_model/Control_Model.cpp.i
+control/Control_Model.cpp.i:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control/Control_Model.cpp.i
+.PHONY : control/Control_Model.cpp.i
 
-control_model/Control_Model.s: control_model/Control_Model.cpp.s
+control/Control_Model.s: control/Control_Model.cpp.s
 
-.PHONY : control_model/Control_Model.s
+.PHONY : control/Control_Model.s
 
 # target to generate assembly for a file
-control_model/Control_Model.cpp.s:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control_model/Control_Model.cpp.s
-.PHONY : control_model/Control_Model.cpp.s
+control/Control_Model.cpp.s:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control/Control_Model.cpp.s
+.PHONY : control/Control_Model.cpp.s
 
-controller/PID_controller.obj: controller/PID_controller.cpp.obj
+control/PID_controller.obj: control/PID_controller.cpp.obj
 
-.PHONY : controller/PID_controller.obj
+.PHONY : control/PID_controller.obj
 
 # target to build an object file
-controller/PID_controller.cpp.obj:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/controller/PID_controller.cpp.obj
-.PHONY : controller/PID_controller.cpp.obj
+control/PID_controller.cpp.obj:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control/PID_controller.cpp.obj
+.PHONY : control/PID_controller.cpp.obj
 
-controller/PID_controller.i: controller/PID_controller.cpp.i
+control/PID_controller.i: control/PID_controller.cpp.i
 
-.PHONY : controller/PID_controller.i
+.PHONY : control/PID_controller.i
 
 # target to preprocess a source file
-controller/PID_controller.cpp.i:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/controller/PID_controller.cpp.i
-.PHONY : controller/PID_controller.cpp.i
+control/PID_controller.cpp.i:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control/PID_controller.cpp.i
+.PHONY : control/PID_controller.cpp.i
 
-controller/PID_controller.s: controller/PID_controller.cpp.s
+control/PID_controller.s: control/PID_controller.cpp.s
 
-.PHONY : controller/PID_controller.s
+.PHONY : control/PID_controller.s
 
 # target to generate assembly for a file
-controller/PID_controller.cpp.s:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/controller/PID_controller.cpp.s
-.PHONY : controller/PID_controller.cpp.s
+control/PID_controller.cpp.s:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control/PID_controller.cpp.s
+.PHONY : control/PID_controller.cpp.s
+
+control/control_loop.obj: control/control_loop.cpp.obj
+
+.PHONY : control/control_loop.obj
+
+# target to build an object file
+control/control_loop.cpp.obj:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control/control_loop.cpp.obj
+.PHONY : control/control_loop.cpp.obj
+
+control/control_loop.i: control/control_loop.cpp.i
+
+.PHONY : control/control_loop.i
+
+# target to preprocess a source file
+control/control_loop.cpp.i:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control/control_loop.cpp.i
+.PHONY : control/control_loop.cpp.i
+
+control/control_loop.s: control/control_loop.cpp.s
+
+.PHONY : control/control_loop.s
+
+# target to generate assembly for a file
+control/control_loop.cpp.s:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control/control_loop.cpp.s
+.PHONY : control/control_loop.cpp.s
 
 sim/sim_init_full_logitudinal_model.obj: sim/sim_init_full_logitudinal_model.cpp.obj
 
@@ -376,15 +376,15 @@ help:
 	@echo ... sim_runner
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... control_loop/control_loop.obj
-	@echo ... control_loop/control_loop.i
-	@echo ... control_loop/control_loop.s
-	@echo ... control_model/Control_Model.obj
-	@echo ... control_model/Control_Model.i
-	@echo ... control_model/Control_Model.s
-	@echo ... controller/PID_controller.obj
-	@echo ... controller/PID_controller.i
-	@echo ... controller/PID_controller.s
+	@echo ... control/Control_Model.obj
+	@echo ... control/Control_Model.i
+	@echo ... control/Control_Model.s
+	@echo ... control/PID_controller.obj
+	@echo ... control/PID_controller.i
+	@echo ... control/PID_controller.s
+	@echo ... control/control_loop.obj
+	@echo ... control/control_loop.i
+	@echo ... control/control_loop.s
 	@echo ... sim/sim_init_full_logitudinal_model.obj
 	@echo ... sim/sim_init_full_logitudinal_model.i
 	@echo ... sim/sim_init_full_logitudinal_model.s

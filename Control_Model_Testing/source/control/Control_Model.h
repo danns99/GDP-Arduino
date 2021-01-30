@@ -7,8 +7,8 @@
 #include "..\\util\\file_io.h"
 #include "..\\util\\memory_management.h"
 #include "..\\sim\\sim_init_full_longitudinal_model.h"
-#include "..\\controller\\PID_controller.h"
-#include "..\\control_loop\\control_loop.h"
+#include "PID_controller.h"
+#include "control_loop.h"
 #include "..\\state_space_equations\\state_space_equation.h"
 #include "..\\state_space_equations\\numerical_ode_solvers.h"
 
