@@ -1,5 +1,5 @@
 /*#include <sim_runner.h>*/
-#include "sim\\sim_init_full_longitudinal_model.h"
+#include "sim_runner.h"
 
 
 int main(void){

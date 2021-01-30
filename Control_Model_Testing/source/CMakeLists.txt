@@ -17,6 +17,7 @@ file(GLOB_RECURSE state_space_equations_SOURCE_FILES
 file(GLOB_RECURSE sim_SOURCE_FILES
         "sim/*.h" "sim/*.cpp")
 
-add_executable(sim_runner sim_runner.cpp ${util_SOURCE_FILES}
+add_executable(sim_runner  ${util_SOURCE_FILES}
                 ${control_SOURCE_FILES} ${state_space_equations_SOURCE_FILES}
                 ${sim_SOURCE_FILES})
+#sim_runner.cpp

@@ -124,33 +124,6 @@ sim_runner/fast:
 	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/build
 .PHONY : sim_runner/fast
 
-control/Control_Model.obj: control/Control_Model.cpp.obj
-
-.PHONY : control/Control_Model.obj
-
-# target to build an object file
-control/Control_Model.cpp.obj:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control/Control_Model.cpp.obj
-.PHONY : control/Control_Model.cpp.obj
-
-control/Control_Model.i: control/Control_Model.cpp.i
-
-.PHONY : control/Control_Model.i
-
-# target to preprocess a source file
-control/Control_Model.cpp.i:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control/Control_Model.cpp.i
-.PHONY : control/Control_Model.cpp.i
-
-control/Control_Model.s: control/Control_Model.cpp.s
-
-.PHONY : control/Control_Model.s
-
-# target to generate assembly for a file
-control/Control_Model.cpp.s:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control/Control_Model.cpp.s
-.PHONY : control/Control_Model.cpp.s
-
 control/PID_controller.obj: control/PID_controller.cpp.obj
 
 .PHONY : control/PID_controller.obj
@@ -205,6 +178,33 @@ control/control_loop.cpp.s:
 	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/control/control_loop.cpp.s
 .PHONY : control/control_loop.cpp.s
 
+sim/sim.obj: sim/sim.cpp.obj
+
+.PHONY : sim/sim.obj
+
+# target to build an object file
+sim/sim.cpp.obj:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/sim/sim.cpp.obj
+.PHONY : sim/sim.cpp.obj
+
+sim/sim.i: sim/sim.cpp.i
+
+.PHONY : sim/sim.i
+
+# target to preprocess a source file
+sim/sim.cpp.i:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/sim/sim.cpp.i
+.PHONY : sim/sim.cpp.i
+
+sim/sim.s: sim/sim.cpp.s
+
+.PHONY : sim/sim.s
+
+# target to generate assembly for a file
+sim/sim.cpp.s:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/sim/sim.cpp.s
+.PHONY : sim/sim.cpp.s
+
 sim/sim_init_full_logitudinal_model.obj: sim/sim_init_full_logitudinal_model.cpp.obj
 
 .PHONY : sim/sim_init_full_logitudinal_model.obj
@@ -232,32 +232,32 @@ sim/sim_init_full_logitudinal_model.cpp.s:
 	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/sim/sim_init_full_logitudinal_model.cpp.s
 .PHONY : sim/sim_init_full_logitudinal_model.cpp.s
 
-sim_runner.obj: sim_runner.cpp.obj
+sim/sim_runner.obj: sim/sim_runner.cpp.obj
 
-.PHONY : sim_runner.obj
+.PHONY : sim/sim_runner.obj
 
 # target to build an object file
-sim_runner.cpp.obj:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/sim_runner.cpp.obj
-.PHONY : sim_runner.cpp.obj
+sim/sim_runner.cpp.obj:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/sim/sim_runner.cpp.obj
+.PHONY : sim/sim_runner.cpp.obj
 
-sim_runner.i: sim_runner.cpp.i
+sim/sim_runner.i: sim/sim_runner.cpp.i
 
-.PHONY : sim_runner.i
+.PHONY : sim/sim_runner.i
 
 # target to preprocess a source file
-sim_runner.cpp.i:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/sim_runner.cpp.i
-.PHONY : sim_runner.cpp.i
+sim/sim_runner.cpp.i:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/sim/sim_runner.cpp.i
+.PHONY : sim/sim_runner.cpp.i
 
-sim_runner.s: sim_runner.cpp.s
+sim/sim_runner.s: sim/sim_runner.cpp.s
 
-.PHONY : sim_runner.s
+.PHONY : sim/sim_runner.s
 
 # target to generate assembly for a file
-sim_runner.cpp.s:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/sim_runner.cpp.s
-.PHONY : sim_runner.cpp.s
+sim/sim_runner.cpp.s:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/sim/sim_runner.cpp.s
+.PHONY : sim/sim_runner.cpp.s
 
 state_space_equations/numerical_ode_solvers.obj: state_space_equations/numerical_ode_solvers.cpp.obj
 
@@ -376,21 +376,21 @@ help:
 	@echo ... sim_runner
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... control/Control_Model.obj
-	@echo ... control/Control_Model.i
-	@echo ... control/Control_Model.s
 	@echo ... control/PID_controller.obj
 	@echo ... control/PID_controller.i
 	@echo ... control/PID_controller.s
 	@echo ... control/control_loop.obj
 	@echo ... control/control_loop.i
 	@echo ... control/control_loop.s
+	@echo ... sim/sim.obj
+	@echo ... sim/sim.i
+	@echo ... sim/sim.s
 	@echo ... sim/sim_init_full_logitudinal_model.obj
 	@echo ... sim/sim_init_full_logitudinal_model.i
 	@echo ... sim/sim_init_full_logitudinal_model.s
-	@echo ... sim_runner.obj
-	@echo ... sim_runner.i
-	@echo ... sim_runner.s
+	@echo ... sim/sim_runner.obj
+	@echo ... sim/sim_runner.i
+	@echo ... sim/sim_runner.s
 	@echo ... state_space_equations/numerical_ode_solvers.obj
 	@echo ... state_space_equations/numerical_ode_solvers.i
 	@echo ... state_space_equations/numerical_ode_solvers.s
