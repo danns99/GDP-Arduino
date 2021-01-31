@@ -2,7 +2,7 @@
 This is a repository for all of the Arduino code for GDP Group 52 - Variable Stability Demonstrator
 
 ## Control Model Testing
-The Control_Model_Testing folder contains the code for implementing and testing the control model in C.
+The `Control_Model_Testing` folder contains the code for implementing and testing the control model in C.
 
 ### Source
 #### Code
@@ -45,7 +45,7 @@ The simulation takes as input 3 files:
   The aircraft data files should be placed in the same folder.
   The directory to this folder needs to be included in `sim_settings.txt`.
 
-The simulation outputs the results to `data.txt`.
+The simulation outputs the results to `test_data.txt`.
 The format of the output is:
 ```
 time scout_data target_data modified_scout_data
@@ -59,7 +59,7 @@ horizontal_velocity _vertical_velocity pitch_rate pitch_angle
 At each level in the directory of the project there is a `CMakeLists.txt` file which is used for building the executable.
 `CMakeLists.txt` in `source` contains the instructions for building an executable.
 The preprocessor definition `STATE_SPACE_MATRIX_SIZE` is used for determining what system of state-space matrices are used when building and running a simulation target:
-- `4`: Full state-space longitudinal equations are used
+- `4`: The full state-space longitudinal equations are used
 - `2`: The Short Period Oscillation (SPO) approximation of the state-space matrices is used.
 
 The SPO approximation reduces the full longitudinal model state matrices to:
