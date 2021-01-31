@@ -2,9 +2,9 @@
 
 
 /*
-Returns a storage array for the state values which are solved during the
-simulation
-*/
+ Returns a storage array for the state values which are solved during the
+ simulation
+ */
 double** memory_allocation_for_storage_arrays(int sim_time, double dt){
     int i;
     double **x_store;
@@ -30,8 +30,8 @@ double** memory_allocation_for_storage_arrays(int sim_time, double dt){
 
 
 /*
-Frees the memory of used by the storage arrays.
-*/
+ Frees the memory of used by the storage arrays.
+ */
 void destroy_arrays(double** array){
     free(*array);
     free(array);

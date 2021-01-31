@@ -2,9 +2,9 @@
 
 
 /*
-Reads in the simulation settings from sim_settings.txt. The text file should be
-placed in the same folder as the executable.
-*/
+ Reads in the simulation settings from sim_settings.txt. The text file should be
+ placed in the same folder as the executable.
+ */
 int read_sim_settings(int* sim_time, double* dt, double* input_time,
                       char aircraft_data_folder_dir[200]){
     int i;
@@ -41,9 +41,9 @@ int read_sim_settings(int* sim_time, double* dt, double* input_time,
 
 
 /* 
-Reads in the aircraft state space matrix from a text file. Then writes the
-data to arrays A and B which are passed to the function.
-*/
+ Reads in the aircraft state space matrix from a text file. Then writes the
+ data to arrays A and B which are passed to the function.
+ */
 int read_state_space_matrices_from_file(double A[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
                                         double B[STATE_SPACE_MATRIX_SIZE],
                                         char* file_dir){
@@ -103,8 +103,8 @@ int read_state_space_matrices_from_file(double A[STATE_SPACE_MATRIX_SIZE][STATE_
 
 
 /*
-Gets the aircraft state space matrices for the Scout and the target aircraft.
-*/
+ Gets the aircraft state space matrices for the Scout and the target aircraft.
+ */
 int get_aircraft_state_space_matrices(double A_sc[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
                                       double B_sc[STATE_SPACE_MATRIX_SIZE],
                                       double A_t[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
@@ -136,8 +136,8 @@ int get_aircraft_state_space_matrices(double A_sc[STATE_SPACE_MATRIX_SIZE][STATE
 
 
 /*
-Writes the simulation data to a text file at the end of the simulation.
-*/
+ Writes the simulation data to a text file at the end of the simulation.
+ */
 int write_sim_data_to_file(int steps, double dt, double **x_sc_store,
                            double **x_t_store, double **x_sc_mod_store){
     int i;
@@ -169,9 +169,9 @@ int write_sim_data_to_file(int steps, double dt, double **x_sc_store,
 
 
 /*
-Stores data for the states of the target, Scout and modified Scout
-aircraft at the end of the timestep
-*/
+ Stores data for the states of the target, Scout and modified Scout
+ aircraft at the end of the timestep
+ */
 int store_timestep_data(int steps, double *x_sc, double *x_t, double *x_sc_mod,
                         double **x_sc_store, double **x_t_store,
                         double **x_sc_mod_store){

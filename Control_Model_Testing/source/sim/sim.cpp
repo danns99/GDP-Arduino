@@ -2,8 +2,8 @@
 
 
 /*
-Runs the simulation
-*/
+ Runs the simulation
+ */
 int run_sim(int sim_time, double input_time, double dt, int steps,
             double *u, double u_old, double *x_sc, double *x_t,
             double *x_sc_mod, double *xdot_sc_store, double *xdot_t_store,

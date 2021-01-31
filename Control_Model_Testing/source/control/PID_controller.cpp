@@ -2,19 +2,19 @@
 
 
 /*
-Calculates and returns the error between the output of the target aircraft and
-the output of the modified Sherwood Scout.
-*/
+ Calculates and returns the error between the output of the target aircraft and
+ the output of the modified Sherwood Scout.
+ */
 double error_signal(double target_input, double error_from_system_output){
     return (target_input - error_from_system_output);
 }
 
 
 /*
-Calculates and returns the proportional (P) integral (I) and derivative (D)
-gains using the current error, the previous error and the timestep size. The PID
-gains were determined using MATLAB's response optimizer.
-*/
+ Calculates and returns the proportional (P) integral (I) and derivative (D)
+ gains using the current error, the previous error and the timestep size. The
+ PID gains were determined using MATLAB's response optimizer.
+ */
 double PID_controller(double error, double *error_prior, double iteration_time){
     double proportional_term;
     double integral_term=0;

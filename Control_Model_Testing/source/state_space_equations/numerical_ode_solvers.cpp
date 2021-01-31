@@ -2,9 +2,9 @@
 
 
 /*
-Calculates and returns the derivative of x with respect to time for the
-state-space system using a fourth-order Runge-Kutta scheme.
-*/
+ Calculates and returns the derivative of x with respect to time for the
+ state-space system using a fourth-order Runge-Kutta scheme.
+ */
 double* xdot_solve(double* x_dot,
                    double A[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
                    double B[STATE_SPACE_MATRIX_SIZE],
