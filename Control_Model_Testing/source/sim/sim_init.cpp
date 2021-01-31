@@ -50,8 +50,7 @@ int init_sim(void){
 
     /* Run the simulation */
     run_sim(sim_time, input_time, dt, steps, u, u_old, x_sc, x_t, x_sc_mod,
-            xdot_sc_store, xdot_t_store,
-            xdot_sc_mod_store,  x_sc_store,
+            xdot_sc_store, xdot_t_store, xdot_sc_mod_store,  x_sc_store,
             x_t_store, x_sc_mod_store, u_into_modified_scout, error_prior, A_sc,
             B_sc, A_t, B_t);
 
