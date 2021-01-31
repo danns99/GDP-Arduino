@@ -2,9 +2,6 @@
 
 
 int init_sim(void){
-    int i;
-    FILE *f;
-
     /* Variables for simulation settings */
     int steps = 0;
     int sim_time = 0;
@@ -22,19 +19,12 @@ int init_sim(void){
     double x_sc[STATE_SPACE_MATRIX_SIZE] = {0};
     double x_t[STATE_SPACE_MATRIX_SIZE] = {0};
     double x_sc_mod[STATE_SPACE_MATRIX_SIZE] = {0};
-    double x_sc_old;
-    double x_t_old;
-    double x_sc_mod_old;
 
     /* x dot vectors */
     /* For storing data at the end of each timestep */
     double xdot_sc_store[STATE_SPACE_MATRIX_SIZE] = {0};
     double xdot_t_store[STATE_SPACE_MATRIX_SIZE] = {0};
     double xdot_sc_mod_store[STATE_SPACE_MATRIX_SIZE] = {0};
-    /* For use during the timestep */
-    double *xdot_sc;
-    double *xdot_t;
-    double *xdot_sc_mod;
 
     /* Arrays for storing the aircraft data for all timesteps */
     double** x_sc_store = memory_allocation_for_storage_arrays(sim_time, dt); 
@@ -60,8 +50,8 @@ int init_sim(void){
 
     /* Run the simulation */
     run_sim(sim_time, input_time, dt, steps, u, u_old, x_sc, x_t, x_sc_mod,
-            x_sc_old, x_t_old, x_sc_mod_old, xdot_sc_store, xdot_t_store,
-            xdot_sc_mod_store, xdot_sc, xdot_t, xdot_sc_mod, x_sc_store,
+            xdot_sc_store, xdot_t_store,
+            xdot_sc_mod_store,  x_sc_store,
             x_t_store, x_sc_mod_store, u_into_modified_scout, error_prior, A_sc,
             B_sc, A_t, B_t);
 

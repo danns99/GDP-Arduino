@@ -12,7 +12,6 @@ double* xdot_solve(double* x_dot,
                    double u[STATE_SPACE_MATRIX_SIZE],
                    double dt){
     int i;
-    double error;
     double x_old;
     double K1;
     double K2;
@@ -64,7 +63,6 @@ double* xdot_solve_mod(double* x_dot,
                        double dt,
                        double q_out_of_target_aircraft, double *error_prior){
     int i;
-    double error;
     double x_old;
     double K1;
     double K2;

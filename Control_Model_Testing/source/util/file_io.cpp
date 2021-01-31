@@ -48,7 +48,6 @@ int read_state_space_matrices_from_file(double A[STATE_SPACE_MATRIX_SIZE][STATE_
                                         double B[STATE_SPACE_MATRIX_SIZE],
                                         char* file_dir){
     int i;
-    double buffer;
     FILE *f;
 
     if ((f=fopen(file_dir,"r"))==NULL) {
@@ -75,16 +74,16 @@ int read_state_space_matrices_from_file(double A[STATE_SPACE_MATRIX_SIZE][STATE_
             if (feof(f))
                 break;
             if(i==0 || i==3){
-                fscanf(f, "%*lf %*lf %*lf %*lf");
+                fscanf(f, "%*f %*f %*f %*f");
             }
             if (i==1){
-                fscanf(f, "%*lf %lf %lf %*lf", &(A[0][0]), &(A[0][1]));
+                fscanf(f, "%*f %lf %lf %*f", &(A[0][0]), &(A[0][1]));
             }
             if (i==2){
-                fscanf(f, "%*lf %lf %lf %*lf", &(A[1][0]), &(A[1][1]));
+                fscanf(f, "%*f %lf %lf %*f", &(A[1][0]), &(A[1][1]));
             }
             if (i>6){
-                fscanf(f, "%*lf %lf %lf %*lf", &(B[0]), &(B[1]));
+                fscanf(f, "%*f %lf %lf %*f", &(B[0]), &(B[1]));
             }
         }
     }

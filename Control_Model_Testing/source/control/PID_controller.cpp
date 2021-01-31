@@ -17,7 +17,7 @@ gains were determined using MATLAB's response optimizer.
 */
 double PID_controller(double error, double *error_prior, double iteration_time){
     double proportional_term;
-    double integral_term;
+    double integral_term=0;
     double derivative_term;
     double K_p = -98.687493079853600;
     double K_i = -19.396423994327110;
