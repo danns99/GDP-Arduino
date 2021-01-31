@@ -1,6 +1,9 @@
 #include "control_loop.h"
 
 
+/*
+ Runs the main control loop.
+ */
 int run_control_loop(double dt, double *u, double *u_into_modified_scout,
                      double A_sc[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
                      double *B_sc, double *x_sc,

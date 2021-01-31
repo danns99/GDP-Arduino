@@ -2,7 +2,7 @@
 
 
 /*
- Calculates and returns the state-space equation solution
+ Calculates and returns the state-space equation solution.
  */
 double state_space_function(int i, double y_option,
                             double A[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],

@@ -3,7 +3,7 @@
 
 /*
  Returns a storage array for the state values which are solved during the
- simulation
+ simulation.
  */
 double** memory_allocation_for_storage_arrays(int sim_time, double dt){
     int i;

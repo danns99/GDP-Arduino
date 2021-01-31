@@ -1,6 +1,10 @@
 #include "sim_init.h"
 
 
+/*
+ Initialises variables used by the simulation and calls the function run_sim to
+ run the simulation.
+ */
 int init_sim(void){
     /* Variables for simulation settings */
     int steps = 0;
