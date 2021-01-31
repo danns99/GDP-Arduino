@@ -61,3 +61,7 @@ At each level in the directory of the project there is a `CMakeLists.txt` file w
 The preprocessor definition `STATE_SPACE_MATRIX_SIZE` is used for determining what system of state-space matrices are used when building and running a simulation target:
 - `4`: Full state-space longitudinal equations are used
 - `2`: The Short Period Oscillation (SPO) approximation of the state-space matrices is used.
+
+The SPO approximation reduces the full longitudinal model state matrices to:
+
+<img src="https://latex.codecogs.com/svg.latex?\begin{bmatrix}\mathring{Z_w}%20&%20\mathring{Z_q}+mU_\infty%20\\\mathring{M_w}%20&%20\mathring{M_q}%20\\\end{bmatrix}\begin{bmatrix}w%20\\q\end{bmatrix}" title="SPO_matrices" />
