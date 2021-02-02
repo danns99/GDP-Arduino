@@ -22,7 +22,7 @@ int run_sim(int sim_time, double input_time, double dt, int steps,
         if((-tol_difference <= difference) && (difference <= tol_difference)){
             printf("here\n");
             u_old = u[0];
-            u[0] = u_old + 0.1;
+            u[0] = u_old + 0.2618;  // 15 * pi/180 radians
         }
 
         /* Run the control loop */
