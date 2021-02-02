@@ -15,9 +15,9 @@ class sim_analysis():
     output from the simulation.
     '''
 
-    def __init__(self, simulation_executable, filename):
+    def __init__(self, simulation_executable, data_filename):
         self.simulation_executable = simulation_executable
-        self.filename = filename
+        self.data_filename = data_filename
 
         # Initialse arrays for storing data
         self.times = []
@@ -49,7 +49,7 @@ class sim_analysis():
         '''
 
         # Open the file and read in the data
-        with open(self.filename, 'r') as f:
+        with open(self.data_filename, 'r') as f:
             # read in data line by line into the 1D array lines
             lines = f.readlines()
 
@@ -58,7 +58,7 @@ class sim_analysis():
                 # Read in the discrete time values
                 self.times.append(float(line.split(' ')[0]))
 
-                if self.filename == "test_data_full_model.txt":
+                if self.data_filename == "test_data_full_model.txt":
                     # Read in the values for the Scout
                     self.horizontal_velocities_sc.append(
                             float(line.split(' ')[1]))
@@ -82,7 +82,7 @@ class sim_analysis():
                             float(line.split(' ')[10]))
                     self.pitch_rates_sc_mod.append(float(line.split(' ')[11]))
                     self.pitch_angles_sc_mod.append(float(line.split(' ')[12]))
-                if self.filename == "test_data_spo_model.txt":
+                if self.data_filename == "test_data_spo_model.txt":
                     # Read in the values for the Scout
                     self.vertical_velocities_sc.append(
                             float(line.split(' ')[1]))
@@ -110,7 +110,7 @@ class sim_analysis():
         # Create subplot of 4 plots, organised in 2 rows and 2 columns
         fig, axs = plt.subplots(2, 2)
 
-        if self.filename == "test_data_spo_model.txt":
+        if self.data_filename == "test_data_spo_model.txt":
             # Plot vertical velocities
             axs[0][1].plot(self.times, self.vertical_velocities_sc, 'k',
                            label="Scout")
@@ -132,7 +132,7 @@ class sim_analysis():
             axs[1][0].set_ylabel(r"$q$ ($rad/s$)")
             axs[1][0].legend()
 
-        if self.filename == "test_data_full_model.txt":
+        if self.data_filename == "test_data_full_model.txt":
             # Plot vertical velocities
             axs[0][1].plot(self.times, self.vertical_velocities_sc, 'k',
                            label="Scout")
@@ -207,7 +207,7 @@ full_model_results.data_plotting()  # Plot the data from the simulation
 full_model_results.calc_error()  # Error between modified Scout and target
 # --------------------------------------------------------------------------- #
 
-# Analyse the results for the full longitudinal model
+# Analyse the results for the SPO model
 # --------------------------------------------------------------------------- #
 spo_model_results = sim_analysis(data_dir + "sim_runner_spo_model",
                                  "test_data_spo_model.txt")
