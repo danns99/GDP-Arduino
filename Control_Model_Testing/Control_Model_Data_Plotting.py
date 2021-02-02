@@ -7,6 +7,9 @@ plt.rcParams.update({'font.size': 15})  # Set matplotlib font size
 # --------------------------------------------------------------------------- #
 
 
+data_dir = ".//build//source//"
+
+
 # --------------------------------------------------------------------------- #
 class sim_analysis():
     '''
@@ -194,25 +197,33 @@ class sim_analysis():
 # --------------------------------------------------------------------------- #
 
 
-data_dir = ".//build//source//"
+# Functions
+# --------------------------------------------------------------------------- #
+def full_model_sim():
+    '''
+    Analyses the results for the full longitudinal model.
+    '''
+    full_model_results = sim_analysis(data_dir +
+                                      "sim_runner_full_longitudinal_model",
+                                      "test_data_full_model.txt")
+    full_model_results.run_simulation()  # Run the external simulation code
+    full_model_results.file_read()  # Read in the data from the simulation run
+    full_model_results.data_plotting()  # Plot the data from the simulation
+    full_model_results.calc_error()  # Error between modified Scout and target
 
-# Analyse the results for the full longitudinal model
-# --------------------------------------------------------------------------- #
-full_model_results = sim_analysis(data_dir +
-                                  "sim_runner_full_longitudinal_model",
-                                  "test_data_full_model.txt")
-full_model_results.run_simulation()  # Run the external simulation code
-full_model_results.file_read()  # Read in the data from the simulation run
-full_model_results.data_plotting()  # Plot the data from the simulation
-full_model_results.calc_error()  # Error between modified Scout and target
+
+def spo_model_sim():
+    '''
+    Analyses the results for the SPO model.
+    '''
+    spo_model_results = sim_analysis(data_dir + "sim_runner_spo_model",
+                                     "test_data_spo_model.txt")
+    spo_model_results.run_simulation()  # Run the external simulation code
+    spo_model_results.file_read()  # Read in the data from the simulation run
+    spo_model_results.data_plotting()  # Plot the data from the simulation
+    spo_model_results.calc_error()  # Error between modified Scout and target
 # --------------------------------------------------------------------------- #
 
-# Analyse the results for the SPO model
-# --------------------------------------------------------------------------- #
-spo_model_results = sim_analysis(data_dir + "sim_runner_spo_model",
-                                 "test_data_spo_model.txt")
-spo_model_results.run_simulation()  # Run the external simulation code
-spo_model_results.file_read()  # Read in the data from the simulation run
-spo_model_results.data_plotting()  # Plot the data from the simulation
-spo_model_results.calc_error()  # Error between modified Scout and target
-# --------------------------------------------------------------------------- #
+
+full_model_sim()
+spo_model_sim()
