@@ -51,12 +51,12 @@ double* xdot_solve_backward_euler(double* x_dot,
     double x_old;
     double error=0;
 
-    /* Use Euler's method to calculate start point */
     for(i=0; i<STATE_SPACE_MATRIX_SIZE; i++){
+        /* Use Euler's method to calculate start point */
         x_old = x[i];
         x_dot[i] = state_space_function(i, 0.0, A, B, x, u);
         x[i] = x_old + x_dot[i]*dt; 
-        while(error*error > 0.01){
+        while(error*error > 0.001){
             x_dot[i] = state_space_function(i, 0.0, A, B, x, u);
             x[i] = x_old + x_dot[i]*dt;
             x_old = x[i];
