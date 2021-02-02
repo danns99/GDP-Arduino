@@ -81,7 +81,7 @@ double* xdot_solve_mod(double* x_dot,
             and the modified Scout */
             u_from_error_sum = error_signal(q_out_of_target_aircraft, K1);
             /* Calculate the input to the modified Scout using the PID */
-            u[2] = PID_controller(u_from_error_sum, error_prior, dt);
+            u[2] = PD_controller(u_from_error_sum, error_prior, dt);
         }
         /* K2 = dt*(A*(x+K1/2)+B*u) */
         K2 = dt*state_space_function(i, K1/2.0, A, B, x, u);
@@ -91,7 +91,7 @@ double* xdot_solve_mod(double* x_dot,
             and the modified Scout */
             u_from_error_sum = error_signal(q_out_of_target_aircraft, K2);
             /* Calculate the input to the modified Scout using the PID */
-            u[2] = PID_controller(u_from_error_sum, error_prior, dt);
+            u[2] = PD_controller(u_from_error_sum, error_prior, dt);
         }
         /* K3 = dt*(A*(x+K2/2)+B*u) */
         K3 = dt*state_space_function(i, K2/2.0, A, B, x, u);
@@ -101,7 +101,7 @@ double* xdot_solve_mod(double* x_dot,
             and the modified Scout */
             u_from_error_sum = error_signal(q_out_of_target_aircraft, K3);
             /* Calculate the input to the modified Scout using the PID */
-            u[2] = PID_controller(u_from_error_sum, error_prior, dt);
+            u[2] = PD_controller(u_from_error_sum, error_prior, dt);
         }
         /* K4 = dt*(A*(x+K3)+B*u) */
         K4 = dt*state_space_function(i, K3, A, B, x, u);
