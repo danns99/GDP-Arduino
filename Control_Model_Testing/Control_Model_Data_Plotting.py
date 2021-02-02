@@ -9,6 +9,12 @@ plt.rcParams.update({'font.size': 15})  # Set matplotlib font size
 
 # --------------------------------------------------------------------------- #
 class sim_analysis():
+    '''
+    Provides functionality for analysing simulation results. Takes as input
+    strings for the simulation executable to run and the filename of the data
+    output from the simulation.
+    '''
+
     def __init__(self, simulation_executable, filename):
         self.simulation_executable = simulation_executable
         self.filename = filename
@@ -93,6 +99,14 @@ class sim_analysis():
                     self.pitch_rates_sc_mod.append(float(line.split(' ')[6]))
 
     def data_plotting(self):
+        '''
+        Plots the data read in from the simulation results. For the SPO results
+        only the vertical velocities and pitch rates are plotted. For the full
+        longitudinal model the vertical velocities, pitch rates, horizontal
+        velocities and pitch angles are plotted. Results are plotted for the
+        Scout, target aircraft and the modified Scout.
+        '''
+
         # Create subplot of 4 plots, organised in 2 rows and 2 columns
         fig, axs = plt.subplots(2, 2)
 
@@ -171,7 +185,7 @@ class sim_analysis():
 
     def calc_error(self):
         '''
-        Calculatea the average absolute error between the target aircraft and
+        Calculates the average absolute error between the target aircraft and
         the modified Scout.
         '''
         print(abs(sum([self.pitch_rates_t[i]-self.pitch_rates_sc_mod[i]
