@@ -143,9 +143,8 @@ int write_sim_data_to_file(int steps, double dt, double **x_sc_store,
     int i;
     FILE *f;
 
-    f=fopen("test_data.txt","w");
-
     if(STATE_SPACE_MATRIX_SIZE == 4){
+        f=fopen("test_data_full_model.txt","w");
         for(i=0; i<steps; i++){
             fprintf(f, "%f %f %f %f %f %f %f %f %f %f %f %f %f \n",
                     i*(dt), x_sc_store[i][0], x_sc_store[i][1], x_sc_store[i][2],
@@ -156,6 +155,7 @@ int write_sim_data_to_file(int steps, double dt, double **x_sc_store,
         }
     }
     if(STATE_SPACE_MATRIX_SIZE == 2){
+        f=fopen("test_data_spo_model.txt","w");
         for(i=0; i<steps; i++){
             fprintf(f, "%f %f %f %f %f %f %f \n",
                     i*(dt), x_sc_store[i][0], x_sc_store[i][1], x_t_store[i][0],
