@@ -4,9 +4,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_compile_options(-Wall -Wextra -pedantic -Werror)
 
-# Set to 4 for the full longitudinal model or 2 for the SPO approximation
-add_compile_definitions(STATE_SPACE_MATRIX_SIZE=4)
-
+# Group together source code files
 file(GLOB_RECURSE util_SOURCE_FILES
         "util/*.h" "util/*.cpp")
 
@@ -19,6 +17,17 @@ file(GLOB_RECURSE state_space_equations_SOURCE_FILES
 file(GLOB_RECURSE sim_SOURCE_FILES
         "sim/*.h" "sim/*.cpp")
 
-add_executable(sim_runner  ${util_SOURCE_FILES}
+# Executables
+add_executable(sim_runner_full_longitudinal_model  ${util_SOURCE_FILES}
                 ${control_SOURCE_FILES} ${state_space_equations_SOURCE_FILES}
                 ${sim_SOURCE_FILES})
+
+add_executable(sim_runner_SPO_model  ${util_SOURCE_FILES}
+                ${control_SOURCE_FILES} ${state_space_equations_SOURCE_FILES}
+                ${sim_SOURCE_FILES})
+
+# Set preprocessor compile definitions
+# Set STATE_SPACE_MATRIX_SIZE to 4 for the full longitudinal model or
+# 2 for the SPO approximation
+target_compile_definitions(sim_runner_full_longitudinal_model PUBLIC STATE_SPACE_MATRIX_SIZE=4)
+target_compile_definitions(sim_runner_SPO_model PUBLIC STATE_SPACE_MATRIX_SIZE=2)

@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "source/sim_runner.exe"
+			"path" : "source/sim_runner_SPO_model.exe"
 		},
 		{
-			"path" : "source/sim_runner.pdb"
+			"path" : "source/sim_runner_SPO_model.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -14,7 +14,7 @@
 		"commands" : 
 		[
 			"add_executable",
-			"add_compile_definitions"
+			"target_compile_definitions"
 		],
 		"files" : 
 		[
@@ -28,13 +28,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 22,
+				"line" : 25,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 8,
+				"line" : 33,
 				"parent" : 0
 			}
 		]
@@ -52,7 +52,7 @@
 			[
 				{
 					"backtrace" : 2,
-					"define" : "STATE_SPACE_MATRIX_SIZE=4"
+					"define" : "STATE_SPACE_MATRIX_SIZE=2"
 				}
 			],
 			"language" : "CXX",
@@ -70,7 +70,7 @@
 			]
 		}
 	],
-	"id" : "sim_runner::@411ffd8adc737496fe19",
+	"id" : "sim_runner_SPO_model::@411ffd8adc737496fe19",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -86,8 +86,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "sim_runner",
-	"nameOnDisk" : "sim_runner.exe",
+	"name" : "sim_runner_SPO_model",
+	"nameOnDisk" : "sim_runner_SPO_model.exe",
 	"paths" : 
 	{
 		"build" : "source",
