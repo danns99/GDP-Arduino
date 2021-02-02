@@ -20,6 +20,7 @@ double* xdot_solve(double* x_dot,
     
     /* Solve the state-space equations */
     for (i=0; i<STATE_SPACE_MATRIX_SIZE; i++){
+        x_old = x[i];
         /* K1 = dt*(A*x+B*u) */
         K1 = dt*state_space_function(i, 0.0, A, B, x, u);
         /* K2 = dt*(A*(x+K1/2)+B*u) */
@@ -31,26 +32,38 @@ double* xdot_solve(double* x_dot,
 
         /* Calculate the derivative of x with respect to time */
         x_dot[i] = (K1 + (2.0*K2) + (2.0*K3) + K4)/6.0;
-        x_old = x[i];
 
         /* Update the state */
         x[i] = x_old + x_dot[i];
     }
 
+    return x;
+}
+
+
+double* xdot_solve_backward_euler(double* x_dot,
+                   double A[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
+                   double B[STATE_SPACE_MATRIX_SIZE],
+                   double x[STATE_SPACE_MATRIX_SIZE],
+                   double u[STATE_SPACE_MATRIX_SIZE],
+                   double dt){
+    int i;
+    double x_old;
+    double error=0;
+
     /* Use Euler's method to calculate start point */
-    // for(i=0; i<4; i++){
-    //     x_old = x[i];
-    //     B_times_u = B[i]*u[0];
-    //     x_dot[i] = state_space_function(i, 0.0, A, B, x, u);
-    //     x[i] = x_old + x_dot[i]*dt; 
-    //     while(abs(error) > 0.01){
-    //         B_times_u = B[i]*u[0];
-    //         x_dot[i] = state_space_function(i, 0.0, A, B, x, u);
-    //         x[i] = x_old + x_dot[i]*dt;
-    //         x_old = x[i];
-    //         error = x[i] - x_old;
-    //     }
-    // }
+    for(i=0; i<STATE_SPACE_MATRIX_SIZE; i++){
+        x_old = x[i];
+        x_dot[i] = state_space_function(i, 0.0, A, B, x, u);
+        x[i] = x_old + x_dot[i]*dt; 
+        while(error*error > 0.01){
+            x_dot[i] = state_space_function(i, 0.0, A, B, x, u);
+            x[i] = x_old + x_dot[i]*dt;
+            x_old = x[i];
+            error = x[i] - x_old;
+        }
+    }
+
     return x;
 }
 
