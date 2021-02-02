@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Import required modules
 # --------------------------------------------------------------------------- #
+import subprocess
 import matplotlib.pyplot as plt
 plt.rcParams.update({'font.size': 15})  # Set matplotlib font size
-import subprocess
 # --------------------------------------------------------------------------- #
 
 
@@ -12,7 +12,7 @@ class sim_analysis():
     def __init__(self, simulation_executable, filename):
         self.simulation_executable = simulation_executable
         self.filename = filename
-        
+
         # Initialse arrays for storing data
         self.times = []
         self.horizontal_velocities_sc = []
@@ -27,7 +27,7 @@ class sim_analysis():
         self.vertical_velocities_sc_mod = []
         self.pitch_rates_sc_mod = []
         self.pitch_angles_sc_mod = []
-        
+
     def run_simulation(self):
         '''
         Runs the simulation executable.
@@ -41,46 +41,55 @@ class sim_analysis():
         line. Data from the file is read into arrays for storing the simulation
         results for the Scout, a target aircraft and the modified Scout.
         '''
-    
+
         # Open the file and read in the data
         with open(self.filename, 'r') as f:
             # read in data line by line into the 1D array lines
             lines = f.readlines()
-    
+
             # Go through each line read in from the file
             for line in lines:
                 # Read in the discrete time values
                 self.times.append(float(line.split(' ')[0]))
-                
+
                 if self.filename == "test_data_full_model.txt":
                     # Read in the values for the Scout
-                    self.horizontal_velocities_sc.append(float(line.split(' ')[1]))
-                    self.vertical_velocities_sc.append(float(line.split(' ')[2]))
+                    self.horizontal_velocities_sc.append(
+                            float(line.split(' ')[1]))
+                    self.vertical_velocities_sc.append(
+                            float(line.split(' ')[2]))
                     self.pitch_rates_sc.append(float(line.split(' ')[3]))
                     self.pitch_angles_sc.append(float(line.split(' ')[4]))
-        
+
                     # Read in the values for the target aircraft
-                    self.horizontal_velocities_t.append(float(line.split(' ')[5]))
-                    self.vertical_velocities_t.append(float(line.split(' ')[6]))
+                    self.horizontal_velocities_t.append(
+                            float(line.split(' ')[5]))
+                    self.vertical_velocities_t.append(
+                            float(line.split(' ')[6]))
                     self.pitch_rates_t.append(float(line.split(' ')[7]))
                     self.pitch_angles_t.append(float(line.split(' ')[8]))
-        
+
                     # Read in the values for the modified Scout
-                    self.horizontal_velocities_sc_mod.append(float(line.split(' ')[9]))
-                    self.vertical_velocities_sc_mod.append(float(line.split(' ')[10]))
+                    self.horizontal_velocities_sc_mod.append(
+                            float(line.split(' ')[9]))
+                    self.vertical_velocities_sc_mod.append(
+                            float(line.split(' ')[10]))
                     self.pitch_rates_sc_mod.append(float(line.split(' ')[11]))
                     self.pitch_angles_sc_mod.append(float(line.split(' ')[12]))
                 if self.filename == "test_data_spo_model.txt":
                     # Read in the values for the Scout
-                    self.vertical_velocities_sc.append(float(line.split(' ')[1]))
+                    self.vertical_velocities_sc.append(
+                            float(line.split(' ')[1]))
                     self.pitch_rates_sc.append(float(line.split(' ')[2]))
-    
+
                     # Read in the values for the target aircraft
-                    self.vertical_velocities_t.append(float(line.split(' ')[3]))
+                    self.vertical_velocities_t.append(
+                            float(line.split(' ')[3]))
                     self.pitch_rates_t.append(float(line.split(' ')[4]))
-        
+
                     # Read in the values for the modified Scout
-                    self.vertical_velocities_sc_mod.append(float(line.split(' ')[5]))
+                    self.vertical_velocities_sc_mod.append(
+                            float(line.split(' ')[5]))
                     self.pitch_rates_sc_mod.append(float(line.split(' ')[6]))
 
     def data_plotting(self):
@@ -89,53 +98,66 @@ class sim_analysis():
 
         if self.filename == "test_data_spo_model.txt":
             # Plot vertical velocities
-            axs[0][1].plot(self.times, self.vertical_velocities_sc, 'k', label="Scout")
-            axs[0][1].plot(self.times, self.vertical_velocities_t, label="Target Aircraft")
+            axs[0][1].plot(self.times, self.vertical_velocities_sc, 'k',
+                           label="Scout")
+            axs[0][1].plot(self.times, self.vertical_velocities_t,
+                           label="Target Aircraft")
             axs[0][1].plot(self.times, self.vertical_velocities_sc_mod, 'r--',
                            label="Modified Scout")
             axs[0][1].set_title("Vertical Velocity Vs Time")
             axs[0][1].set_ylabel(r"$w$ ($m/s$)")
             axs[0][1].legend()
- 
+
             # Plot pitch rates
             axs[1][0].plot(self.times, self.pitch_rates_sc, 'k', label="Scout")
-            axs[1][0].plot(self.times, self.pitch_rates_t, label="Target Aircraft")
-            axs[1][0].plot(self.times, self.pitch_rates_sc_mod, 'r--', label="Modified Scout")
+            axs[1][0].plot(self.times, self.pitch_rates_t,
+                           label="Target Aircraft")
+            axs[1][0].plot(self.times, self.pitch_rates_sc_mod, 'r--',
+                           label="Modified Scout")
             axs[1][0].set_title("Pitch Rate Vs Time")
             axs[1][0].set_ylabel(r"$q$ ($rad/s$)")
             axs[1][0].legend()
 
         if self.filename == "test_data_full_model.txt":
             # Plot vertical velocities
-            axs[0][1].plot(self.times, self.vertical_velocities_sc, 'k', label="Scout")
-            axs[0][1].plot(self.times, self.vertical_velocities_t, label="Target Aircraft")
+            axs[0][1].plot(self.times, self.vertical_velocities_sc, 'k',
+                           label="Scout")
+            axs[0][1].plot(self.times, self.vertical_velocities_t,
+                           label="Target Aircraft")
             axs[0][1].plot(self.times, self.vertical_velocities_sc_mod, 'r--',
                            label="Modified Scout")
             axs[0][1].set_title("Vertical Velocity Vs Time")
             axs[0][1].set_ylabel(r"$w$ ($m/s$)")
             axs[0][1].legend()
-            
+
             # Plot pitch rates
             axs[1][0].plot(self.times, self.pitch_rates_sc, 'k', label="Scout")
-            axs[1][0].plot(self.times, self.pitch_rates_t, label="Target Aircraft")
-            axs[1][0].plot(self.times, self.pitch_rates_sc_mod, 'r--', label="Modified Scout")
+            axs[1][0].plot(self.times, self.pitch_rates_t,
+                           label="Target Aircraft")
+            axs[1][0].plot(self.times, self.pitch_rates_sc_mod, 'r--',
+                           label="Modified Scout")
             axs[1][0].set_title("Pitch Rate Vs Time")
             axs[1][0].set_ylabel(r"$q$ ($rad/s$)")
             axs[1][0].legend()
 
             # Plot horizontal velocities
-            axs[0][0].plot(self.times, self.horizontal_velocities_sc, 'k', label="Scout")
-            axs[0][0].plot(self.times, self.horizontal_velocities_t, label="Target Aircraft")
-            axs[0][0].plot(self.times, self.horizontal_velocities_sc_mod, 'r--',
-                           label="Modified Scout")
+            axs[0][0].plot(self.times, self.horizontal_velocities_sc, 'k',
+                           label="Scout")
+            axs[0][0].plot(self.times, self.horizontal_velocities_t,
+                           label="Target Aircraft")
+            axs[0][0].plot(self.times, self.horizontal_velocities_sc_mod,
+                           'r--', label="Modified Scout")
             axs[0][0].set_title("Horizontal Velocity Vs Time")
             axs[0][0].set_ylabel(r"$u$ ($m/s$)")
             axs[0][0].legend()
-            
+
             # Plot pitch angles
-            axs[1][1].plot(self.times, self.pitch_angles_sc, 'k', label="Scout")
-            axs[1][1].plot(self.times, self.pitch_angles_t, label="Target Aircraft")
-            axs[1][1].plot(self.times, self.pitch_angles_sc_mod, 'r--', label="Modified Scout")
+            axs[1][1].plot(self.times, self.pitch_angles_sc, 'k',
+                           label="Scout")
+            axs[1][1].plot(self.times, self.pitch_angles_t,
+                           label="Target Aircraft")
+            axs[1][1].plot(self.times, self.pitch_angles_sc_mod, 'r--',
+                           label="Modified Scout")
             axs[1][1].set_title("Pitch Angle Vs Time")
             axs[1][1].set_ylabel(r"$\theta$ ($rad$)")
             axs[1][1].legend()
@@ -154,7 +176,7 @@ class sim_analysis():
         '''
         print(abs(sum([self.pitch_rates_t[i]-self.pitch_rates_sc_mod[i]
                        for i in range(len(self.pitch_rates_sc_mod))])) /
-                       len(self.pitch_rates_sc_mod))
+              len(self.pitch_rates_sc_mod))
 # --------------------------------------------------------------------------- #
 
 
