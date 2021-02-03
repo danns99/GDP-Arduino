@@ -1,0 +1,44 @@
+Include required libraries
+Define aerodynamic and control values for 3 system states
+Define flight envelope limits for safety checks
+
+SETUP SEQUENCE	
+	Initialize serial communication and specify baud rate
+	Create and configure a new file on the SD card
+	Configure pins:
+		4 pins for ADA254 SD Card module
+		1 pin for MAX485 TTL to RS485, along with TX and RX TTL pins (?)
+		1 analogue input pin for MPX5010DP sensor
+		SCL and SDA pin for MPU6050 sensor
+		4 analogue input pins for thermistors
+		4 digital output pins for LEDs on control panel
+		1 pin for button on control panel
+		1 pin for safety relay
+	Initialise interrupts, and define at what frequency the interrupt occurs
+	Define starting system mode as 'OFF'
+	Initialise sensors and check communication has been established with Arduino
+	Initialise actuators and clutches
+
+INTERRUPT SEQUENCE (~1kHz)
+	if STATE = OFF then
+		Update flight speeds, pitch and pitch rate from sensors
+		end
+	if STATE =! OFF then
+		Update flight speeds, pitch and pitch rate from sensors
+		Run safety check function
+		if safety check function returns unsafe then
+			Set system to OFF state
+			Trigger an alert to warn pilots that system has been disabled
+			Record to SD card that system was disabled
+			end
+		else
+			Run control calculations using aerodynamic and control values for whichever state the system is in
+			Send updated position requirement to actuator
+			end
+		end
+
+LOOP SEQUENCE (~10Hz)
+	Check if system state has changed
+	Display the current system state using the LEDs
+	Record flight speeds, pitch and pitch rate to SD card
+	delay
