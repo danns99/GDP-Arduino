@@ -18,12 +18,13 @@ double error_signal(double target_input, double error_from_system_output){
 double PD_controller(double error, double *error_prior, double iteration_time){
     double proportional_term;
     double derivative_term;
-    double K_p = -98.687493079853600;
-    double K_d = -0.018045698057602;
+    double K_p = -86.717674561182620;  // -98.687493079853600; -86.717674561182620;  
+    double K_d = 0.637114873357555;  // -0.018045698057602; 0.637114873357555; 
 
     proportional_term = K_p*error;
     derivative_term = K_d*((error - (*error_prior)) / iteration_time);
 
     *error_prior = error;
+
     return (proportional_term + derivative_term);
 }

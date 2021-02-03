@@ -7,6 +7,8 @@
 
 double** memory_allocation_for_storage_arrays(int sim_time, double dt);
 
+double* memory_allocation_for_1_d_arrays(int sim_time, double dt);
+
 void destroy_arrays(double** array);
 
 #endif

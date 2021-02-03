@@ -35,6 +35,9 @@ int init_sim(void){
     double** x_t_store = memory_allocation_for_storage_arrays(sim_time, dt);
     double** x_sc_mod_store = memory_allocation_for_storage_arrays(sim_time,
                                                                    dt);
+    /* Arrays for storing inputs to the aircraft for all timesteps */
+    double* u_store = memory_allocation_for_1_d_arrays(sim_time, dt);
+    double* u_sc_mod_store = memory_allocation_for_1_d_arrays(sim_time, dt);
 
     /* Variables for the modified Scout control */
     double u_into_modified_scout[STATE_SPACE_MATRIX_SIZE] = {0};
@@ -55,8 +58,8 @@ int init_sim(void){
     /* Run the simulation */
     run_sim(sim_time, input_time, dt, steps, u, u_old, x_sc, x_t, x_sc_mod,
             xdot_sc_store, xdot_t_store, xdot_sc_mod_store,  x_sc_store,
-            x_t_store, x_sc_mod_store, u_into_modified_scout, error_prior, A_sc,
-            B_sc, A_t, B_t);
+            x_t_store, x_sc_mod_store, u_store, u_sc_mod_store,
+            u_into_modified_scout, error_prior, A_sc, B_sc, A_t, B_t);
 
     return 0;
 }

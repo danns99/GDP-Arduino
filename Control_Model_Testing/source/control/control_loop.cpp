@@ -46,10 +46,10 @@ int run_control_loop(double dt, double *u, double *u_into_modified_scout,
                                                 &error_prior, dt);
 
     /* Solve the state-space equations for the modified scout */
-    // xdot_solve(xdot_sc_mod_store, A_sc, B_sc, x_sc_mod,
-    //                 u_into_modified_scout, dt);
-    xdot_solve_backward_euler(xdot_sc_mod_store, A_sc, B_sc, x_sc_mod,
-                              u_into_modified_scout, dt);
+    xdot_solve(xdot_sc_mod_store, A_sc, B_sc, x_sc_mod,
+                     u_into_modified_scout, dt);
+    //xdot_solve_backward_euler(xdot_sc_mod_store, A_sc, B_sc, x_sc_mod,
+    //                          u_into_modified_scout, dt);
     // xdot_solve_mod(xdot_sc_mod_store, A_sc, B_sc, x_sc_mod,
     //                u_into_modified_scout, dt, q_out_of_target_aircraft,
     //                &error_prior);
