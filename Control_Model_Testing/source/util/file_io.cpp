@@ -5,7 +5,7 @@
  Reads in the simulation settings from sim_settings.txt. The text file should be
  placed in the same folder as the executable.
  */
-int read_sim_settings(int* sim_time, double* dt, double* input_time,
+int read_sim_settings(double* sim_time, double* dt, double* input_time,
                       char aircraft_data_folder_dir[200]){
     int i;
     FILE *f;
@@ -17,7 +17,7 @@ int read_sim_settings(int* sim_time, double* dt, double* input_time,
 
     for(i=0; i<4; i++){
         if(i==0){
-            fscanf(f, "%*s %*s %*s %d", sim_time);
+            fscanf(f, "%*s %*s %*s %lf", sim_time);
         }
         if(i==1){
             fscanf(f, "%*s %*s %*s %lf", dt);

@@ -8,7 +8,7 @@
 int init_sim(void){
     /* Variables for simulation settings */
     int steps = 0;
-    int sim_time = 0;
+    double sim_time = 0;
     double input_time = 0;
     double dt = 0;
     char aircraft_data_folder_dir[100];

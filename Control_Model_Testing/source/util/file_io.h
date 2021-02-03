@@ -6,7 +6,7 @@
 #include <string.h>
 
 
-int read_sim_settings(int* sim_time, double* dt, double* input_time,
+int read_sim_settings(double* sim_time, double* dt, double* input_time,
                       char aircraft_data_folder_dir[200]);
 
 int read_state_space_matrices_from_file(double A[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
