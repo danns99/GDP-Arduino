@@ -4,12 +4,12 @@
 /*
  Runs the simulation.
  */
-int run_sim(int sim_time, double input_time, double dt, int steps,
+int run_sim(double sim_time, double input_time, double dt, int steps,
             double *u, double u_old, double *x_sc, double *x_t,
             double *x_sc_mod, double *xdot_sc_store, double *xdot_t_store,
             double *xdot_sc_mod_store, double **x_sc_store, double **x_t_store,
-            double **x_sc_mod_store, double *u_into_modified_scout,
-            double error_prior,
+            double **x_sc_mod_store, double *u_store, double *u_sc_mod_store,
+            double *u_into_modified_scout, double error_prior,
             double A_sc[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
             double *B_sc,
             double A_t[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
@@ -17,12 +17,12 @@ int run_sim(int sim_time, double input_time, double dt, int steps,
     /* Main time loop */
     while(steps < sim_time*1/dt){
         /* Select time to apply step input */
-        float difference = (float) steps - (input_time)*1/(dt);
+        float difference = (float) steps - (input_time)*0/(dt);
         float tol_difference = 0.001;
         if((-tol_difference <= difference) && (difference <= tol_difference)){
-            printf("here\n");
             u_old = u[0];
-            u[0] = u_old + 0.1;
+            u[0] = u_old + (15*(M_PI/180));
+            printf("here\n");
         }
 
         /* Run the control loop */
@@ -33,8 +33,9 @@ int run_sim(int sim_time, double input_time, double dt, int steps,
                          error_prior);
 
         /* Store the aircraft data from the timestep */
-        store_timestep_data(steps, x_sc, x_t, x_sc_mod, x_sc_store, x_t_store,
-                            x_sc_mod_store);
+        store_timestep_data(steps, x_sc, x_t, x_sc_mod, u,
+                            u_into_modified_scout, x_sc_store, x_t_store,
+                            x_sc_mod_store, u_store, u_sc_mod_store);
 
         /* Increment the step counter */
         steps += 1;
@@ -43,7 +44,8 @@ int run_sim(int sim_time, double input_time, double dt, int steps,
     printf("%f\n", error_prior);
 
     /* Write the simulation data to file */
-    write_sim_data_to_file(steps, dt, x_sc_store, x_t_store, x_sc_mod_store);
+    write_sim_data_to_file(steps, dt, x_sc_store, x_t_store, x_sc_mod_store,
+                           u_store, u_sc_mod_store);
 
     /* Free memory used by the storage arrays */
     destroy_arrays(x_sc_store);

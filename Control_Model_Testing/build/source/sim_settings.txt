@@ -2,4 +2,4 @@ Simulation time (seconds): 5
 Simulation timestep (seconds): 0.0001
 Time to put in input (seconds): 1
 
-Directory to aircraft state space matrices (relative or absolute): aircraft_data//
+Directory to aircraft state space matrices (relative or absolute): ..//..//aircraft_data//

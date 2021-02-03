@@ -1,6 +1,8 @@
 #ifndef SIM_H
 #define SIM_H
 
+#define _USE_MATH_DEFINES
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -13,12 +15,12 @@
 #include "..\\state_space_equations\\numerical_ode_solvers.h"
 
 
-int run_sim(int sim_time, double input_time, double dt, int steps,
+int run_sim(double sim_time, double input_time, double dt, int steps,
             double *u, double u_old, double *x_sc, double *x_t,
             double *x_sc_mod, double *xdot_sc_store, double *xdot_t_store,
             double *xdot_sc_mod_store, double **x_sc_store, double **x_t_store,
-            double **x_sc_mod_store, double *u_into_modified_scout,
-            double error_prior,
+            double **x_sc_mod_store, double *u_store, double *u_sc_mod_store,
+            double *u_into_modified_scout, double error_prior,
             double A_sc[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
             double *B_sc,
             double A_t[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],

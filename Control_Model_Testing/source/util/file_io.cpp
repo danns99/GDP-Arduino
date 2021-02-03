@@ -5,7 +5,7 @@
  Reads in the simulation settings from sim_settings.txt. The text file should be
  placed in the same folder as the executable.
  */
-int read_sim_settings(int* sim_time, double* dt, double* input_time,
+int read_sim_settings(double* sim_time, double* dt, double* input_time,
                       char aircraft_data_folder_dir[200]){
     int i;
     FILE *f;
@@ -17,7 +17,7 @@ int read_sim_settings(int* sim_time, double* dt, double* input_time,
 
     for(i=0; i<4; i++){
         if(i==0){
-            fscanf(f, "%*s %*s %*s %d", sim_time);
+            fscanf(f, "%*s %*s %*s %lf", sim_time);
         }
         if(i==1){
             fscanf(f, "%*s %*s %*s %lf", dt);
@@ -139,15 +139,16 @@ int get_aircraft_state_space_matrices(double A_sc[STATE_SPACE_MATRIX_SIZE][STATE
  Writes the simulation data to a text file at the end of the simulation.
  */
 int write_sim_data_to_file(int steps, double dt, double **x_sc_store,
-                           double **x_t_store, double **x_sc_mod_store){
+                           double **x_t_store, double **x_sc_mod_store,
+                           double *u_store, double *u_sc_mod_store){
     int i;
-    FILE *f;
-
-    f=fopen("test_data.txt","w");
+    FILE *f_aircraft_states;
+    FILE *f_aircraft_inputs;
 
     if(STATE_SPACE_MATRIX_SIZE == 4){
+        f_aircraft_states=fopen("test_data_full_model.txt","w");
         for(i=0; i<steps; i++){
-            fprintf(f, "%f %f %f %f %f %f %f %f %f %f %f %f %f \n",
+            fprintf(f_aircraft_states, "%f %f %f %f %f %f %f %f %f %f %f %f %f \n",
                     i*(dt), x_sc_store[i][0], x_sc_store[i][1], x_sc_store[i][2],
                     x_sc_store[i][3], x_t_store[i][0], x_t_store[i][1],
                     x_t_store[i][2], x_t_store[i][3], x_sc_mod_store[i][0],
@@ -156,14 +157,21 @@ int write_sim_data_to_file(int steps, double dt, double **x_sc_store,
         }
     }
     if(STATE_SPACE_MATRIX_SIZE == 2){
+        f_aircraft_states=fopen("test_data_spo_model.txt","w");
         for(i=0; i<steps; i++){
-            fprintf(f, "%f %f %f %f %f %f %f \n",
+            fprintf(f_aircraft_states, "%f %f %f %f %f %f %f \n",
                     i*(dt), x_sc_store[i][0], x_sc_store[i][1], x_t_store[i][0],
                     x_t_store[i][1], x_sc_mod_store[i][0],
                     x_sc_mod_store[i][1]);
         }
     }
-    
+
+    f_aircraft_inputs=fopen("test_data_aircraft_inputs.txt","w");
+    for(i=0; i<steps; i++){
+        fprintf(f_aircraft_inputs, "%f %f %f \n",
+                i*(dt), u_store[i], u_sc_mod_store[i]);
+    }
+
     return 0; 
 }
 
@@ -173,8 +181,10 @@ int write_sim_data_to_file(int steps, double dt, double **x_sc_store,
  aircraft at the end of the timestep.
  */
 int store_timestep_data(int steps, double *x_sc, double *x_t, double *x_sc_mod,
+                        double *u, double *u_into_modified_scout,
                         double **x_sc_store, double **x_t_store,
-                        double **x_sc_mod_store){
+                        double **x_sc_mod_store, double *u_store,
+                        double *u_sc_mod_store){
     int i;
 
     for (i=0; i<STATE_SPACE_MATRIX_SIZE; i++){
@@ -182,5 +192,9 @@ int store_timestep_data(int steps, double *x_sc, double *x_t, double *x_sc_mod,
         x_t_store[steps][i] = x_t[i];
         x_sc_mod_store[steps][i] = x_sc_mod[i];
     }
+
+    u_store[steps] = u[0];
+    u_sc_mod_store[steps] = u_into_modified_scout[0];
+
     return 0;
 }

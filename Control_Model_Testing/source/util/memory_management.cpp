@@ -5,7 +5,7 @@
  Returns a storage array for the state values which are solved during the
  simulation.
  */
-double** memory_allocation_for_storage_arrays(int sim_time, double dt){
+double** memory_allocation_for_storage_arrays(double sim_time, double dt){
     int i;
     double **x_store;
 
@@ -28,6 +28,14 @@ double** memory_allocation_for_storage_arrays(int sim_time, double dt){
     return x_store;
 }
 
+double* memory_allocation_for_1_d_arrays(double sim_time, double dt){
+    double *x_store;
+
+    /* Allocate memory for 1D array */
+    x_store = (double *) malloc(sim_time*1/dt*sizeof(double));
+
+    return x_store;
+}
 
 /*
  Frees the memory of used by the storage arrays.

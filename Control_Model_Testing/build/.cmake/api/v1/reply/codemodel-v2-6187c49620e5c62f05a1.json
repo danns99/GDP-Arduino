@@ -1,0 +1,83 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "source",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "source",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "Control_Model_testing",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "sim_runner_SPO_model::@411ffd8adc737496fe19",
+					"jsonFile" : "target-sim_runner_SPO_model-Debug-522110f5156b7120bde6.json",
+					"name" : "sim_runner_SPO_model",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "sim_runner_full_longitudinal_model::@411ffd8adc737496fe19",
+					"jsonFile" : "target-sim_runner_full_longitudinal_model-Debug-a6f332b604555da0fdfb.json",
+					"name" : "sim_runner_full_longitudinal_model",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Testing/build",
+		"source" : "D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Control_Model_Testing"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

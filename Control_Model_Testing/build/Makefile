@@ -110,17 +110,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named sim_runner
+# Target rules for targets named sim_runner_full_longitudinal_model
 
 # Build rule for target.
-sim_runner: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 sim_runner
-.PHONY : sim_runner
+sim_runner_full_longitudinal_model: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 sim_runner_full_longitudinal_model
+.PHONY : sim_runner_full_longitudinal_model
 
 # fast build rule for target.
-sim_runner/fast:
-	$(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/build
-.PHONY : sim_runner/fast
+sim_runner_full_longitudinal_model/fast:
+	$(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/build
+.PHONY : sim_runner_full_longitudinal_model/fast
+
+#=============================================================================
+# Target rules for targets named sim_runner_SPO_model
+
+# Build rule for target.
+sim_runner_SPO_model: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 sim_runner_SPO_model
+.PHONY : sim_runner_SPO_model
+
+# fast build rule for target.
+sim_runner_SPO_model/fast:
+	$(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/build
+.PHONY : sim_runner_SPO_model/fast
 
 # Help Target
 help:
@@ -130,7 +143,8 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... sim_runner
+	@echo ... sim_runner_full_longitudinal_model
+	@echo ... sim_runner_SPO_model
 .PHONY : help
 
 

@@ -70,12 +70,14 @@ preinstall: source/preinstall
 # Directory level rules for directory source
 
 # Recursive "all" directory target.
-source/all: source/CMakeFiles/sim_runner.dir/all
+source/all: source/CMakeFiles/sim_runner_full_longitudinal_model.dir/all
+source/all: source/CMakeFiles/sim_runner_SPO_model.dir/all
 
 .PHONY : source/all
 
 # Recursive "clean" directory target.
-source/clean: source/CMakeFiles/sim_runner.dir/clean
+source/clean: source/CMakeFiles/sim_runner_full_longitudinal_model.dir/clean
+source/clean: source/CMakeFiles/sim_runner_SPO_model.dir/clean
 
 .PHONY : source/clean
 
@@ -85,31 +87,58 @@ source/preinstall:
 .PHONY : source/preinstall
 
 #=============================================================================
-# Target rules for target source/CMakeFiles/sim_runner.dir
+# Target rules for target source/CMakeFiles/sim_runner_full_longitudinal_model.dir
 
 # All Build rule for target.
-source/CMakeFiles/sim_runner.dir/all:
-	$(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/depend
-	$(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target sim_runner"
-.PHONY : source/CMakeFiles/sim_runner.dir/all
+source/CMakeFiles/sim_runner_full_longitudinal_model.dir/all:
+	$(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/depend
+	$(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build\CMakeFiles" --progress-num=11,12,13,14,15,16,17,18,19,20 "Built target sim_runner_full_longitudinal_model"
+.PHONY : source/CMakeFiles/sim_runner_full_longitudinal_model.dir/all
 
 # Build rule for subdir invocation for target.
-source/CMakeFiles/sim_runner.dir/rule: cmake_check_build_system
+source/CMakeFiles/sim_runner_full_longitudinal_model.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build\CMakeFiles" 10
-	$(MAKE) -f CMakeFiles\Makefile2 source/CMakeFiles/sim_runner.dir/all
+	$(MAKE) -f CMakeFiles\Makefile2 source/CMakeFiles/sim_runner_full_longitudinal_model.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build\CMakeFiles" 0
-.PHONY : source/CMakeFiles/sim_runner.dir/rule
+.PHONY : source/CMakeFiles/sim_runner_full_longitudinal_model.dir/rule
 
 # Convenience name for target.
-sim_runner: source/CMakeFiles/sim_runner.dir/rule
+sim_runner_full_longitudinal_model: source/CMakeFiles/sim_runner_full_longitudinal_model.dir/rule
 
-.PHONY : sim_runner
+.PHONY : sim_runner_full_longitudinal_model
 
 # clean rule for target.
-source/CMakeFiles/sim_runner.dir/clean:
-	$(MAKE) -f source\CMakeFiles\sim_runner.dir\build.make source/CMakeFiles/sim_runner.dir/clean
-.PHONY : source/CMakeFiles/sim_runner.dir/clean
+source/CMakeFiles/sim_runner_full_longitudinal_model.dir/clean:
+	$(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/clean
+.PHONY : source/CMakeFiles/sim_runner_full_longitudinal_model.dir/clean
+
+#=============================================================================
+# Target rules for target source/CMakeFiles/sim_runner_SPO_model.dir
+
+# All Build rule for target.
+source/CMakeFiles/sim_runner_SPO_model.dir/all:
+	$(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/depend
+	$(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target sim_runner_SPO_model"
+.PHONY : source/CMakeFiles/sim_runner_SPO_model.dir/all
+
+# Build rule for subdir invocation for target.
+source/CMakeFiles/sim_runner_SPO_model.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build\CMakeFiles" 10
+	$(MAKE) -f CMakeFiles\Makefile2 source/CMakeFiles/sim_runner_SPO_model.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build\CMakeFiles" 0
+.PHONY : source/CMakeFiles/sim_runner_SPO_model.dir/rule
+
+# Convenience name for target.
+sim_runner_SPO_model: source/CMakeFiles/sim_runner_SPO_model.dir/rule
+
+.PHONY : sim_runner_SPO_model
+
+# clean rule for target.
+source/CMakeFiles/sim_runner_SPO_model.dir/clean:
+	$(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/clean
+.PHONY : source/CMakeFiles/sim_runner_SPO_model.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
