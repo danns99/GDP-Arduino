@@ -10,7 +10,7 @@ int run_control_loop(double dt, double *u, double *u_into_modified_scout,
                      double A_t[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
                      double *B_t, double *x_t, double* x_sc_mod,
                      double *xdot_t_store, double *xdot_sc_store,
-                     double *xdot_sc_mod_store, double error_prior){
+                     double *xdot_sc_mod_store, double *error_prior){
     double q_out_of_target_aircraft;
     double current_error;
     double u_from_error_sum;
@@ -41,9 +41,10 @@ int run_control_loop(double dt, double *u, double *u_into_modified_scout,
     the modified Scout */
     u_from_error_sum = error_signal(q_out_of_target_aircraft,
                                     current_error);
+
     /* Calculate the input to the modified Scout using the PID */
     u_into_modified_scout[0] = PD_controller(u_from_error_sum,
-                                                &error_prior, dt);
+                                                error_prior, dt);
 
     /* Solve the state-space equations for the modified scout */
     xdot_solve(xdot_sc_mod_store, A_sc, B_sc, x_sc_mod,
