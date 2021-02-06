@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # Import required modules
 # --------------------------------------------------------------------------- #
+from numpy import pi
 import matplotlib.pyplot as plt
 # --------------------------------------------------------------------------- #
 
@@ -31,7 +32,7 @@ def solve_xdot_b_euler(A, B, x_store_0, x_store_1, u, dt, steps):
     inv_A = [[0, 0], [0, 0]]
     x = [0, 0]
 
-    # Calculate the 1 over the determinant of the I-A matrix
+    # Calculate 1 over the determinant of the I-A matrix
     inv_det_A = 1 / (((1-(A[0][0]*dt))*(1-(A[1][1]*dt))) -
                      ((-A[0][1]*dt)*((-A[1][0]*dt))))
     inv_A[0][0] = inv_det_A * (1-(A[1][1]*dt))
@@ -59,7 +60,7 @@ def get_modified_scout_input(q_from_target, error, integral, iteration_time):
     K_p = -86.717674561182620
     K_d = 0.637114873357555
 
-    # Calculate PD terms
+    # Calculate the PD terms
     proportional_term = K_p*u_from_error_sum
     derivative_term = ((K_d * u_from_error_sum) - integral) * N
 
@@ -89,7 +90,7 @@ def run_sim():
 
     times = []
 
-    # Initialise the value of the integral use for the PD controller
+    # Initialise the value of the integral used for the PD controller
     integral = 0
 
     # Simulation time settings
@@ -100,25 +101,25 @@ def run_sim():
     # Run the simulation
     while(steps < sim_time/dt):
         if steps == 0:
-            u[0] = 15 * 3.1415/180
+            u[0] = 15 * pi/180
 
-        # Solve state-space equations for Scout
+        # Solve the state-space equations for the Scout
         x = solve_xdot_b_euler(A_sc, B_sc, x_store_0_sc_b_euler,
                                x_store_1_sc_b_euler, u, dt, steps)
         x_store_0_sc_b_euler.append(x[0])
         x_store_1_sc_b_euler.append(x[1])
-        # Solve state-space equations for target
+        # Solve the state-space equations for the target
         x = solve_xdot_b_euler(A_t, B_t, x_store_0_t_b_euler,
                                x_store_1_t_b_euler, u, dt, steps)
         x_store_0_t_b_euler.append(x[0])
         x_store_1_t_b_euler.append(x[1])
 
-        # Get input into modified Scout
+        # Get the input into modified Scout
         u_modified_scout, integral = get_modified_scout_input(
                 x_store_1_t_b_euler[steps], x_store_1_sc_mod_b_euler[steps],
                 integral, dt)
 
-        # Solve state-space equations for modified Scout
+        # Solve the state-space equations for the modified Scout
         x = solve_xdot_b_euler(A_t, B_t, x_store_0_sc_mod_b_euler,
                                x_store_1_sc_mod_b_euler, u_modified_scout,
                                dt, steps)
@@ -145,7 +146,7 @@ def run_sim():
 # --------------------------------------------------------------------------- #
 
 
-# Run simulation
+# Run the simulation
 # --------------------------------------------------------------------------- #
 run_sim()
 # --------------------------------------------------------------------------- #
