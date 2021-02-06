@@ -114,9 +114,9 @@ def run_sim():
         x_store_0_t_b_euler.append(x[0])
         x_store_1_t_b_euler.append(x[1])
 
-        # Get the input into modified Scout
+        # Get the input into the modified Scout
         u_modified_scout, integral = get_modified_scout_input(
-                x_store_1_t_b_euler[steps], x_store_1_sc_mod_b_euler[steps],
+                x_store_1_t_b_euler[steps+1], x_store_1_sc_mod_b_euler[steps],
                 integral, dt)
 
         # Solve the state-space equations for the modified Scout
