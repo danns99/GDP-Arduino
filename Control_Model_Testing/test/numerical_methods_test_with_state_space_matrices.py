@@ -137,6 +137,9 @@ def run_sim():
     plt.plot(times, x_store_1_sc_mod_b_euler[:-1], 'b--',
              label='Modified Scout Backwards Euler')
     plt.legend(loc='upper right')
+    plt.xlabel(r"time ($s$)")
+    plt.ylabel(r"$q$ ($rad/s$)")
+    plt.title("Pitch Rate vs Time")
     plt.xlim(0, 12)
     plt.ylim(-1, 0.2)
 # --------------------------------------------------------------------------- #
