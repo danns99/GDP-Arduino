@@ -62,9 +62,6 @@ def run_sim():
     u = [0, 0]
     x = [0, 0]
 
-#    x_store_0_euler = [0]
-#    x_store_1_euler = [0]
-
     x_store_0_sc_b_euler = [0]
     x_store_1_sc_b_euler = [0]
     x_store_0_t_b_euler = [0]
@@ -101,15 +98,10 @@ def run_sim():
         x_store_0_sc_mod_b_euler.append(x[0])
         x_store_1_sc_mod_b_euler.append(x[1])
 
-#        x = solve_xdot_f_euler(A, B, x_store_0_euler, x_store_1_euler, u, dt, steps)
-#        x_store_0_euler.append(x[0])
-#        x_store_1_euler.append(x[1])
-
         times.append(dt*steps)
 
         steps += 1
 
-#    plt.plot(times, x_store_1[:-1], label='Forward Euler')
     plt.plot(times, x_store_1_sc_b_euler[:-1], 'k', label='Scout Backwards Euler')
     plt.plot(times, x_store_1_t_b_euler[:-1], 'r', label='Target Backwards Euler')
     plt.plot(times, x_store_1_sc_mod_b_euler[:-1], 'b--', label='Modified Scout Backwards Euler')
