@@ -2,6 +2,7 @@
 # Import required modules
 # --------------------------------------------------------------------------- #
 from numpy import pi
+from numpy import arange
 import matplotlib.pyplot as plt
 # --------------------------------------------------------------------------- #
 
@@ -10,18 +11,16 @@ import matplotlib.pyplot as plt
 # --------------------------------------------------------------------------- #
 def solve_xdot_f_euler(A, B, x_store_0, x_store_1, u, dt, steps):
     # Initialise variables
-    B_times_u = [0, 0]
     x = [0, 0]
 
     # Calculate B*u
-    B_times_u[0] = (B[0]*0 + B[1]*u[0])
-    B_times_u[1] = (B[0]*0 + B[1]*u[0])
+    B_times_u = (B[0]*0 + B[1]*u[0])
 
     # Calculate x
     x[0] = x_store_0[steps] + dt*(A[0][0]*x_store_0[steps] +
-                                  A[0][1]*x_store_1[steps] + B_times_u[0])
+                                  A[0][1]*x_store_1[steps] + B_times_u)
     x[1] = x_store_1[steps] + dt*(A[1][0]*x_store_0[steps] +
-                                  A[1][1]*x_store_1[steps] + B_times_u[1])
+                                  A[1][1]*x_store_1[steps] + B_times_u)
 
     return(x)
 
@@ -62,10 +61,11 @@ def get_modified_scout_input(q_from_target, error, integral, iteration_time):
 
     # Calculate the PD terms
     proportional_term = K_p*u_from_error_sum
-    derivative_term = ((K_d * u_from_error_sum) - integral) * N
+    derivative_term = ((K_d*u_from_error_sum) - integral) * N
 
     # Update the value of the integral
     integral += iteration_time * derivative_term
+
     return([proportional_term + derivative_term], integral)
 
 
@@ -108,6 +108,7 @@ def run_sim():
                                x_store_1_sc_b_euler, u, dt, steps)
         x_store_0_sc_b_euler.append(x[0])
         x_store_1_sc_b_euler.append(x[1])
+
         # Solve the state-space equations for the target
         x = solve_xdot_b_euler(A_t, B_t, x_store_0_t_b_euler,
                                x_store_1_t_b_euler, u, dt, steps)
@@ -116,11 +117,11 @@ def run_sim():
 
         # Get the input into the modified Scout
         u_modified_scout, integral = get_modified_scout_input(
-                x_store_1_t_b_euler[steps+1], x_store_1_sc_mod_b_euler[steps],
+                x_store_1_t_b_euler[steps], x_store_1_sc_mod_b_euler[steps],
                 integral, dt)
 
         # Solve the state-space equations for the modified Scout
-        x = solve_xdot_b_euler(A_t, B_t, x_store_0_sc_mod_b_euler,
+        x = solve_xdot_b_euler(A_sc, B_sc, x_store_0_sc_mod_b_euler,
                                x_store_1_sc_mod_b_euler, u_modified_scout,
                                dt, steps)
         x_store_0_sc_mod_b_euler.append(x[0])
@@ -133,16 +134,19 @@ def run_sim():
     # Plot the results of the simulation
     plt.plot(times, x_store_1_sc_b_euler[:-1], 'k',
              label='Scout Backwards Euler')
-    plt.plot(times, x_store_1_t_b_euler[:-1], 'r',
+    plt.plot(times, x_store_1_t_b_euler[:-1], 'b',
              label='Target Backwards Euler')
-    plt.plot(times, x_store_1_sc_mod_b_euler[:-1], 'b--',
+    plt.plot(times, x_store_1_sc_mod_b_euler[:-1], 'r--',
              label='Modified Scout Backwards Euler')
     plt.legend(loc='upper right')
     plt.xlabel(r"time ($s$)")
     plt.ylabel(r"$q$ ($rad/s$)")
     plt.title("Pitch Rate vs Time")
-    plt.xlim(0, 12)
-    plt.ylim(-1, 0.2)
+    plt.xticks(arange(0, 15, step=1))
+    plt.yticks(arange(-0.9, 0.2, step=0.1))
+    plt.grid()
+    plt.xlim(0, 15)
+    plt.ylim(-0.9, 0.1)
 # --------------------------------------------------------------------------- #
 
 
