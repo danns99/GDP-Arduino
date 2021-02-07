@@ -15,6 +15,11 @@ int run_sim(double sim_time, double input_time, double dt, int steps,
             double *B_t){
     /* Main time loop */
     while(steps < sim_time*1/dt){
+        /* Store the aircraft data from the timestep */
+        store_timestep_data(steps, x_sc, x_t, x_sc_mod, u,
+                            u_into_modified_scout, x_sc_store, x_t_store,
+                            x_sc_mod_store, u_store, u_sc_mod_store);
+
         /* Select time to apply step input */
         float difference = (float) steps - (input_time)*1/(dt);
         float tol_difference = 0.001;
@@ -29,11 +34,6 @@ int run_sim(double sim_time, double input_time, double dt, int steps,
                          A_sc, B_sc, x_sc,
                          A_t, B_t, x_t, x_sc_mod,
                          integral);
-
-        /* Store the aircraft data from the timestep */
-        store_timestep_data(steps, x_sc, x_t, x_sc_mod, u,
-                            u_into_modified_scout, x_sc_store, x_t_store,
-                            x_sc_mod_store, u_store, u_sc_mod_store);
 
         /* Increment the step counter */
         steps += 1;
