@@ -58,7 +58,7 @@ double* xdot_solve_backward_euler(
     x_old[0] = x[0];
     x_old[1] = x[1];
 
-    inv_det_A = 1.0 / (((1-A[0][0])*dt)*((1-A[1][1])*dt) - ((-A[0][1]*dt)*(-A[1][0]*dt)));
+    inv_det_A = 1.0 / ((1-(A[0][0])*dt)*(1-(A[1][1])*dt) - ((-A[0][1]*dt)*(-A[1][0]*dt)));
     inv_A[0][0] = inv_det_A * (1-(A[1][1]*dt));
     inv_A[0][1] = inv_det_A * (A[0][1]*dt);
     inv_A[1][0] = inv_det_A * (A[1][0]*dt);
