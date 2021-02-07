@@ -40,19 +40,15 @@ int run_control_loop(double dt, double *u, double *u_into_modified_scout,
     }
     /* Calculate the error between the pitch rate of the target aircraft and
     the modified Scout */
-    u_from_error_sum = error_signal(q_out_of_target_aircraft,
-                                    current_error);
+    u_from_error_sum = error_signal(q_out_of_target_aircraft, current_error);
 
     /* Calculate the input to the modified Scout using the PID */
-    u_into_modified_scout[0] = PD_controller(u_from_error_sum,
-                                                error_prior, dt);
+    u_into_modified_scout[0] = PD_controller(u_from_error_sum, error_prior, dt);
 
     /* Solve the state-space equations for the modified scout */
-    // xdot_solve(A_sc, B_sc, x_sc_mod,
-    //                  u_into_modified_scout, dt);
+    // xdot_solve(A_sc, B_sc, x_sc_mod, u_into_modified_scout, dt);
     xdot_solve_backward_euler(A_sc, B_sc, x_sc_mod, u_into_modified_scout, dt);
-    // xdot_solve_mod(A_sc, B_sc, x_sc_mod,
-    //                u_into_modified_scout, dt, q_out_of_target_aircraft,
-    //                error_prior);
+    // xdot_solve_mod(A_sc, B_sc, x_sc_mod, u_into_modified_scout, dt,
+    //                q_out_of_target_aircraft, error_prior);
     return 0;
 }
