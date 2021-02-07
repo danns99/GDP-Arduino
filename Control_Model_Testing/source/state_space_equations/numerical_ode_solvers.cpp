@@ -5,8 +5,7 @@
  Calculates and returns the derivative of x with respect to time for the
  state-space system using a fourth-order Runge-Kutta scheme.
  */
-double* xdot_solve(double* x_dot,
-                   double A[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
+double* xdot_solve(double A[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
                    double B[STATE_SPACE_MATRIX_SIZE],
                    double x[STATE_SPACE_MATRIX_SIZE],
                    double u[STATE_SPACE_MATRIX_SIZE],
@@ -17,6 +16,7 @@ double* xdot_solve(double* x_dot,
     double K2;
     double K3;
     double K4;
+    double x_dot[STATE_SPACE_MATRIX_SIZE];
     
     /* Solve the state-space equations */
     for (i=0; i<STATE_SPACE_MATRIX_SIZE; i++){
@@ -41,35 +41,55 @@ double* xdot_solve(double* x_dot,
 }
 
 
-double* xdot_solve_backward_euler(double* x_dot,
+double* xdot_solve_backward_euler(
                    double A[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
                    double B[STATE_SPACE_MATRIX_SIZE],
                    double x[STATE_SPACE_MATRIX_SIZE],
                    double u[STATE_SPACE_MATRIX_SIZE],
                    double dt){
-    int i;
-    double x_old;
-    double error=0;
+    //int i;
+    //double x_fixed;
+    //double N;
+    double x_old[2];
+    double inv_det_A;
+    double inv_A[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE];
+    double B_times_u[STATE_SPACE_MATRIX_SIZE];
 
+    x_old[0] = x[0];
+    x_old[1] = x[1];
+
+    inv_det_A = 1.0 / (((1-A[0][0])*dt)*((1-A[1][1])*dt) - ((-A[0][1]*dt)*(-A[1][0]*dt)));
+    inv_A[0][0] = inv_det_A * (1-(A[1][1]*dt));
+    inv_A[0][1] = inv_det_A * (A[0][1]*dt);
+    inv_A[1][0] = inv_det_A * (A[1][0]*dt);
+    inv_A[1][1] = inv_det_A * (1-(A[0][0]*dt));
+
+    B_times_u[0] = x_old[0] + ((B[0]*0 + B[1]*u[0])*dt);
+    B_times_u[1] = x_old[1] + ((B[0]*0 + B[1]*u[0])*dt);
+
+    x[0] = inv_A[0][0]*B_times_u[0] + inv_A[0][1]*B_times_u[1];
+    x[1] = inv_A[1][0]*B_times_u[0] + inv_A[1][1]*B_times_u[1];
+
+    /*
     for(i=0; i<STATE_SPACE_MATRIX_SIZE; i++){
-        /* Use Euler's method to calculate start point */
-        x_old = x[i];
+        N=0;
+        // Use Euler's method to calculate start point 
+        x_fixed = x[i];
         x_dot[i] = state_space_function(i, 0.0, A, B, x, u);
-        x[i] = x_old + x_dot[i]*dt; 
-        while(error*error > 0.001){
+        x[i] = x[i] + x_dot[i]*dt; 
+        while(N<15){
             x_dot[i] = state_space_function(i, 0.0, A, B, x, u);
-            x[i] = x_old + x_dot[i]*dt;
-            x_old = x[i];
-            error = x[i] - x_old;
+            x[i] = x_fixed + x_dot[i]*dt;
+            N++;
+            //printf("x is: %lf\n", x[i]);
         }
     }
-
+    */
     return x;
 }
 
 
-double* xdot_solve_mod(double* x_dot,
-                       double A[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
+double* xdot_solve_mod(double A[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],
                        double B[STATE_SPACE_MATRIX_SIZE],
                        double x[STATE_SPACE_MATRIX_SIZE],
                        double u[STATE_SPACE_MATRIX_SIZE],
@@ -81,6 +101,7 @@ double* xdot_solve_mod(double* x_dot,
     double K2;
     double K3;
     double K4;
+    double x_dot[STATE_SPACE_MATRIX_SIZE];
 
     double u_from_error_sum;
     
