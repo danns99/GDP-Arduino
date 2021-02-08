@@ -91,9 +91,12 @@ for i in range(len(times)):
 plt.plot(times, act_ans, label='analytic')
 plt.plot(times, b_euler_fixed_iter_vals[:-1], '--', label='b_euler fixed-point iter')
 plt.plot(times, b_euler_newton_vals[:-1], '.', label='b_euler newton')
-plt.plot(times, b_euler_root_finder_vals[:-1], '*', label='b_euler newton root')
+#plt.plot(times, b_euler_root_finder_vals[:-1], '*', label='b_euler newton root')
 #plt.plot(times, b_euler_newton_secant_vals[:-1], '*', label='b_euler newton-secant')
 plt.legend(loc='upper right')
+plt.xlabel('t')
+plt.ylabel('y')
+plt.title(r'solution of $dy/dt = -9y$ for $y(0)=1.3$')
 
 #plt.plot(times, act_grad)
 #plt.plot(times[:-1], num_grad)
