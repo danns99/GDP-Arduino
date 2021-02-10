@@ -79,7 +79,13 @@ Substituting this result into the $x_{a(n+1)}$ equation:
     x_{a(n+1)} &= x_{a(n)} +  a_1 x_{a(n+1)}\Delta t + \frac{a_2 x_{b(n)} \Delta t + a_2(b_1 u_1 + b_2 u_2)\Delta t\Delta t}{1 - a_4\Delta t} + \\ \nonumber
     &\quad \frac{a_2 a_3 x_{a(n+1)}\Delta t\Delta t}{1 - a_4\Delta t} + (b_1 u_1 + b_2 u_2)\Delta t \\
     x_{a(n+1)}\left[1 - a_1\Delta t - \frac{a_2 a_3 \Delta t\Delta t}{1 - a_4\Delta t}\right] &= x_{a(n)} + \frac{a_2 x_{b(n)} \Delta t + a_2(b_1 u_1 + b_2 u_2)\Delta t\Delta t}{1 - a_4\Delta t} + (b_1 u_1 + b_2 u_2)\Delta t \\
-    x_{a(n+1)} &= \frac{x_{a(n)} + \frac{a_2 x_{b(n)} \Delta t + a_2(b_1 u_1 + b_2 u_2)\Delta t\Delta t}{1 - a_4\Delta t} + (b_1 u_1 + b_2 u_2)\Delta t}{1 - a_1\Delta t - \frac{a_2 a_3 \Delta t\Delta t}{1 - a_4\Delta t}}
+    x_{a(n+1)} &= \frac{x_{a(n)} + \frac{a_2 x_{b(n)} \Delta t + a_2(b_1 u_1 + b_2 u_2)\Delta t\Delta t}{1 - a_4\Delta t} + (b_1 u_1 + b_2 u_2)\Delta t}{1 - a_1\Delta t - \frac{a_2 a_3 \Delta t\Delta t}{1 - a_4\Delta t}} \\
+    x_{a(n+1)} &= \frac{x_{a(n)} + \frac{a_2 x_{b(n)} \Delta t + a_2(b_1 u_1 + b_2 u_2)\Delta t\Delta t}{1 - a_4\Delta t} + (b_1 u_1 + b_2 u_2)\Delta t}{(1 - a_1\Delta t) - (1 - a_1\Delta t)a_4\Delta t - a_2 a_3 \Delta t\Delta t} \\
+    x_{a(n+1)} &= \frac{x_{a(n)} + \frac{a_2 x_{b(n)} \Delta t + a_2(b_1 u_1 + b_2 u_2)\Delta t\Delta t}{1 - a_4\Delta t} + (b_1 u_1 + b_2 u_2)\Delta t}{1 - a_1\Delta t - a_4\Delta t + a_1a_4\Delta t\Delta t - a_2 a_3 \Delta t\Delta t} \\
+    x_{a(n+1)} &= \frac{[x_{a(n)} + (b_1 u_1 + b_2 u_2)\Delta t](1 - a_4\Delta t)}{(1 - a_1\Delta t)(1 - a_4\Delta t) - (- a_2\Delta t)(- a_3\Delta t)} + \\ \nonumber
+    &\quad \frac{a_2 x_{b(n)} \Delta t + a_2(b_1 u_1 + b_2 u_2)\Delta t\Delta t}{(1 - a_1\Delta t)(1 - a_4\Delta t) - (- a_2\Delta t)(- a_3\Delta t)} \\
+    x_{a(n+1)} &= \frac{[x_{a(n)} + (b_1 u_1 + b_2 u_2)\Delta t](1 - a_4\Delta t)}{(1 - a_1\Delta t)(1 - a_4\Delta t) - (- a_2\Delta t)(- a_3\Delta t)} + \\ \nonumber
+    &\quad \frac{[x_{b(n)} + (b_1 u_1 + b_2 u_2)\Delta t](a_2\Delta t)}{(1 - a_1\Delta t)(1 - a_4\Delta t) - (- a_2\Delta t)(- a_3\Delta t)}
   \end{align}
 \end{subequations}
 
@@ -102,7 +108,14 @@ Substituting this result into the $x_{b(n+1)}$ equation:
     x_{b(n+1)} &= x_{b(n)} + \frac{a_3 x_{a(n)}\Delta t + a_3(b_1 u_1 + b_2 u_2)\Delta t\Delta t}{1 - a_1\Delta t} + a_4 x_{b(n+1)}\Delta t + \\ \nonumber
     &\quad \frac{a_2 a_3 x_{b(n+1)}\Delta t\Delta t}{1 - a_1\Delta t} + (b_1 u_1 + b_2 u_2)\Delta t \\
     x_{b(n+1)}\left[1 - a_4\Delta t - \frac{a_2 a_3 \Delta t\Delta t}{1 - a_1\Delta t}\right] &= x_{b(n)} + \frac{a_3 x_{a(n)}\Delta t + a_3(b_1 u_1 + b_2 u_2)\Delta t\Delta t}{1 - a_1\Delta t} + (b_1 u_1 + b_2 u_2)\Delta t \\
-    x_{b(n+1)} &= \frac{x_{b(n)} + \frac{a_3 x_{a(n)}\Delta t + a_3(b_1 u_1 + b_2 u_2)\Delta t\Delta t}{1 - a_1\Delta t} + (b_1 u_1 + b_2 u_2)\Delta t}{1 - a_4\Delta t - \frac{a_2 a_3 \Delta t\Delta t}{1 - a_1\Delta t}}
+    x_{b(n+1)} &= \frac{x_{b(n)} + \frac{a_3 x_{a(n)}\Delta t + a_3(b_1 u_1 + b_2 u_2)\Delta t\Delta t}{1 - a_1\Delta t} + (b_1 u_1 + b_2 u_2)\Delta t}{1 - a_4\Delta t - \frac{a_2 a_3 \Delta t\Delta t}{1 - a_1\Delta t}} \\
+    x_{b(n+1)} &= \frac{x_{b(n)} + \frac{a_3 x_{a(n)}\Delta t + a_3(b_1 u_1 + b_2 u_2)\Delta t\Delta t}{1 - a_1\Delta t} + (b_1 u_1 + b_2 u_2)\Delta t}{(1 - a_1\Delta t) - (1 - a_1\Delta t)a_4\Delta t - a_2 a_3 \Delta t\Delta t} \\
+    x_{b(n+1)} &= \frac{x_{b(n)} + \frac{a_3 x_{a(n)}\Delta t + a_3(b_1 u_1 + b_2 u_2)\Delta t\Delta t}{1 - a_1\Delta t} + (b_1 u_1 + b_2 u_2)\Delta t}{1 - a_1\Delta t - a_4\Delta t + a_1a_4\Delta t\Delta t - a_2 a_3 \Delta t\Delta t} \\
+    x_{b(n+1)} &= \frac{x_{b(n)} + \frac{a_3 x_{a(n)}\Delta t + a_3(b_1 u_1 + b_2 u_2)\Delta t\Delta t}{1 - a_1\Delta t} + (b_1 u_1 + b_2 u_2)\Delta t}{(1 - a_1\Delta t)(1 - a_4\Delta t) - (- a_2\Delta t)(- a_3\Delta t)} \\
+    x_{b(n+1)} &= \frac{\left[x_{b(n)} + (b_1 u_1 + b_2 u_2)\Delta t\right](1 - a_1\Delta t)}{(1 - a_1\Delta t)(1 - a_4\Delta t) - (- a_2\Delta t)(- a_3\Delta t)} + \\ \nonumber
+    &\quad \frac{a_3 x_{a(n)}\Delta t + a_3(b_1 u_1 + b_2 u_2)\Delta t\Delta t }{(1 - a_1\Delta t)(1 - a_4\Delta t) - (- a_2\Delta t)(- a_3\Delta t)} \\
+    x_{b(n+1)} &= \frac{\left[x_{b(n)} + (b_1 u_1 + b_2 u_2)\Delta t\right](1 - a_1\Delta t)}{(1 - a_1\Delta t)(1 - a_4\Delta t) - (- a_2\Delta t)(- a_3\Delta t)} + \\ \nonumber
+    &\quad \frac{\left[x_{a(n)} + (b_1 u_1 + b_2 u_2)\Delta t\right](a_3\Delta t)}{(1 - a_1\Delta t)(1 - a_4\Delta t) - (- a_2\Delta t)(- a_3\Delta t)}
   \end{align}
 \end{subequations}
 
@@ -314,64 +327,23 @@ Instead solving using the matrix equation:
     \begin{bmatrix}
       x_{a(n)} + (b_1 u_1 + b_2 u_2)\Delta t \\
       x_{b(n)} + (b_1 u_1 + b_2 u_2)\Delta t
-    \end{bmatrix} \\
+    \end{bmatrix}
   \end{align}
 \end{subequations}
 
-
-% \begin{subequations}
-%   \begin{align}
-%   \begin{bmatrix}
-%     x_{a(n+1)} \\
-%     x_{b(n+1)}
-%   \end{bmatrix} -
-%   \begin{bmatrix}
-%     a_1\Delta t x_{a(n+1)} +  a_2\Delta t x_{b(n+1)} \\
-%     a_3\Delta t x_{a(n+1)} + a_4\Delta t x_{b(n+1)}
-%   \end{bmatrix} &=
-%   \begin{bmatrix}
-%     x_{a(n)} \\
-%     x_{b(n)}
-%   \end{bmatrix} +
-%   \begin{bmatrix}
-%     b_1\Delta t & b_2\Delta t \\
-%   \end{bmatrix}
-%   \begin{bmatrix}
-%     u_1 \\
-%     u_2
-%   \end{bmatrix} \\
-%   \begin{bmatrix}
-%     x_{a(n+1)} - (a_1\Delta t x_{a(n+1)} +  a_2\Delta t x_{b(n+1)}) \\
-%     x_{b(n+1)} - (a_3\Delta t x_{a(n+1)} + a_4\Delta t x_{b(n+1)})
-%   \end{bmatrix} &=
-%   \begin{bmatrix}
-%     x_{a(n)} \\
-%     x_{b(n)}
-%   \end{bmatrix} +
-%   \begin{bmatrix}
-%     b_1\Delta t & b_2\Delta t \\
-%   \end{bmatrix}
-%   \begin{bmatrix}
-%     u_1 \\
-%     u_2
-%   \end{bmatrix} \\
-%   \begin{bmatrix}
-%     x_{a(n+1)}(1 - a_1\Delta t) - a_2\Delta t x_{b(n+1)} \\
-%     x_{b(n+1)}(1 - a_4\Delta t) - a_3\Delta t x_{a(n+1)}
-%   \end{bmatrix} &=
-%   \begin{bmatrix}
-%     x_{a(n)} \\
-%     x_{b(n)}
-%   \end{bmatrix} +
-%   \begin{bmatrix}
-%     b_1\Delta t & b_2\Delta t \\
-%   \end{bmatrix}
-%   \begin{bmatrix}
-%     u_1 \\
-%     u_2
-%   \end{bmatrix} \\
-%   \end{align}
-% \end{subequations}
+Therefore:
+\begin{subequations}
+  \begin{align}
+    x_{a(n+1)} &= \frac{\left[x_{a(n)} + (b_1 u_1 + b_2 u_2)\Delta t\right](1 - a_4\Delta t)}{(1 - a_1\Delta t)(1 - a_4\Delta t) - (- a_2\Delta t)(- a_3\Delta t)} + \\ \nonumber
+    &\quad \frac{\left[x_{b(n)} + (b_1 u_1 + b_2 u_2)\Delta t\right](a_2\Delta t)}{(1 - a_1\Delta t)(1 - a_4\Delta t) - (- a_2\Delta t)(- a_3\Delta t)}
+  \end{align}
+\end{subequations}
+\begin{subequations}
+  \begin{align}
+    x_{b(n+1)} &= \frac{\left[x_{a(n)} + (b_1 u_1 + b_2 u_2)\Delta t\right](a_3\Delta t)}{(1 - a_1\Delta t)(1 - a_4\Delta t) - (- a_2\Delta t)(- a_3\Delta t)} + \\ \nonumber
+    &\quad \frac{\left[x_{b(n)} + (b_1 u_1 + b_2 u_2)\Delta t\right](1 - a_1\Delta t)}{(1 - a_1\Delta t)(1 - a_4\Delta t) - (- a_2\Delta t)(- a_3\Delta t)}
+  \end{align}
+\end{subequations}
 
 \end{document}
 %-----------------------------------------------------------------------------%

@@ -1,4 +1,4 @@
-PWD D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\test
+PWD D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\test\backwards_euler_derivation
 INPUT C:\Users\akern\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
 INPUT backwards_euler_derivation.tex
 OUTPUT backwards_euler_derivation.log
