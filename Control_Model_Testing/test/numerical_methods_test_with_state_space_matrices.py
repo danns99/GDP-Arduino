@@ -200,7 +200,7 @@ def run_sim():
     axs[0].set_xlim(0, sim_time)
     axs[0].set_xticks(arange(0, sim_time+1, step=1))
     axs[0].grid()
-    # plot vertical velocities
+    # Plot vertical velocities
     axs[1].plot(times, x_store_0_sc[:-1], 'k',
                 label='Scout Backwards Euler')
     axs[1].plot(times, x_store_0_t[:-1], 'b',
