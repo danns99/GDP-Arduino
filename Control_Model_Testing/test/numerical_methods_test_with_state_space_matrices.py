@@ -56,9 +56,6 @@ def solve_xdot_f_euler(A, B, x_store_0, x_store_1, u, dt, steps):
     # Initialise variables
     x = [0, 0]
 
-    # Calculate B*u
-    # B_times_u = (B[0]*0 + B[1]*u[0])
-
     # Calculate x
     x[0] = x_store_0[steps] + dt*(A[0][0]*x_store_0[steps] +
                                   A[0][1]*x_store_1[steps] + B[0]*u[0])
@@ -152,7 +149,7 @@ def run_sim():
                                x_store_1_t_b_euler, u, dt, steps)
         x_store_0_t_b_euler.append(x[0])
         x_store_1_t_b_euler.append(x[1])
-        
+
         # Solve the state-space equations for the Scout
         x = solve_xdot_b_euler(A_sc, B_sc, x_store_0_sc_b_euler,
                                x_store_1_sc_b_euler, u, dt, steps)
@@ -180,11 +177,11 @@ def run_sim():
     # Plot pitch rates
     fig, axs = plt.subplots(2, 1)
     axs[0].plot(times, x_store_1_sc_b_euler[:-1], 'k',
-             label='Scout Backwards Euler')
+                label='Scout Backwards Euler')
     axs[0].plot(times, x_store_1_t_b_euler[:-1], 'b',
-             label='Target Backwards Euler')
+                label='Target Backwards Euler')
     axs[0].plot(times, x_store_1_sc_mod_b_euler[:-1], 'r--',
-             label='Modified Scout Backwards Euler')
+                label='Modified Scout Backwards Euler')
     axs[0].legend(loc='upper right')
     axs[0].set_ylabel(r"$q$ ($rad/s$)")
     axs[0].set_title("Pitch Rate vs Time")
