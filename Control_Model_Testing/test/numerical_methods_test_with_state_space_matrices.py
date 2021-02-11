@@ -10,6 +10,9 @@ import matplotlib.pyplot as plt
 # Functions
 # --------------------------------------------------------------------------- #
 def solve_xdot_rk_4(A, B, x_store_0, x_store_1, u, dt, steps):
+    '''
+    Solves the state-space equations using a fourth order Runge-Kutta method.
+    '''
     # Initialise variables
     x = [0, 0]
     x_dot = [0, 0]
@@ -53,6 +56,9 @@ def solve_xdot_rk_4(A, B, x_store_0, x_store_1, u, dt, steps):
 
 
 def solve_xdot_f_euler(A, B, x_store_0, x_store_1, u, dt, steps):
+    '''
+    Solves the state-space equations using the forward Euler method.
+    '''
     # Initialise variables
     x = [0, 0]
 
@@ -66,6 +72,9 @@ def solve_xdot_f_euler(A, B, x_store_0, x_store_1, u, dt, steps):
 
 
 def solve_xdot_b_euler(A, B, x_store_0, x_store_1, u, dt, steps):
+    '''
+    Solves the state-space equations using the backwards Euler method.
+    '''
     # Initialise variables
     B_times_u = [0, 0]
     inv_A = [[0, 0], [0, 0]]
@@ -110,6 +119,9 @@ def get_modified_scout_input(q_from_target, error, integral, iteration_time):
 
 
 def run_sim():
+    '''
+    Runs and plots the results of the state-space systems.
+    '''
     # State-space matrices for the Scout and target aircraft
     A_sc = [[-3.36272133719075, 53.0090457250976],
             [-1.22585753557309, -5.71920679668875]]
@@ -121,12 +133,12 @@ def run_sim():
     x = [0, 0]
 
     # Initialise arrays for storing the results of the simulation
-    x_store_0_sc_b_euler = [0]
-    x_store_1_sc_b_euler = [0]
-    x_store_0_t_b_euler = [0]
-    x_store_1_t_b_euler = [0]
-    x_store_0_sc_mod_b_euler = [0]
-    x_store_1_sc_mod_b_euler = [0]
+    x_store_0_sc = [0]
+    x_store_1_sc = [0]
+    x_store_0_t = [0]
+    x_store_1_t = [0]
+    x_store_0_sc_mod = [0]
+    x_store_1_sc_mod = [0]
     u_store_modified_scout = [0]
 
     times = []
@@ -145,28 +157,28 @@ def run_sim():
             u[0] = 15 * pi/180
 
         # Solve the state-space equations for the target
-        x = solve_xdot_b_euler(A_t, B_t, x_store_0_t_b_euler,
-                               x_store_1_t_b_euler, u, dt, steps)
-        x_store_0_t_b_euler.append(x[0])
-        x_store_1_t_b_euler.append(x[1])
+        x = solve_xdot_b_euler(A_t, B_t, x_store_0_t,
+                               x_store_1_t, u, dt, steps)
+        x_store_0_t.append(x[0])
+        x_store_1_t.append(x[1])
 
         # Solve the state-space equations for the Scout
-        x = solve_xdot_b_euler(A_sc, B_sc, x_store_0_sc_b_euler,
-                               x_store_1_sc_b_euler, u, dt, steps)
-        x_store_0_sc_b_euler.append(x[0])
-        x_store_1_sc_b_euler.append(x[1])
+        x = solve_xdot_b_euler(A_sc, B_sc, x_store_0_sc,
+                               x_store_1_sc, u, dt, steps)
+        x_store_0_sc.append(x[0])
+        x_store_1_sc.append(x[1])
 
         # Get the input into the modified Scout
         u_modified_scout, integral = get_modified_scout_input(
-                x_store_1_t_b_euler[steps], x_store_1_sc_mod_b_euler[steps],
+                x_store_1_t[steps], x_store_1_sc_mod[steps],
                 integral, dt)
 
         # Solve the state-space equations for the modified Scout
-        x = solve_xdot_b_euler(A_sc, B_sc, x_store_0_sc_mod_b_euler,
-                               x_store_1_sc_mod_b_euler, u_modified_scout,
+        x = solve_xdot_b_euler(A_sc, B_sc, x_store_0_sc_mod,
+                               x_store_1_sc_mod, u_modified_scout,
                                dt, steps)
-        x_store_0_sc_mod_b_euler.append(x[0])
-        x_store_1_sc_mod_b_euler.append(x[1])
+        x_store_0_sc_mod.append(x[0])
+        x_store_1_sc_mod.append(x[1])
         u_store_modified_scout.append(u_modified_scout[0])
 
         times.append(dt*steps)
@@ -176,11 +188,11 @@ def run_sim():
     # Plot the results of the simulation
     # Plot pitch rates
     fig, axs = plt.subplots(2, 1)
-    axs[0].plot(times, x_store_1_sc_b_euler[:-1], 'k',
+    axs[0].plot(times, x_store_1_sc[:-1], 'k',
                 label='Scout Backwards Euler')
-    axs[0].plot(times, x_store_1_t_b_euler[:-1], 'b',
+    axs[0].plot(times, x_store_1_t[:-1], 'b',
                 label='Target Backwards Euler')
-    axs[0].plot(times, x_store_1_sc_mod_b_euler[:-1], 'r--',
+    axs[0].plot(times, x_store_1_sc_mod[:-1], 'r--',
                 label='Modified Scout Backwards Euler')
     axs[0].legend(loc='lower right')
     axs[0].set_ylabel(r"$q$ ($rad/s$)")
