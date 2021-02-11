@@ -100,6 +100,9 @@ def solve_xdot_b_euler(A, B, x_store_0, x_store_1, u, dt, steps):
 
 
 def get_modified_scout_input(q_from_target, error, integral, iteration_time):
+    '''
+    Gets the input for the modified Scout.
+    '''
     # Calculate the output from the feedback sum
     u_from_error_sum = q_from_target - error
 
