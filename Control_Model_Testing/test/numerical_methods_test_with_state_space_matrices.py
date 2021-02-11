@@ -135,7 +135,7 @@ def run_sim():
     integral = 0
 
     # Simulation time settings
-    dt = 0.002
+    dt = 0.001
     sim_time = 15
     steps = 0
 
