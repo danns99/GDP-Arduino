@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1613061677 "backwards_euler_derivation.tex" "backwards_euler_derivation.pdf" "backwards_euler_derivation" 1613061678
+["pdflatex"] 1613062365 "backwards_euler_derivation.tex" "backwards_euler_derivation.pdf" "backwards_euler_derivation" 1613062366
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmex10.tfm" 1136765053 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
@@ -39,9 +39,9 @@
   "C:/Users/akern/AppData/Roaming/MiKTeX/2.9/tex/latex/kvoptions/kvoptions.sty" 1602224496 22521 d2fceb764a442a2001d257ef11db7618 ""
   "C:/Users/akern/AppData/Roaming/MiKTeX/2.9/tex/latex/l3backend/l3backend-pdftex.def" 1600952516 23704 02c466ff883953a445c97e55638005fc ""
   "C:/Users/akern/AppData/Roaming/MiKTeX/2.9/tex/latex/parskip/parskip.sty" 1592833306 4414 25631f9679adf750bac898538ededd61 ""
-  "backwards_euler_derivation.aux" 1613061678 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "backwards_euler_derivation.tex" 1613061677 13625 36d36ff9ae1af8401914a766bd175084 ""
+  "backwards_euler_derivation.aux" 1613062366 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "backwards_euler_derivation.tex" 1613062365 13257 5d9e824fe5ec2590156209603c666208 ""
   (generated)
   "backwards_euler_derivation.log"
-  "backwards_euler_derivation.aux"
   "backwards_euler_derivation.pdf"
+  "backwards_euler_derivation.aux"
