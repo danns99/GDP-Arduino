@@ -9,18 +9,61 @@ import matplotlib.pyplot as plt
 
 # Functions
 # --------------------------------------------------------------------------- #
+def solve_xdot_rk_4(A, B, x_store_0, x_store_1, u, dt, steps):
+    # Initialise variables
+    x = [0, 0]
+    x_dot = [0, 0]
+
+    # K1 = dt*(A*x+B*u)
+    K1 = dt*(A[0][0]*x_store_0[steps] + A[0][1]*x_store_1[steps] + B[0]*u[0])
+    # K2 = dt*(A*(x+K1/2)+B*u)
+    K2 = dt*(A[0][0]*(x_store_0[steps]+K1/2) +
+             A[0][1]*(x_store_1[steps]+K1/2) + B[0]*u[0])
+    # K3 = dt*(A*(x+K2/2)+B*u)
+    K3 = dt*(A[0][0]*(x_store_0[steps]+K2/2) +
+             A[0][1]*(x_store_1[steps]+K2/2) + B[0]*u[0])
+    # K4 = dt*(A*(x+K3)+B*u)
+    K4 = dt*(A[0][0]*(x_store_0[steps]+K3) +
+             A[0][1]*(x_store_1[steps]+K3) + B[0]*u[0])
+
+    # Calculate the derivative of x with respect to time
+    x_dot[0] = (K1 + (2.0*K2) + (2.0*K3) + K4)/6.0
+    # Calculate x
+    x[0] = x_store_0[steps] + x_dot[0]
+
+    # K1 = dt*(A*x+B*u)
+    K1 = dt*(A[1][0]*x_store_0[steps] +
+             A[1][1]*x_store_1[steps] + B[1]*u[0])
+    # K2 = dt*(A*(x+K1/2)+B*u)
+    K2 = dt*(A[1][0]*(x_store_0[steps]+K1/2) +
+             A[1][1]*(x_store_1[steps]+K1/2) + B[1]*u[0])
+    # K3 = dt*(A*(x+K2/2)+B*u)
+    K3 = dt*(A[1][0]*(x_store_0[steps]+K2/2) +
+             A[1][1]*(x_store_1[steps]+K2/2) + B[1]*u[0])
+    # K4 = dt*(A*(x+K3)+B*u)
+    K4 = dt*(A[1][0]*(x_store_0[steps]+K3) +
+             A[1][1]*(x_store_1[steps]+K3) + B[1]*u[0])
+
+    # Calculate the derivative of x with respect to time
+    x_dot[1] = (K1 + (2.0*K2) + (2.0*K3) + K4)/6.0
+    # Calculate x
+    x[1] = x_store_1[steps] + x_dot[1]
+
+    return(x)
+
+
 def solve_xdot_f_euler(A, B, x_store_0, x_store_1, u, dt, steps):
     # Initialise variables
     x = [0, 0]
 
     # Calculate B*u
-    B_times_u = (B[0]*0 + B[1]*u[0])
+    # B_times_u = (B[0]*0 + B[1]*u[0])
 
     # Calculate x
     x[0] = x_store_0[steps] + dt*(A[0][0]*x_store_0[steps] +
-                                  A[0][1]*x_store_1[steps] + B_times_u)
+                                  A[0][1]*x_store_1[steps] + B[0]*u[0])
     x[1] = x_store_1[steps] + dt*(A[1][0]*x_store_0[steps] +
-                                  A[1][1]*x_store_1[steps] + B_times_u)
+                                  A[1][1]*x_store_1[steps] + B[1]*u[0])
 
     return(x)
 
@@ -40,8 +83,8 @@ def solve_xdot_b_euler(A, B, x_store_0, x_store_1, u, dt, steps):
     inv_A[1][1] = inv_det_A * (1-(A[0][0]*dt))
 
     # Calculate B*u
-    B_times_u[0] = x_store_0[steps] + (B[0]*0 + B[1]*u[0])*dt
-    B_times_u[1] = x_store_1[steps] + (B[0]*0 + B[1]*u[0])*dt
+    B_times_u[0] = x_store_0[steps] + (B[0]*u[0])*dt
+    B_times_u[1] = x_store_1[steps] + (B[1]*u[0])*dt
 
     # Calculate x
     x[0] = inv_A[0][0]*B_times_u[0] + inv_A[0][1]*B_times_u[1]
@@ -77,7 +120,7 @@ def run_sim():
     A_t = [[-0.295319442940517, 177.255749314106],
            [-0.0104482212700093, -0.448358567032906]]
     B_t = [-6.2938910678574, -4.88848338612147]
-    u = [0, 0]
+    u = [0]
     x = [0, 0]
 
     # Initialise arrays for storing the results of the simulation
@@ -95,7 +138,7 @@ def run_sim():
     integral = 0
 
     # Simulation time settings
-    dt = 0.001
+    dt = 0.002
     sim_time = 15
     steps = 0
 
@@ -104,17 +147,17 @@ def run_sim():
         if steps == 0:
             u[0] = 15 * pi/180
 
-        # Solve the state-space equations for the Scout
-        x = solve_xdot_b_euler(A_sc, B_sc, x_store_0_sc_b_euler,
-                               x_store_1_sc_b_euler, u, dt, steps)
-        x_store_0_sc_b_euler.append(x[0])
-        x_store_1_sc_b_euler.append(x[1])
-
         # Solve the state-space equations for the target
         x = solve_xdot_b_euler(A_t, B_t, x_store_0_t_b_euler,
                                x_store_1_t_b_euler, u, dt, steps)
         x_store_0_t_b_euler.append(x[0])
         x_store_1_t_b_euler.append(x[1])
+        
+        # Solve the state-space equations for the Scout
+        x = solve_xdot_b_euler(A_sc, B_sc, x_store_0_sc_b_euler,
+                               x_store_1_sc_b_euler, u, dt, steps)
+        x_store_0_sc_b_euler.append(x[0])
+        x_store_1_sc_b_euler.append(x[1])
 
         # Get the input into the modified Scout
         u_modified_scout, integral = get_modified_scout_input(
