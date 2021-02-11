@@ -187,7 +187,7 @@ def run_sim():
 
     # Plot the results of the simulation
     # Plot pitch rates
-    fig, axs = plt.subplots(2, 1)
+    fig, axs = plt.subplots(3, 1)
     axs[0].plot(times, x_store_1_sc[:-1], 'k',
                 label='Scout Backwards Euler')
     axs[0].plot(times, x_store_1_t[:-1], 'b',
@@ -195,22 +195,32 @@ def run_sim():
     axs[0].plot(times, x_store_1_sc_mod[:-1], 'r--',
                 label='Modified Scout Backwards Euler')
     axs[0].legend(loc='lower right')
-    axs[0].set_ylabel(r"$q$ ($rad/s$)")
     axs[0].set_title("Pitch Rate vs Time")
-    axs[0].set_xticks(arange(0, sim_time+1, step=1))
-    axs[0].set_yticks(arange(-0.9, 0.2, step=0.1))
-    axs[0].grid()
+    axs[0].set_ylabel(r"$q$ ($rad/s$)")
     axs[0].set_xlim(0, sim_time)
-    axs[0].set_ylim(-0.9, 0.1)
+    axs[0].set_xticks(arange(0, sim_time+1, step=1))
+    axs[0].grid()
+    # plot vertical velocities
+    axs[1].plot(times, x_store_0_sc[:-1], 'k',
+                label='Scout Backwards Euler')
+    axs[1].plot(times, x_store_0_t[:-1], 'b',
+                label='Target Backwards Euler')
+    axs[1].plot(times, x_store_0_sc_mod[:-1], 'r--',
+                label='Modified Scout Backwards Euler')
+    axs[1].legend(loc='lower right')
+    axs[1].set_title("Vertical Velocity vs Time")
+    axs[1].set_ylabel(r"$w$ ($m/s$)")
+    axs[1].set_xlim(0, sim_time)
+    axs[1].set_xticks(arange(0, sim_time+1, step=1))
+    axs[1].grid()
 
     # Plot control inputs
-    axs[1].plot(times, u_store_modified_scout[:-1], 'k')
-    axs[1].set_xticks(arange(0, sim_time+1, step=1))
-    axs[1].set_xlim(0, sim_time)
-    axs[1].set_ylim(min(u_store_modified_scout), max(u_store_modified_scout))
-    axs[1].set_ylabel(r"$u$ ($rad$)")
-    axs[1].set_title(r"$u$ into Modified Scout vs Time")
-    axs[1].grid()
+    axs[2].plot(times, u_store_modified_scout[:-1], 'k')
+    axs[2].set_title(r"$u$ into Modified Scout vs Time")
+    axs[2].set_ylabel(r"$u$ ($rad$)")
+    axs[2].set_xlim(0, sim_time)
+    axs[2].set_xticks(arange(0, sim_time+1, step=1))
+    axs[2].grid()
 
     # Place labels on the x-axis of the subplots
     for ax in axs.flat:
