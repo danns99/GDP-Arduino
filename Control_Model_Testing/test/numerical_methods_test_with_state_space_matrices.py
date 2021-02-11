@@ -182,7 +182,7 @@ def run_sim():
                 label='Target Backwards Euler')
     axs[0].plot(times, x_store_1_sc_mod_b_euler[:-1], 'r--',
                 label='Modified Scout Backwards Euler')
-    axs[0].legend(loc='upper right')
+    axs[0].legend(loc='lower right')
     axs[0].set_ylabel(r"$q$ ($rad/s$)")
     axs[0].set_title("Pitch Rate vs Time")
     axs[0].set_xticks(arange(0, sim_time+1, step=1))
