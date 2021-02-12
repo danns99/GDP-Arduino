@@ -18,7 +18,8 @@ def solve_xdot_rk_4(A, B, x_store_0, x_store_1, u, dt, steps):
     x_dot = [0, 0]
 
     # K1 = dt*(A*x+B*u)
-    K1 = dt*(A[0][0]*x_store_0[steps] + A[0][1]*x_store_1[steps] + B[0]*u[0])
+    K1 = dt*(A[0][0]*x_store_0[steps] +
+             A[0][1]*x_store_1[steps] + B[0]*u[0])
     # K2 = dt*(A*(x+K1/2)+B*u)
     K2 = dt*(A[0][0]*(x_store_0[steps]+K1/2) +
              A[0][1]*(x_store_1[steps]+K1/2) + B[0]*u[0])
@@ -73,7 +74,8 @@ def solve_xdot_f_euler(A, B, x_store_0, x_store_1, u, dt, steps):
 
 def solve_xdot_b_euler(A, B, x_store_0, x_store_1, u, dt, steps):
     '''
-    Solves the state-space equations using the backwards Euler method.
+    Solves the state-space equations using an equation derived from the
+    backwards Euler method.
     '''
     # Initialise variables
     B_times_u = [0, 0]
@@ -95,6 +97,33 @@ def solve_xdot_b_euler(A, B, x_store_0, x_store_1, u, dt, steps):
     # Calculate x
     x[0] = inv_A[0][0]*B_times_u[0] + inv_A[0][1]*B_times_u[1]
     x[1] = inv_A[1][0]*B_times_u[0] + inv_A[1][1]*B_times_u[1]
+
+    return(x)
+
+
+def solve_xdot_b_euler_iter(A, B, x_store_0, x_store_1, u, dt, steps):
+    '''
+    Solves the state-space equations using the backwards Euler method through
+    fixed point iteration.
+    '''
+    # Initialise variables
+    N = 0
+    x_fixed = [x_store_0[steps], x_store_1[steps]]
+    x = [0, 0]
+    x_dot = [0, 0]
+
+    # Guess the first step in the iteration by using the forward Euler method
+    x = solve_xdot_f_euler(A, B, x_store_0, x_store_1, u, dt, steps)
+
+    # Iterate to calculate x
+    while(N < 10):
+        x_dot[0] = (A[0][0]*x[0] + A[0][1]*x[1] + B[0]*u[0])
+        x_dot[1] = (A[1][0]*x[0] + A[1][1]*x[1] + B[1]*u[0])
+
+        x[0] = x_fixed[0] + x_dot[0]*dt
+        x[1] = x_fixed[1] + x_dot[1]*dt
+
+        N += 1
 
     return(x)
 
