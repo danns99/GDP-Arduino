@@ -160,26 +160,24 @@ def run_sim():
             u[0] = 15 * pi/180
 
         # Solve the state-space equations for the target
-        x = solve_xdot_b_euler(A_t, B_t, x_store_0_t,
-                               x_store_1_t, u, dt, steps)
+        x = solve_xdot_b_euler(A_t, B_t, x_store_0_t, x_store_1_t, u, dt,
+                               steps)
         x_store_0_t.append(x[0])
         x_store_1_t.append(x[1])
 
         # Solve the state-space equations for the Scout
-        x = solve_xdot_b_euler(A_sc, B_sc, x_store_0_sc,
-                               x_store_1_sc, u, dt, steps)
+        x = solve_xdot_b_euler(A_sc, B_sc, x_store_0_sc, x_store_1_sc, u, dt,
+                               steps)
         x_store_0_sc.append(x[0])
         x_store_1_sc.append(x[1])
 
         # Get the input into the modified Scout
         u_modified_scout, integral = get_modified_scout_input(
-                x_store_1_t[steps], x_store_1_sc_mod[steps],
-                integral, dt)
+                x_store_1_t[steps], x_store_1_sc_mod[steps], integral, dt)
 
         # Solve the state-space equations for the modified Scout
-        x = solve_xdot_b_euler(A_sc, B_sc, x_store_0_sc_mod,
-                               x_store_1_sc_mod, u_modified_scout,
-                               dt, steps)
+        x = solve_xdot_b_euler(A_sc, B_sc, x_store_0_sc_mod, x_store_1_sc_mod,
+                               u_modified_scout, dt, steps)
         x_store_0_sc_mod.append(x[0])
         x_store_1_sc_mod.append(x[1])
         u_store_modified_scout.append(u_modified_scout[0])
@@ -191,12 +189,9 @@ def run_sim():
     # Plot the results of the simulation
     # Plot pitch rates
     fig, axs = plt.subplots(3, 1)
-    axs[0].plot(times, x_store_1_sc[:-1], 'k',
-                label='Scout Backwards Euler')
-    axs[0].plot(times, x_store_1_t[:-1], 'b',
-                label='Target Backwards Euler')
-    axs[0].plot(times, x_store_1_sc_mod[:-1], 'r--',
-                label='Modified Scout Backwards Euler')
+    axs[0].plot(times, x_store_1_sc[:-1], 'k', label='Scout')
+    axs[0].plot(times, x_store_1_t[:-1], 'b', label='Target')
+    axs[0].plot(times, x_store_1_sc_mod[:-1], 'r--', label='Modified Scout')
     axs[0].legend(loc='lower right')
     axs[0].set_title("Pitch Rate vs Time")
     axs[0].set_ylabel(r"$q$ ($rad/s$)")
@@ -204,12 +199,9 @@ def run_sim():
     axs[0].set_xticks(arange(0, sim_time+1, step=1))
     axs[0].grid()
     # Plot vertical velocities
-    axs[1].plot(times, x_store_0_sc[:-1], 'k',
-                label='Scout Backwards Euler')
-    axs[1].plot(times, x_store_0_t[:-1], 'b',
-                label='Target Backwards Euler')
-    axs[1].plot(times, x_store_0_sc_mod[:-1], 'r--',
-                label='Modified Scout Backwards Euler')
+    axs[1].plot(times, x_store_0_sc[:-1], 'k', label='Scout')
+    axs[1].plot(times, x_store_0_t[:-1], 'b', label='Target')
+    axs[1].plot(times, x_store_0_sc_mod[:-1], 'r--', label='Modified Scout')
     axs[1].legend(loc='lower right')
     axs[1].set_title("Vertical Velocity vs Time")
     axs[1].set_ylabel(r"$w$ ($m/s$)")
@@ -227,7 +219,7 @@ def run_sim():
 
     # Place labels on the x-axis of the subplots
     for ax in axs.flat:
-        ax.set(xlabel=r'time ($s$)')
+        ax.set(xlabel=r'Time ($s$)')
 
     # Adjust the horizontal spacing between subplots
     plt.subplots_adjust(hspace=0.5)
