@@ -21,8 +21,9 @@ class sim_analysis():
     def __init__(self, simulation_executable, data_filename):
         self.simulation_executable = simulation_executable
         self.data_filename = data_filename
+        self.control_inputs_data_filename = "test_data_aircraft_inputs.txt"
 
-        # Initialse arrays for storing data
+        # Initialise arrays for storing data
         self.times = []
         self.horizontal_velocities_sc = []
         self.vertical_velocities_sc = []
@@ -37,6 +38,9 @@ class sim_analysis():
         self.pitch_rates_sc_mod = []
         self.pitch_angles_sc_mod = []
 
+        self.control_sc_and_t = []
+        self.control_sc_mod = []
+
     def run_simulation(self):
         '''
         Runs the simulation executable.
@@ -44,7 +48,7 @@ class sim_analysis():
 
         subprocess.run(["./" + self.simulation_executable])
 
-    def file_read(self):
+    def file_read_state_data(self):
         '''
         Takes as input a filename and reads the data from the file line by
         line. Data from the file is read into arrays for storing the simulation
@@ -100,6 +104,23 @@ class sim_analysis():
                     self.vertical_velocities_sc_mod.append(
                             float(line.split(' ')[5]))
                     self.pitch_rates_sc_mod.append(float(line.split(' ')[6]))
+
+    def file_read_control_inputs_data(self):
+        '''
+        Takes as input a filename and reads the data from the file line by
+        line. Data from the file is read into arrays for storing the control
+        inputs for the Scout and target aircraft, and the modified Scout.
+        '''
+
+        with open(self.control_inputs_data_filename, 'r') as f:
+            # read in data line by line into the 1D array lines
+            lines = f.readlines()
+
+            # Go through each line read in from the file
+            for line in lines:
+                # Read in the values for control inputs
+                self.control_sc_and_t.append(float(line.split(' ')[1]))
+                self.control_sc_mod.append(float(line.split(' ')[2]))
 
     def data_plotting(self):
         '''
@@ -186,11 +207,32 @@ class sim_analysis():
         # Adjust the horizontal spacing between subplots
         plt.subplots_adjust(hspace=0.5)
 
+    def elevator_deflection_plotting(self):
+        '''
+        Plots the data read in from the simulation results. Plots the control
+        input for the Scout and target aircraft, and the control input for the
+        modified Scout.
+        '''
+
+        # Create subplot of 1 plot
+        fig, axs = plt.subplots(1)
+
+        # Plot control inputs
+        axs.plot(self.times, self.control_sc_and_t, 'k',
+                 label="Scout and Target Aircraft")
+        axs.plot(self.times, self.control_sc_mod, 'r--',
+                 label="Modified Scout")
+        axs.set_title("Control Inputs Vs Time")
+        axs.set_xlabel(r'time ($s$)')
+        axs.set_ylabel(r"$u$ ($rad$)")
+        axs.legend()
+
     def calc_error(self):
         '''
         Calculates the average absolute error between the target aircraft and
         the modified Scout.
         '''
+
         print(abs(sum([self.pitch_rates_t[i]-self.pitch_rates_sc_mod[i]
                        for i in range(len(self.pitch_rates_sc_mod))])) /
               len(self.pitch_rates_sc_mod))
@@ -203,12 +245,15 @@ def full_model_sim():
     '''
     Analyses the results for the full longitudinal model.
     '''
+
     full_model_results = sim_analysis(data_dir +
                                       "sim_runner_full_longitudinal_model",
                                       "test_data_full_model.txt")
     full_model_results.run_simulation()  # Run the external simulation code
-    full_model_results.file_read()  # Read in the data from the simulation run
+    full_model_results.file_read_state_data()  # Read in the data
+    full_model_results.file_read_control_inputs_data()  # Read in the data
     full_model_results.data_plotting()  # Plot the data from the simulation
+    full_model_results.elevator_deflection_plotting()  # Plot the control data
     full_model_results.calc_error()  # Error between modified Scout and target
 
 
@@ -216,14 +261,17 @@ def spo_model_sim():
     '''
     Analyses the results for the SPO model.
     '''
+
     spo_model_results = sim_analysis(data_dir + "sim_runner_spo_model",
                                      "test_data_spo_model.txt")
     spo_model_results.run_simulation()  # Run the external simulation code
-    spo_model_results.file_read()  # Read in the data from the simulation run
+    spo_model_results.file_read_state_data()  # Read in the data
+    spo_model_results.file_read_control_inputs_data()  # Read in the data
     spo_model_results.data_plotting()  # Plot the data from the simulation
+    spo_model_results.elevator_deflection_plotting()  # Plot the control data
     spo_model_results.calc_error()  # Error between modified Scout and target
 # --------------------------------------------------------------------------- #
 
 
-#full_model_sim()
+full_model_sim()
 spo_model_sim()

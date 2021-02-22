@@ -16,10 +16,10 @@ int run_control_loop(double dt, double *u, double *u_into_modified_scout,
     
     /* Solve the state-space equations for the target aircraft and the
     Scout */
-    // xdot_solve(A_t, B_t, x_t, u, dt);
-    // xdot_solve(A_sc, B_sc, x_sc, u, dt);
-    xdot_solve_backward_euler(A_t, B_t, x_t, u, dt);
-    xdot_solve_backward_euler(A_sc, B_sc, x_sc, u, dt);
+    xdot_solve(A_t, B_t, x_t, u, dt);
+    xdot_solve(A_sc, B_sc, x_sc, u, dt);
+    // xdot_solve_backward_euler(A_t, B_t, x_t, u, dt);
+    // xdot_solve_backward_euler(A_sc, B_sc, x_sc, u, dt);
 
     /* Get the control input for the modified Scout */
     /* Get the pitch rate output of the target aircraft */
@@ -46,8 +46,8 @@ int run_control_loop(double dt, double *u, double *u_into_modified_scout,
     u_into_modified_scout[0] = PD_controller(u_from_error_sum, error_prior, dt);
 
     /* Solve the state-space equations for the modified scout */
-    // xdot_solve(A_sc, B_sc, x_sc_mod, u_into_modified_scout, dt);
-    xdot_solve_backward_euler(A_sc, B_sc, x_sc_mod, u_into_modified_scout, dt);
+    xdot_solve(A_sc, B_sc, x_sc_mod, u_into_modified_scout, dt);
+    // xdot_solve_backward_euler(A_sc, B_sc, x_sc_mod, u_into_modified_scout, dt);
     // xdot_solve_mod(A_sc, B_sc, x_sc_mod, u_into_modified_scout, dt,
     //                q_out_of_target_aircraft, error_prior);
     return 0;
