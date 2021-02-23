@@ -13,6 +13,7 @@ def solve_xdot_rk_4(A, B, x_store_0, x_store_1, u, dt, steps):
     '''
     Solves the state-space equations using a fourth order Runge-Kutta method.
     '''
+
     # Initialise variables
     x = [0, 0]
     x_dot = [0, 0]
@@ -60,6 +61,7 @@ def solve_xdot_f_euler(A, B, x_store_0, x_store_1, u, dt, steps):
     '''
     Solves the state-space equations using the forward Euler method.
     '''
+
     # Initialise variables
     x = [0, 0]
 
@@ -77,6 +79,7 @@ def solve_xdot_b_euler(A, B, x_store_0, x_store_1, u, dt, steps):
     Solves the state-space equations using an equation derived from the
     backwards Euler method.
     '''
+
     # Initialise variables
     B_times_u = [0, 0]
     inv_A = [[0, 0], [0, 0]]
@@ -106,6 +109,7 @@ def solve_xdot_b_euler_iter(A, B, x_store_0, x_store_1, u, dt, steps):
     Solves the state-space equations using the backwards Euler method through
     fixed point iteration.
     '''
+
     # Initialise variables
     N = 0
     x_fixed = [x_store_0[steps], x_store_1[steps]]
@@ -128,12 +132,49 @@ def solve_xdot_b_euler_iter(A, B, x_store_0, x_store_1, u, dt, steps):
     return(x)
 
 
+def solve_xdot_b_euler_iter_var(A, B, x_store_0, x_store_1, u, dt, steps,
+                                integral, q_from_target, error):
+    '''
+    Solves the state-space equations using the backwards Euler method through
+    fixed point iteration. The u vector is also iterated.
+    '''
+
+    # Initialise variables
+    N = 0
+    x_fixed = [x_store_0[steps], x_store_1[steps]]
+    x = [0, 0]
+    x_dot = [0, 0]
+
+    # Guess the first step in the iteration by using the forward Euler method
+    x = solve_xdot_f_euler(A, B, x_store_0, x_store_1, u, dt, steps)
+    u_fixed = u
+
+    # Iterate to calculate x
+    while(N < 10):
+        error = x[1]
+        u, integral = get_modified_scout_input(q_from_target, error, integral,
+                                               dt)
+
+        u[0] = u_fixed[0] + u[0]*dt
+
+        x_dot[0] = (A[0][0]*x[0] + A[0][1]*x[1] + B[0]*u[0])
+        x_dot[1] = (A[1][0]*x[0] + A[1][1]*x[1] + B[1]*u[0])
+
+        x[0] = x_fixed[0] + x_dot[0]*dt
+        x[1] = x_fixed[1] + x_dot[1]*dt
+
+        N += 1
+
+    return(x, integral, u)
+
+
 def get_modified_scout_input(q_from_target, error, integral, iteration_time):
     '''
     Gets the input for the modified Scout.
     '''
+
     # Calculate the output from the feedback sum
-    u_from_error_sum = q_from_target - error
+    u_from_error_sum = (q_from_target - error)
 
     # Values for the PD controller
     N = 100.0
@@ -154,6 +195,7 @@ def run_sim():
     '''
     Runs and plots the results of the state-space systems.
     '''
+
     # State-space matrices for the Scout and target aircraft
     A_sc = [[-3.36272133719075, 53.0090457250976],
             [-1.22585753557309, -5.71920679668875]]
@@ -179,7 +221,7 @@ def run_sim():
     integral = 0
 
     # Simulation time settings
-    dt = 0.001
+    dt = 1/100
     sim_time = 15
     steps = 0
 
@@ -200,13 +242,16 @@ def run_sim():
         x_store_0_sc.append(x[0])
         x_store_1_sc.append(x[1])
 
-        # Get the input into the modified Scout
-        u_modified_scout, integral = get_modified_scout_input(
-                x_store_1_t[steps], x_store_1_sc_mod[steps], integral, dt)
+        # Get the input into the modified Scout for the first timestep
+        if steps == 0:
+            u_modified_scout, integral = get_modified_scout_input(
+                    x_store_1_t[steps], x_store_1_sc_mod[steps], integral, dt)
 
         # Solve the state-space equations for the modified Scout
-        x = solve_xdot_b_euler(A_sc, B_sc, x_store_0_sc_mod, x_store_1_sc_mod,
-                               u_modified_scout, dt, steps)
+        x, integral, u_modified_scout = solve_xdot_b_euler_iter_var(
+                               A_sc, B_sc, x_store_0_sc_mod, x_store_1_sc_mod,
+                               u_modified_scout, dt, steps, integral,
+                               x_store_1_t[steps], x_store_1_sc_mod[steps])
         x_store_0_sc_mod.append(x[0])
         x_store_1_sc_mod.append(x[1])
         u_store_modified_scout.append(u_modified_scout[0])
@@ -252,6 +297,11 @@ def run_sim():
 
     # Adjust the horizontal spacing between subplots
     plt.subplots_adjust(hspace=0.5)
+
+    print("Scout: ", x_store_1_sc[0:4])
+    print("Target: ", x_store_1_t[0:4])
+    print("U into modified Scout: ", u_store_modified_scout[0:4])
+    print("Modified Scout: ", x_store_1_sc_mod[0:4])
 # --------------------------------------------------------------------------- #
 
 
