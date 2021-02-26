@@ -166,6 +166,71 @@ def solve_xdot_b_euler_iter_var(A, B, x_store_0, x_store_1, u, dt, steps,
         N += 1
 
     return(x, integral, u)
+    
+
+def f_1_for_newton(A, B, x_1, x_2, x_fixed, u, dt):
+    return(x_1 - x_fixed - dt*(A[0][0]*x_1 + A[0][1]*x_2 + B[0]*u))
+
+
+def f_2_for_newton(A, B, x_1, x_2, x_fixed, u, dt):
+    return(x_2 - x_fixed - dt*(A[1][0]*x_1 + A[1][1]*x_2 + B[1]*u))
+
+
+def solve_xdot_b_euler_newton(A, B, x_store_0, x_store_1, u, dt, steps,
+                              integral, q_from_target, error):
+    # Initialise variables
+    N = 0
+    x_fixed = [x_store_0[steps], x_store_1[steps]]
+    x = [0, 0]
+    x_dot = [0, 0]
+    inv_J = [[0, 0], [0, 0]]
+    h = 1e-6
+
+    # Guess the first step in the iteration by using the forward Euler method
+    x = solve_xdot_f_euler(A, B, x_store_0, x_store_1, u, dt, steps)
+    u_fixed = u
+
+    # Iterate to calculate x
+    while(N < 10):
+        error = x[1]
+        u, integral = get_modified_scout_input(q_from_target, error, integral,
+                                               dt)
+
+        u[0] = u_fixed[0] + u[0]*dt
+
+        # Calculate the terms in the Jacobian
+        df1_dx1 = ((f_1_for_newton(A, B, x[0]+h, x[1], x_fixed[0], u[0], dt) -
+                   f_1_for_newton(A, B, x[0]-h, x[1], x_fixed[0], u[0], dt)) /
+                   (2*h))
+        df1_dx2 = ((f_1_for_newton(A, B, x[0], x[1]+h, x_fixed[0], u[0], dt) -
+                   f_1_for_newton(A, B, x[0], x[1]-h, x_fixed[0], u[0], dt)) /
+                   (2*h))
+        df2_dx1 = ((f_2_for_newton(A, B, x[0]+h, x[1], x_fixed[1], u[0], dt) -
+                   f_2_for_newton(A, B, x[0]-h, x[1], x_fixed[1], u[0], dt)) /
+                   (2*h))
+        df2_dx2 = ((f_2_for_newton(A, B, x[0], x[1]+h, x_fixed[1], u[0], dt) -
+                   f_2_for_newton(A, B, x[0], x[1]-h, x_fixed[1], u[0], dt)) /
+                   (2*h))
+
+        # Calculate the inverse of the Jacobian
+        inv_det_J = 1 / (df1_dx1*df2_dx2 - df1_dx2*df2_dx1)
+        inv_J[0][0] = inv_det_J * df2_dx2
+        inv_J[0][1] = inv_det_J * -df1_dx2
+        inv_J[1][0] = inv_det_J * -df2_dx1
+        inv_J[1][1] = inv_det_J * df1_dx1
+
+        x_dot[0] = (A[0][0]*x[0] + A[0][1]*x[1] + B[0]*u[0])
+        x_dot[1] = (A[1][0]*x[0] + A[1][1]*x[1] + B[1]*u[0])
+        
+        f_1 = f_1_for_newton(A, B, x[0], x[1], x_fixed[0], u[0], dt)
+        f_2 = f_2_for_newton(A, B, x[0], x[1], x_fixed[1], u[0], dt)
+
+        x[0] = x[0] - (inv_J[0][0]*f_1 + inv_J[0][1]*f_2)
+        x[1] = x[1] - (inv_J[1][0]*f_1 + inv_J[1][1]*f_2)
+
+        N += 1
+
+    return(x, integral, u)
 
 
 def get_modified_scout_input(q_from_target, error, integral, iteration_time):
@@ -239,6 +304,7 @@ def run_sim():
         # Solve the state-space equations for the Scout
         x = solve_xdot_b_euler(A_sc, B_sc, x_store_0_sc, x_store_1_sc, u, dt,
                                steps)
+
         x_store_0_sc.append(x[0])
         x_store_1_sc.append(x[1])
 
@@ -248,7 +314,7 @@ def run_sim():
                     x_store_1_t[steps], x_store_1_sc_mod[steps], integral, dt)
 
         # Solve the state-space equations for the modified Scout
-        x, integral, u_modified_scout = solve_xdot_b_euler_iter_var(
+        x, integral, u_modified_scout = solve_xdot_b_euler_newton(
                                A_sc, B_sc, x_store_0_sc_mod, x_store_1_sc_mod,
                                u_modified_scout, dt, steps, integral,
                                x_store_1_t[steps], x_store_1_sc_mod[steps])
