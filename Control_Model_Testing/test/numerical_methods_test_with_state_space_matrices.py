@@ -166,7 +166,7 @@ def solve_xdot_b_euler_iter_var(A, B, x_store_0, x_store_1, u, dt, steps,
         N += 1
 
     return(x, integral, u)
-    
+
 
 def f_1_for_newton(A, B, x_1, x_2, x_fixed, u, dt):
     return(x_1 - x_fixed - dt*(A[0][0]*x_1 + A[0][1]*x_2 + B[0]*u))
@@ -182,7 +182,6 @@ def solve_xdot_b_euler_newton(A, B, x_store_0, x_store_1, u, dt, steps,
     N = 0
     x_fixed = [x_store_0[steps], x_store_1[steps]]
     x = [0, 0]
-    x_dot = [0, 0]
     inv_J = [[0, 0], [0, 0]]
     h = 1e-6
 
@@ -219,9 +218,6 @@ def solve_xdot_b_euler_newton(A, B, x_store_0, x_store_1, u, dt, steps,
         inv_J[1][0] = inv_det_J * -df2_dx1
         inv_J[1][1] = inv_det_J * df1_dx1
 
-        x_dot[0] = (A[0][0]*x[0] + A[0][1]*x[1] + B[0]*u[0])
-        x_dot[1] = (A[1][0]*x[0] + A[1][1]*x[1] + B[1]*u[0])
-        
         f_1 = f_1_for_newton(A, B, x[0], x[1], x_fixed[0], u[0], dt)
         f_2 = f_2_for_newton(A, B, x[0], x[1], x_fixed[1], u[0], dt)
 
