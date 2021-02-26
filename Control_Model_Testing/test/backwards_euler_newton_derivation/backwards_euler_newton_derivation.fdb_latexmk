@@ -1,8 +1,11 @@
 # Fdb version 3
-["pdflatex"] 1613149732 "backwards_euler_newton_derivation.tex" "backwards_euler_newton_derivation.pdf" "backwards_euler_newton_derivation" 1613149733
+["pdflatex"] 1614362623 "backwards_euler_newton_derivation.tex" "backwards_euler_newton_derivation.pdf" "backwards_euler_newton_derivation" 1614362624
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
+  "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmbx10.tfm" 1136765053 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmbx12.tfm" 1136765053 1324 c910af8c371558dc20f2d7822f66fe64 ""
+  "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmbx6.tfm" 1136765053 1344 8a0be4fe4d376203000810ad4dc81558 ""
+  "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmbx8.tfm" 1136765053 1332 1fde11373e221473104d6cc5993f046e ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmex10.tfm" 1136765053 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmmi10.tfm" 1136765053 1528 abec98dbc43e172678c11b3b9031252a ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmmi6.tfm" 1136765053 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -14,6 +17,7 @@
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmsy10.tfm" 1136765053 1124 6c73e740cf17375f03eec0ee63599741 ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmsy6.tfm" 1136765053 1116 933a60c408fc0a863a92debe84b2d294 ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmsy8.tfm" 1136765053 1120 8b7d695260f3cff42e636090a8002094 ""
+  "C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1247593066 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247593066 32080 340ef9bf63678554ee606688e7b5339d ""
   "C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1247593067 30251 6afa5cb1d0204815a708a080681d4674 ""
   "C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247593067 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
@@ -44,9 +48,9 @@
   "C:/Users/akern/AppData/Roaming/MiKTeX/2.9/tex/latex/kvoptions/kvoptions.sty" 1602224496 22521 d2fceb764a442a2001d257ef11db7618 ""
   "C:/Users/akern/AppData/Roaming/MiKTeX/2.9/tex/latex/l3backend/l3backend-pdftex.def" 1600952516 23704 02c466ff883953a445c97e55638005fc ""
   "C:/Users/akern/AppData/Roaming/MiKTeX/2.9/tex/latex/parskip/parskip.sty" 1592833306 4414 25631f9679adf750bac898538ededd61 ""
-  "backwards_euler_newton_derivation.aux" 1613149733 514 77d90430fbf32d4faca3f3eb28c51488 "pdflatex"
-  "backwards_euler_newton_derivation.tex" 1613149732 5031 c71483e65562c7f7e0673864d3d2618f ""
+  "backwards_euler_newton_derivation.aux" 1614362624 514 77d90430fbf32d4faca3f3eb28c51488 "pdflatex"
+  "backwards_euler_newton_derivation.tex" 1614362623 7877 a7358800fff07eec6d6fb0e23411d3fb ""
   (generated)
-  "backwards_euler_newton_derivation.log"
   "backwards_euler_newton_derivation.pdf"
   "backwards_euler_newton_derivation.aux"
+  "backwards_euler_newton_derivation.log"
