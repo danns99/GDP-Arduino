@@ -147,15 +147,14 @@ def solve_xdot_b_euler_iter_var(A, B, x_store_0, x_store_1, u, dt, steps,
 
     # Guess the first step in the iteration by using the forward Euler method
     x = solve_xdot_f_euler(A, B, x_store_0, x_store_1, u, dt, steps)
-    u_fixed = u
 
     # Iterate to calculate x
     while(N < 10):
         error = x[1]
+        u_old = u
         u, integral = get_modified_scout_input(q_from_target, error, integral,
                                                dt)
-
-        u[0] = u_fixed[0] + u[0]*dt
+        u[0] = u_old[0] + u[0]*dt
 
         x_dot[0] = (A[0][0]*x[0] + A[0][1]*x[1] + B[0]*u[0])
         x_dot[1] = (A[1][0]*x[0] + A[1][1]*x[1] + B[1]*u[0])
@@ -187,15 +186,14 @@ def solve_xdot_b_euler_newton(A, B, x_store_0, x_store_1, u, dt, steps,
 
     # Guess the first step in the iteration by using the forward Euler method
     x = solve_xdot_f_euler(A, B, x_store_0, x_store_1, u, dt, steps)
-    u_fixed = u
 
     # Iterate to calculate x
     while(N < 10):
         error = x[1]
+        u_old = u
         u, integral = get_modified_scout_input(q_from_target, error, integral,
                                                dt)
-
-        u[0] = u_fixed[0] + u[0]*dt
+        u[0] = u_old[0] + u[0]*dt
 
         # Calculate the terms in the Jacobian
         df1_dx1 = ((f_1_for_newton(A, B, x[0]+h, x[1], x_fixed[0], u[0], dt) -
