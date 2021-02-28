@@ -141,6 +141,7 @@ def solve_xdot_b_euler_iter_var(A, B, x_store_0, x_store_1, u, dt, steps,
 
     # Initialise variables
     N = 0
+    tol = 1e-6
     x_fixed = [x_store_0[steps], x_store_1[steps]]
     x = [0, 0]
     x_dot = [0, 0]
@@ -149,10 +150,9 @@ def solve_xdot_b_euler_iter_var(A, B, x_store_0, x_store_1, u, dt, steps,
     x = solve_xdot_f_euler(A, B, x_store_0, x_store_1, u, dt, steps)
 
     # Iterate to calculate x
-    while(N < 10):
-        error = x[1]
+    while(N < 100):
         u_old = u
-        u, integral = get_modified_scout_input(q_from_target, error, integral,
+        u, integral = get_modified_scout_input(q_from_target, x[1], integral,
                                                dt)
         u[0] = u_old[0] + u[0]*dt
 
@@ -161,6 +161,9 @@ def solve_xdot_b_euler_iter_var(A, B, x_store_0, x_store_1, u, dt, steps,
 
         x[0] = x_fixed[0] + x_dot[0]*dt
         x[1] = x_fixed[1] + x_dot[1]*dt
+
+        if abs(u_old[0] - u[0]) <= tol:
+            break
 
         N += 1
 
@@ -179,6 +182,7 @@ def solve_xdot_b_euler_newton(A, B, x_store_0, x_store_1, u, dt, steps,
                               integral, q_from_target, error):
     # Initialise variables
     N = 0
+    tol = 1e-6
     x_fixed = [x_store_0[steps], x_store_1[steps]]
     x = [0, 0]
     inv_J = [[0, 0], [0, 0]]
@@ -188,10 +192,9 @@ def solve_xdot_b_euler_newton(A, B, x_store_0, x_store_1, u, dt, steps,
     x = solve_xdot_f_euler(A, B, x_store_0, x_store_1, u, dt, steps)
 
     # Iterate to calculate x
-    while(N < 10):
-        error = x[1]
+    while(N < 100):
         u_old = u
-        u, integral = get_modified_scout_input(q_from_target, error, integral,
+        u, integral = get_modified_scout_input(q_from_target, x[1], integral,
                                                dt)
         u[0] = u_old[0] + u[0]*dt
 
@@ -221,6 +224,9 @@ def solve_xdot_b_euler_newton(A, B, x_store_0, x_store_1, u, dt, steps,
 
         x[0] = x[0] - (inv_J[0][0]*f_1 + inv_J[0][1]*f_2)
         x[1] = x[1] - (inv_J[1][0]*f_1 + inv_J[1][1]*f_2)
+
+        if abs(u_old[0] - u[0]) <= tol:
+            break
 
         N += 1
 
