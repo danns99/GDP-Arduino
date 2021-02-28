@@ -180,6 +180,11 @@ def f_2_for_newton(A, B, x_1, x_2, x_fixed, u, dt):
 
 def solve_xdot_b_euler_newton(A, B, x_store_0, x_store_1, u, dt, steps,
                               integral, q_from_target, error):
+    '''
+    Solves the state-space equations using the backwards Euler method through
+    Newton's method. The u vector is updated with a forward Euler method.
+    '''
+
     # Initialise variables
     N = 0
     tol = 1e-6
