@@ -11,6 +11,14 @@ file(GLOB_RECURSE util_SOURCE_FILES
 file(GLOB_RECURSE control_SOURCE_FILES
         "control/*.h" "control/*.cpp")
 
+file(GLOB_RECURSE control_spo_SOURCE_FILES
+        "control/control_loops/control_loop_spo_model.h"
+        "control/control_loops/control_loop_spo_model.cpp")
+
+file(GLOB_RECURSE control_full_longitudinal_model_SOURCE_FILES
+        "control/control_loops/control_full_longitudinal_model.h"
+        "control/control_loops/control_full_longitudinal_model.cpp")
+
 file(GLOB_RECURSE state_space_equations_SOURCE_FILES
         "state_space_equations/*.h" "state_space_equations/*.cpp")
 
@@ -19,17 +27,16 @@ file(GLOB_RECURSE sim_SOURCE_FILES
 
 # Executables
 add_executable(sim_runner_full_longitudinal_model  ${util_SOURCE_FILES}
-                ${control_SOURCE_FILES} ${state_space_equations_SOURCE_FILES}
-                ${sim_SOURCE_FILES})
+                ${control_SOURCE_FILES} ${control_full_longitudinal_model_SOURCE_FILES}
+                ${state_space_equations_SOURCE_FILES} ${sim_SOURCE_FILES})
 
 add_executable(sim_runner_SPO_model  ${util_SOURCE_FILES}
-                ${control_SOURCE_FILES} ${state_space_equations_SOURCE_FILES}
-                ${sim_SOURCE_FILES})
+                ${control_SOURCE_FILES} ${control_spo_SOURCE_FILES}
+                ${state_space_equations_SOURCE_FILES} ${sim_SOURCE_FILES})
 
 # Set preprocessor compile definitions
-# Set STATE_SPACE_MATRIX_SIZE to
+# Set STATE_SPACE_MATRIX_SIZE to:
 # 4 for the full longitudinal model or
 # 2 for the SPO approximation
 target_compile_definitions(sim_runner_full_longitudinal_model PUBLIC STATE_SPACE_MATRIX_SIZE=4)
 target_compile_definitions(sim_runner_SPO_model PUBLIC STATE_SPACE_MATRIX_SIZE=2)
-

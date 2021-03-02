@@ -169,35 +169,65 @@ control/PID_controller.cpp.s:
 	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/control/PID_controller.cpp.s
 .PHONY : control/PID_controller.cpp.s
 
-control/control_loop.obj: control/control_loop.cpp.obj
+control/control_loops/control_loop_full_longitudinal_model.obj: control/control_loops/control_loop_full_longitudinal_model.cpp.obj
 
-.PHONY : control/control_loop.obj
+.PHONY : control/control_loops/control_loop_full_longitudinal_model.obj
 
 # target to build an object file
-control/control_loop.cpp.obj:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/control/control_loop.cpp.obj
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/control/control_loop.cpp.obj
-.PHONY : control/control_loop.cpp.obj
+control/control_loops/control_loop_full_longitudinal_model.cpp.obj:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/control/control_loops/control_loop_full_longitudinal_model.cpp.obj
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/control/control_loops/control_loop_full_longitudinal_model.cpp.obj
+.PHONY : control/control_loops/control_loop_full_longitudinal_model.cpp.obj
 
-control/control_loop.i: control/control_loop.cpp.i
+control/control_loops/control_loop_full_longitudinal_model.i: control/control_loops/control_loop_full_longitudinal_model.cpp.i
 
-.PHONY : control/control_loop.i
+.PHONY : control/control_loops/control_loop_full_longitudinal_model.i
 
 # target to preprocess a source file
-control/control_loop.cpp.i:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/control/control_loop.cpp.i
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/control/control_loop.cpp.i
-.PHONY : control/control_loop.cpp.i
+control/control_loops/control_loop_full_longitudinal_model.cpp.i:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/control/control_loops/control_loop_full_longitudinal_model.cpp.i
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/control/control_loops/control_loop_full_longitudinal_model.cpp.i
+.PHONY : control/control_loops/control_loop_full_longitudinal_model.cpp.i
 
-control/control_loop.s: control/control_loop.cpp.s
+control/control_loops/control_loop_full_longitudinal_model.s: control/control_loops/control_loop_full_longitudinal_model.cpp.s
 
-.PHONY : control/control_loop.s
+.PHONY : control/control_loops/control_loop_full_longitudinal_model.s
 
 # target to generate assembly for a file
-control/control_loop.cpp.s:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/control/control_loop.cpp.s
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/control/control_loop.cpp.s
-.PHONY : control/control_loop.cpp.s
+control/control_loops/control_loop_full_longitudinal_model.cpp.s:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/control/control_loops/control_loop_full_longitudinal_model.cpp.s
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/control/control_loops/control_loop_full_longitudinal_model.cpp.s
+.PHONY : control/control_loops/control_loop_full_longitudinal_model.cpp.s
+
+control/control_loops/control_loop_spo_model.obj: control/control_loops/control_loop_spo_model.cpp.obj
+
+.PHONY : control/control_loops/control_loop_spo_model.obj
+
+# target to build an object file
+control/control_loops/control_loop_spo_model.cpp.obj:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/control/control_loops/control_loop_spo_model.cpp.obj
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/control/control_loops/control_loop_spo_model.cpp.obj
+.PHONY : control/control_loops/control_loop_spo_model.cpp.obj
+
+control/control_loops/control_loop_spo_model.i: control/control_loops/control_loop_spo_model.cpp.i
+
+.PHONY : control/control_loops/control_loop_spo_model.i
+
+# target to preprocess a source file
+control/control_loops/control_loop_spo_model.cpp.i:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/control/control_loops/control_loop_spo_model.cpp.i
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/control/control_loops/control_loop_spo_model.cpp.i
+.PHONY : control/control_loops/control_loop_spo_model.cpp.i
+
+control/control_loops/control_loop_spo_model.s: control/control_loops/control_loop_spo_model.cpp.s
+
+.PHONY : control/control_loops/control_loop_spo_model.s
+
+# target to generate assembly for a file
+control/control_loops/control_loop_spo_model.cpp.s:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/control/control_loops/control_loop_spo_model.cpp.s
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/control/control_loops/control_loop_spo_model.cpp.s
+.PHONY : control/control_loops/control_loop_spo_model.cpp.s
 
 control/elevator_saturation.obj: control/elevator_saturation.cpp.obj
 
@@ -349,35 +379,125 @@ sim/sim_runner.cpp.s:
 	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/sim/sim_runner.cpp.s
 .PHONY : sim/sim_runner.cpp.s
 
-state_space_equations/numerical_ode_solvers.obj: state_space_equations/numerical_ode_solvers.cpp.obj
+state_space_equations/numerical_ode_solvers/backward_euler_analytic.obj: state_space_equations/numerical_ode_solvers/backward_euler_analytic.cpp.obj
 
-.PHONY : state_space_equations/numerical_ode_solvers.obj
+.PHONY : state_space_equations/numerical_ode_solvers/backward_euler_analytic.obj
 
 # target to build an object file
-state_space_equations/numerical_ode_solvers.cpp.obj:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/state_space_equations/numerical_ode_solvers.cpp.obj
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/state_space_equations/numerical_ode_solvers.cpp.obj
-.PHONY : state_space_equations/numerical_ode_solvers.cpp.obj
+state_space_equations/numerical_ode_solvers/backward_euler_analytic.cpp.obj:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/state_space_equations/numerical_ode_solvers/backward_euler_analytic.cpp.obj
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/state_space_equations/numerical_ode_solvers/backward_euler_analytic.cpp.obj
+.PHONY : state_space_equations/numerical_ode_solvers/backward_euler_analytic.cpp.obj
 
-state_space_equations/numerical_ode_solvers.i: state_space_equations/numerical_ode_solvers.cpp.i
+state_space_equations/numerical_ode_solvers/backward_euler_analytic.i: state_space_equations/numerical_ode_solvers/backward_euler_analytic.cpp.i
 
-.PHONY : state_space_equations/numerical_ode_solvers.i
+.PHONY : state_space_equations/numerical_ode_solvers/backward_euler_analytic.i
 
 # target to preprocess a source file
-state_space_equations/numerical_ode_solvers.cpp.i:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/state_space_equations/numerical_ode_solvers.cpp.i
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/state_space_equations/numerical_ode_solvers.cpp.i
-.PHONY : state_space_equations/numerical_ode_solvers.cpp.i
+state_space_equations/numerical_ode_solvers/backward_euler_analytic.cpp.i:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/state_space_equations/numerical_ode_solvers/backward_euler_analytic.cpp.i
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/state_space_equations/numerical_ode_solvers/backward_euler_analytic.cpp.i
+.PHONY : state_space_equations/numerical_ode_solvers/backward_euler_analytic.cpp.i
 
-state_space_equations/numerical_ode_solvers.s: state_space_equations/numerical_ode_solvers.cpp.s
+state_space_equations/numerical_ode_solvers/backward_euler_analytic.s: state_space_equations/numerical_ode_solvers/backward_euler_analytic.cpp.s
 
-.PHONY : state_space_equations/numerical_ode_solvers.s
+.PHONY : state_space_equations/numerical_ode_solvers/backward_euler_analytic.s
 
 # target to generate assembly for a file
-state_space_equations/numerical_ode_solvers.cpp.s:
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/state_space_equations/numerical_ode_solvers.cpp.s
-	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/state_space_equations/numerical_ode_solvers.cpp.s
-.PHONY : state_space_equations/numerical_ode_solvers.cpp.s
+state_space_equations/numerical_ode_solvers/backward_euler_analytic.cpp.s:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/state_space_equations/numerical_ode_solvers/backward_euler_analytic.cpp.s
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/state_space_equations/numerical_ode_solvers/backward_euler_analytic.cpp.s
+.PHONY : state_space_equations/numerical_ode_solvers/backward_euler_analytic.cpp.s
+
+state_space_equations/numerical_ode_solvers/backward_euler_newton.obj: state_space_equations/numerical_ode_solvers/backward_euler_newton.cpp.obj
+
+.PHONY : state_space_equations/numerical_ode_solvers/backward_euler_newton.obj
+
+# target to build an object file
+state_space_equations/numerical_ode_solvers/backward_euler_newton.cpp.obj:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/state_space_equations/numerical_ode_solvers/backward_euler_newton.cpp.obj
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/state_space_equations/numerical_ode_solvers/backward_euler_newton.cpp.obj
+.PHONY : state_space_equations/numerical_ode_solvers/backward_euler_newton.cpp.obj
+
+state_space_equations/numerical_ode_solvers/backward_euler_newton.i: state_space_equations/numerical_ode_solvers/backward_euler_newton.cpp.i
+
+.PHONY : state_space_equations/numerical_ode_solvers/backward_euler_newton.i
+
+# target to preprocess a source file
+state_space_equations/numerical_ode_solvers/backward_euler_newton.cpp.i:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/state_space_equations/numerical_ode_solvers/backward_euler_newton.cpp.i
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/state_space_equations/numerical_ode_solvers/backward_euler_newton.cpp.i
+.PHONY : state_space_equations/numerical_ode_solvers/backward_euler_newton.cpp.i
+
+state_space_equations/numerical_ode_solvers/backward_euler_newton.s: state_space_equations/numerical_ode_solvers/backward_euler_newton.cpp.s
+
+.PHONY : state_space_equations/numerical_ode_solvers/backward_euler_newton.s
+
+# target to generate assembly for a file
+state_space_equations/numerical_ode_solvers/backward_euler_newton.cpp.s:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/state_space_equations/numerical_ode_solvers/backward_euler_newton.cpp.s
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/state_space_equations/numerical_ode_solvers/backward_euler_newton.cpp.s
+.PHONY : state_space_equations/numerical_ode_solvers/backward_euler_newton.cpp.s
+
+state_space_equations/numerical_ode_solvers/forward_euler.obj: state_space_equations/numerical_ode_solvers/forward_euler.cpp.obj
+
+.PHONY : state_space_equations/numerical_ode_solvers/forward_euler.obj
+
+# target to build an object file
+state_space_equations/numerical_ode_solvers/forward_euler.cpp.obj:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/state_space_equations/numerical_ode_solvers/forward_euler.cpp.obj
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/state_space_equations/numerical_ode_solvers/forward_euler.cpp.obj
+.PHONY : state_space_equations/numerical_ode_solvers/forward_euler.cpp.obj
+
+state_space_equations/numerical_ode_solvers/forward_euler.i: state_space_equations/numerical_ode_solvers/forward_euler.cpp.i
+
+.PHONY : state_space_equations/numerical_ode_solvers/forward_euler.i
+
+# target to preprocess a source file
+state_space_equations/numerical_ode_solvers/forward_euler.cpp.i:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/state_space_equations/numerical_ode_solvers/forward_euler.cpp.i
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/state_space_equations/numerical_ode_solvers/forward_euler.cpp.i
+.PHONY : state_space_equations/numerical_ode_solvers/forward_euler.cpp.i
+
+state_space_equations/numerical_ode_solvers/forward_euler.s: state_space_equations/numerical_ode_solvers/forward_euler.cpp.s
+
+.PHONY : state_space_equations/numerical_ode_solvers/forward_euler.s
+
+# target to generate assembly for a file
+state_space_equations/numerical_ode_solvers/forward_euler.cpp.s:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/state_space_equations/numerical_ode_solvers/forward_euler.cpp.s
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/state_space_equations/numerical_ode_solvers/forward_euler.cpp.s
+.PHONY : state_space_equations/numerical_ode_solvers/forward_euler.cpp.s
+
+state_space_equations/numerical_ode_solvers/runge_kutta.obj: state_space_equations/numerical_ode_solvers/runge_kutta.cpp.obj
+
+.PHONY : state_space_equations/numerical_ode_solvers/runge_kutta.obj
+
+# target to build an object file
+state_space_equations/numerical_ode_solvers/runge_kutta.cpp.obj:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/state_space_equations/numerical_ode_solvers/runge_kutta.cpp.obj
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/state_space_equations/numerical_ode_solvers/runge_kutta.cpp.obj
+.PHONY : state_space_equations/numerical_ode_solvers/runge_kutta.cpp.obj
+
+state_space_equations/numerical_ode_solvers/runge_kutta.i: state_space_equations/numerical_ode_solvers/runge_kutta.cpp.i
+
+.PHONY : state_space_equations/numerical_ode_solvers/runge_kutta.i
+
+# target to preprocess a source file
+state_space_equations/numerical_ode_solvers/runge_kutta.cpp.i:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/state_space_equations/numerical_ode_solvers/runge_kutta.cpp.i
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/state_space_equations/numerical_ode_solvers/runge_kutta.cpp.i
+.PHONY : state_space_equations/numerical_ode_solvers/runge_kutta.cpp.i
+
+state_space_equations/numerical_ode_solvers/runge_kutta.s: state_space_equations/numerical_ode_solvers/runge_kutta.cpp.s
+
+.PHONY : state_space_equations/numerical_ode_solvers/runge_kutta.s
+
+# target to generate assembly for a file
+state_space_equations/numerical_ode_solvers/runge_kutta.cpp.s:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/state_space_equations/numerical_ode_solvers/runge_kutta.cpp.s
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/state_space_equations/numerical_ode_solvers/runge_kutta.cpp.s
+.PHONY : state_space_equations/numerical_ode_solvers/runge_kutta.cpp.s
 
 state_space_equations/state_space_equation.obj: state_space_equations/state_space_equation.cpp.obj
 
@@ -482,9 +602,12 @@ help:
 	@echo ... control/PID_controller.obj
 	@echo ... control/PID_controller.i
 	@echo ... control/PID_controller.s
-	@echo ... control/control_loop.obj
-	@echo ... control/control_loop.i
-	@echo ... control/control_loop.s
+	@echo ... control/control_loops/control_loop_full_longitudinal_model.obj
+	@echo ... control/control_loops/control_loop_full_longitudinal_model.i
+	@echo ... control/control_loops/control_loop_full_longitudinal_model.s
+	@echo ... control/control_loops/control_loop_spo_model.obj
+	@echo ... control/control_loops/control_loop_spo_model.i
+	@echo ... control/control_loops/control_loop_spo_model.s
 	@echo ... control/elevator_saturation.obj
 	@echo ... control/elevator_saturation.i
 	@echo ... control/elevator_saturation.s
@@ -500,9 +623,18 @@ help:
 	@echo ... sim/sim_runner.obj
 	@echo ... sim/sim_runner.i
 	@echo ... sim/sim_runner.s
-	@echo ... state_space_equations/numerical_ode_solvers.obj
-	@echo ... state_space_equations/numerical_ode_solvers.i
-	@echo ... state_space_equations/numerical_ode_solvers.s
+	@echo ... state_space_equations/numerical_ode_solvers/backward_euler_analytic.obj
+	@echo ... state_space_equations/numerical_ode_solvers/backward_euler_analytic.i
+	@echo ... state_space_equations/numerical_ode_solvers/backward_euler_analytic.s
+	@echo ... state_space_equations/numerical_ode_solvers/backward_euler_newton.obj
+	@echo ... state_space_equations/numerical_ode_solvers/backward_euler_newton.i
+	@echo ... state_space_equations/numerical_ode_solvers/backward_euler_newton.s
+	@echo ... state_space_equations/numerical_ode_solvers/forward_euler.obj
+	@echo ... state_space_equations/numerical_ode_solvers/forward_euler.i
+	@echo ... state_space_equations/numerical_ode_solvers/forward_euler.s
+	@echo ... state_space_equations/numerical_ode_solvers/runge_kutta.obj
+	@echo ... state_space_equations/numerical_ode_solvers/runge_kutta.i
+	@echo ... state_space_equations/numerical_ode_solvers/runge_kutta.s
 	@echo ... state_space_equations/state_space_equation.obj
 	@echo ... state_space_equations/state_space_equation.i
 	@echo ... state_space_equations/state_space_equation.s

@@ -10,10 +10,9 @@
 #include "..\\util\\memory_management.h"
 #include "sim_init.h"
 #include "..\\control\\PID_controller.h"
-#include "..\\control\\control_loop.h"
 #include "..\\state_space_equations\\state_space_equation.h"
-#include "..\\state_space_equations\\numerical_ode_solvers.h"
-
+#include "..\\control\\control_loops\\control_loop_full_longitudinal_model.h"
+#include "..\\control\\control_loops\\control_loop_spo_model.h"
 
 int run_sim(double sim_time, double input_time, double dt, int steps,
             double *u, double u_old, double *x_sc, double *x_t,

@@ -273,5 +273,5 @@ def spo_model_sim():
 # --------------------------------------------------------------------------- #
 
 
-#full_model_sim()
+full_model_sim()
 spo_model_sim()

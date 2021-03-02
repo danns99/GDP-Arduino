@@ -33,10 +33,19 @@ int run_sim(double sim_time, double input_time, double dt, int steps,
         }
 
         /* Run the control loop */
-        run_control_loop(dt, u, u_into_modified_scout,
+        if(STATE_SPACE_MATRIX_SIZE == 4){
+            run_control_loop_full(dt, u, u_into_modified_scout,
                          A_sc, B_sc, x_sc,
                          A_t, B_t, x_t, x_sc_mod,
                          integral);
+        }
+        if(STATE_SPACE_MATRIX_SIZE == 2){
+            run_control_loop_spo(dt, u, u_into_modified_scout,
+                         A_sc, B_sc, x_sc,
+                         A_t, B_t, x_t, x_sc_mod,
+                         integral);
+        }
+        
 
         /* Increment the step counter */
         steps += 1;

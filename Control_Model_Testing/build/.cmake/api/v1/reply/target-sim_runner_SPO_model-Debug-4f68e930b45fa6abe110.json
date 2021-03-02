@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "source/sim_runner_full_longitudinal_model.exe"
+			"path" : "source/sim_runner_SPO_model.exe"
 		},
 		{
-			"path" : "source/sim_runner_full_longitudinal_model.pdb"
+			"path" : "source/sim_runner_SPO_model.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -28,13 +28,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 21,
+				"line" : 33,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 33,
+				"line" : 42,
 				"parent" : 0
 			}
 		]
@@ -52,7 +52,7 @@
 			[
 				{
 					"backtrace" : 2,
-					"define" : "STATE_SPACE_MATRIX_SIZE=4"
+					"define" : "STATE_SPACE_MATRIX_SIZE=2"
 				}
 			],
 			"language" : "CXX",
@@ -68,11 +68,15 @@
 				14,
 				16,
 				18,
-				20
+				20,
+				22,
+				24,
+				26,
+				28
 			]
 		}
 	],
-	"id" : "sim_runner_full_longitudinal_model::@411ffd8adc737496fe19",
+	"id" : "sim_runner_SPO_model::@411ffd8adc737496fe19",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -88,8 +92,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "sim_runner_full_longitudinal_model",
-	"nameOnDisk" : "sim_runner_full_longitudinal_model.exe",
+	"name" : "sim_runner_SPO_model",
+	"nameOnDisk" : "sim_runner_SPO_model.exe",
 	"paths" : 
 	{
 		"build" : "source",
@@ -111,7 +115,11 @@
 				14,
 				16,
 				18,
-				20
+				20,
+				22,
+				24,
+				26,
+				28
 			]
 		},
 		{
@@ -128,7 +136,11 @@
 				15,
 				17,
 				19,
-				21
+				21,
+				23,
+				25,
+				27,
+				29
 			]
 		}
 	],
@@ -170,12 +182,23 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "source/control/control_loop.cpp",
+			"path" : "source/control/control_loops/control_loop_full_longitudinal_model.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "source/control/control_loop.h",
+			"path" : "source/control/control_loops/control_loop_full_longitudinal_model.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "source/control/control_loops/control_loop_spo_model.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "source/control/control_loops/control_loop_spo_model.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -203,12 +226,45 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "source/state_space_equations/numerical_ode_solvers.cpp",
+			"path" : "source/state_space_equations/numerical_ode_solvers/backward_euler_analytic.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "source/state_space_equations/numerical_ode_solvers.h",
+			"path" : "source/state_space_equations/numerical_ode_solvers/backward_euler_analytic.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "source/state_space_equations/numerical_ode_solvers/backward_euler_newton.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "source/state_space_equations/numerical_ode_solvers/backward_euler_newton.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "source/state_space_equations/numerical_ode_solvers/forward_euler.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "source/state_space_equations/numerical_ode_solvers/forward_euler.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "source/state_space_equations/numerical_ode_solvers/runge_kutta.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "source/state_space_equations/numerical_ode_solvers/runge_kutta.h",
 			"sourceGroupIndex" : 1
 		},
 		{
