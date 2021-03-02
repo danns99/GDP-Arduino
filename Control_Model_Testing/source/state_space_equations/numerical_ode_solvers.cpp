@@ -168,6 +168,8 @@ double* xdot_solve_backward_euler_newton(
         u_temp = PD_controller(u_from_error_sum, error_prior, dt);
         u[0] = u_old[0] + u_temp*dt;
 
+        /* Limit the control input to the range of elevator angles possible
+        on the Scout */
         u_temp = u[0];
         u[0] = saturate_elevator(u_temp);
 
