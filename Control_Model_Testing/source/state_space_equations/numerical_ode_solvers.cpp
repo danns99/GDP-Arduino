@@ -165,8 +165,11 @@ double* xdot_solve_backward_euler_newton(
         and the modified Scout */
         u_from_error_sum = error_signal(q_out_of_target_aircraft, x[1]);
         /* Calculate the input to the modified Scout using the PID */
-        u_temp= PD_controller(u_from_error_sum, error_prior, dt);
+        u_temp = PD_controller(u_from_error_sum, error_prior, dt);
         u[0] = u_old[0] + u_temp*dt;
+
+        u_temp = u[0];
+        u[0] = saturate_elevator(u_temp);
 
         /* Calculate the terms in the Jacobian */
         df1_dx1 = ((f_1_for_newton(A, B, x[0]+h, x[1], x_fixed[0], u[0], dt) -

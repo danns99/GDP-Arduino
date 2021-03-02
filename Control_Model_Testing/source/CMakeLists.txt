@@ -27,7 +27,9 @@ add_executable(sim_runner_SPO_model  ${util_SOURCE_FILES}
                 ${sim_SOURCE_FILES})
 
 # Set preprocessor compile definitions
-# Set STATE_SPACE_MATRIX_SIZE to 4 for the full longitudinal model or
+# Set STATE_SPACE_MATRIX_SIZE to
+# 4 for the full longitudinal model or
 # 2 for the SPO approximation
 target_compile_definitions(sim_runner_full_longitudinal_model PUBLIC STATE_SPACE_MATRIX_SIZE=4)
 target_compile_definitions(sim_runner_SPO_model PUBLIC STATE_SPACE_MATRIX_SIZE=2)
+

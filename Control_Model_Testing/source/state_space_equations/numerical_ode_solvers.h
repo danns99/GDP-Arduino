@@ -4,6 +4,7 @@
 #include <math.h>
 #include "state_space_equation.h"
 #include "..\\control\\PID_controller.h"
+#include "..\\control\\elevator_saturation.h"
 
 
 double* xdot_solve(double A[STATE_SPACE_MATRIX_SIZE][STATE_SPACE_MATRIX_SIZE],

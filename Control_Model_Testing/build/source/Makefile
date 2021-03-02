@@ -199,6 +199,66 @@ control/control_loop.cpp.s:
 	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/control/control_loop.cpp.s
 .PHONY : control/control_loop.cpp.s
 
+control/elevator_saturation.obj: control/elevator_saturation.cpp.obj
+
+.PHONY : control/elevator_saturation.obj
+
+# target to build an object file
+control/elevator_saturation.cpp.obj:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/control/elevator_saturation.cpp.obj
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/control/elevator_saturation.cpp.obj
+.PHONY : control/elevator_saturation.cpp.obj
+
+control/elevator_saturation.i: control/elevator_saturation.cpp.i
+
+.PHONY : control/elevator_saturation.i
+
+# target to preprocess a source file
+control/elevator_saturation.cpp.i:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/control/elevator_saturation.cpp.i
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/control/elevator_saturation.cpp.i
+.PHONY : control/elevator_saturation.cpp.i
+
+control/elevator_saturation.s: control/elevator_saturation.cpp.s
+
+.PHONY : control/elevator_saturation.s
+
+# target to generate assembly for a file
+control/elevator_saturation.cpp.s:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/control/elevator_saturation.cpp.s
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/control/elevator_saturation.cpp.s
+.PHONY : control/elevator_saturation.cpp.s
+
+control/safety_checks.obj: control/safety_checks.cpp.obj
+
+.PHONY : control/safety_checks.obj
+
+# target to build an object file
+control/safety_checks.cpp.obj:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/control/safety_checks.cpp.obj
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/control/safety_checks.cpp.obj
+.PHONY : control/safety_checks.cpp.obj
+
+control/safety_checks.i: control/safety_checks.cpp.i
+
+.PHONY : control/safety_checks.i
+
+# target to preprocess a source file
+control/safety_checks.cpp.i:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/control/safety_checks.cpp.i
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/control/safety_checks.cpp.i
+.PHONY : control/safety_checks.cpp.i
+
+control/safety_checks.s: control/safety_checks.cpp.s
+
+.PHONY : control/safety_checks.s
+
+# target to generate assembly for a file
+control/safety_checks.cpp.s:
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_full_longitudinal_model.dir\build.make source/CMakeFiles/sim_runner_full_longitudinal_model.dir/control/safety_checks.cpp.s
+	cd /d "D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Control_Model_Testing\build" && $(MAKE) -f source\CMakeFiles\sim_runner_SPO_model.dir\build.make source/CMakeFiles/sim_runner_SPO_model.dir/control/safety_checks.cpp.s
+.PHONY : control/safety_checks.cpp.s
+
 sim/sim.obj: sim/sim.cpp.obj
 
 .PHONY : sim/sim.obj
@@ -425,6 +485,12 @@ help:
 	@echo ... control/control_loop.obj
 	@echo ... control/control_loop.i
 	@echo ... control/control_loop.s
+	@echo ... control/elevator_saturation.obj
+	@echo ... control/elevator_saturation.i
+	@echo ... control/elevator_saturation.s
+	@echo ... control/safety_checks.obj
+	@echo ... control/safety_checks.i
+	@echo ... control/safety_checks.s
 	@echo ... sim/sim.obj
 	@echo ... sim/sim.i
 	@echo ... sim/sim.s
