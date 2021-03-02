@@ -15,6 +15,9 @@ int run_sim(double sim_time, double input_time, double dt, int steps,
             double *B_t){
     /* Main time loop */
     while(steps < sim_time*1/dt){
+        /* Check safety conditions have not been broken */
+        // safety_checks.cpp
+
         /* Store the aircraft data from the timestep */
         store_timestep_data(steps, x_sc, x_t, x_sc_mod, u,
                             u_into_modified_scout, x_sc_store, x_t_store,
