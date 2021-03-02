@@ -272,7 +272,10 @@ def run_sim():
     B_sc = [-13.4847622573906, -38.384583022159]
     A_t = [[-0.295319442940517, 177.255749314106],
            [-0.0104482212700093, -0.448358567032906]]
+#    A_t = [[-2.6580013670223, 41.6458339232994],
+#           [-0.518611371176769, -4.22823707119371]]
     B_t = [-6.2938910678574, -4.88848338612147]
+#    B_t = [-8.3231255862146, -23.7049305891729]
     u = [0]
     x = [0, 0]
 
@@ -313,10 +316,8 @@ def run_sim():
         x_store_0_sc.append(x[0])
         x_store_1_sc.append(x[1])
 
-        # Get the input into the modified Scout for the first timestep
-        if steps == 0:
-            u_modified_scout, integral = get_modified_scout_input(
-                    x_store_1_t[steps], x_store_1_sc_mod[steps], integral, dt)
+        # Initialise input for modified Scout
+        u_modified_scout = [0]
 
         # Solve the state-space equations for the modified Scout
         x, integral, u_modified_scout = solve_xdot_b_euler_newton(
