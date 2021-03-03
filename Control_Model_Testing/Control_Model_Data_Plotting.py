@@ -241,11 +241,28 @@ class sim_analysis():
 
 # Functions
 # --------------------------------------------------------------------------- #
+def write_sim_settings(sim_time, dt, input_time, data_dir):
+    '''
+    Writes the simulation settings file "sim_settings.txt" used for inputting
+    simulation settings into the simulation executables. Takes as input
+    (float) sim_time, (float) dt, (float) input_time and (string) data_dir.
+    '''
+
+    with open("sim_settings.txt", 'w') as f:
+        f.writelines("Simulation time (seconds): " + str(sim_time) + "\n")
+        f.writelines("Simulation timestep (seconds): " + str(dt) + "\n")
+        f.writelines("Time to put in input (seconds): " + str(input_time) +
+                     "\n")
+        f.writelines("\nDirectory to aircraft state space matrices " +
+                     "(relative or absolute): " + data_dir)
+
+
 def full_model_sim():
     '''
     Analyses the results for the full longitudinal model.
     '''
 
+    write_sim_settings(15, 0.001, 0, "..//..//gdp-aeromodel//")
     full_model_results = sim_analysis(data_dir +
                                       "sim_runner_full_longitudinal_model",
                                       "test_data_full_model.txt")
@@ -262,6 +279,7 @@ def spo_model_sim():
     Analyses the results for the SPO model.
     '''
 
+    write_sim_settings(15, 0.01, 0, "..//..//gdp-aeromodel//")
     spo_model_results = sim_analysis(data_dir + "sim_runner_spo_model",
                                      "test_data_spo_model.txt")
     spo_model_results.run_simulation()  # Run the external simulation code
