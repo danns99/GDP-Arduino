@@ -3,14 +3,8 @@
 
 #define _USE_MATH_DEFINES
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
 #include "..\\util\\file_io.h"
 #include "..\\util\\memory_management.h"
-#include "sim_init.h"
-#include "..\\control\\PID_controller.h"
-#include "..\\state_space_equations\\state_space_equation.h"
 #include "..\\control\\control_loops\\control_loop_full_longitudinal_model.h"
 #include "..\\control\\control_loops\\control_loop_spo_model.h"
 
