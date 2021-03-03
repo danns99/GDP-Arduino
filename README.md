@@ -53,7 +53,7 @@ The simulation takes as input 3 files:
   The aircraft data files should be placed in the same folder.
   The directory to this folder needs to be included in `sim_settings.txt`.
 
-The simulation outputs the results to `test_data.txt`.
+The simulation outputs the results to `test_data_full_model.txt` for the full longitduinal model and `test_data_spo_model.txt` for the SPO model.
 The format of the output is:
 ```
 time scout_data target_data modified_scout_data
@@ -67,8 +67,14 @@ And 2 values for the SPO model:
 ```
 vertical_velocity pitch_rate
 ```
- 
-### Building executables
+
+It also outputs the control input for the Scout and target aircraft and the control input for the modified Scout to `test_data_aircraft_inputs.txt`.
+The format of the output is:
+```
+time scout/target_control_input_data modified_scout_control_input_data
+```
+
+### Building Executables
 At each level in the directory of the project there is a `CMakeLists.txt` file which is used for building the executable.
 `CMakeLists.txt` in `source` contains the instructions for building an executable.
 The preprocessor definition `STATE_SPACE_MATRIX_SIZE` is used for determining what system of state-space matrices are used when building and running a simulation target:
@@ -79,4 +85,11 @@ The SPO approximation reduces the full longitudinal model state matrices to:
 
 <img src="https://latex.codecogs.com/svg.latex?\begin{bmatrix}\mathring{Z_w}%20&%20\mathring{Z_q}+mU_\infty%20\\\mathring{M_w}%20&%20\mathring{M_q}%20\\\end{bmatrix}\begin{bmatrix}w%20\\q\end{bmatrix}" title="SPO_matrices" />
 
-For the full longitudinal model the state-space equations are solved with a 4th order Runge-Kutta method. For the SPO model an analytic backwards Euler method is used for the target and scout equations. With a backward Euler method that is solved with Newton's method for the modified Scout.
+For the full longitudinal model the state-space equations are solved with a 4th order Runge-Kutta method.
+For the SPO model an analytic backwards Euler method is used for the target and scout equations.
+With a backward Euler method that is solved with Newton's method for the modified Scout.
+
+### Plotting Results
+The simulation executables for the full longtudinal model and the SPO model can be run by `Control_Model_Data_Plotting.py`.
+This Python script will then plot the simulation results.
+The Python script also creates the `sim_settings.txt` file for each simulation executable.
