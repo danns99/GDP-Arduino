@@ -1,0 +1,322 @@
+PWD D:\Andrew\Documents\Andrew University\Part IV\GDP\GDP-Arduino\Force_Feedback_Testing\dc_motor_state-space_derivation
+INPUT C:\Users\akern\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
+INPUT dc_motor_state_space_derivation.tex
+OUTPUT dc_motor_state_space_derivation.log
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\iftex\ifvtex.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\iftex\ifvtex.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\iftex\ifvtex.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\iftex\ifvtex.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\iftex\ifvtex.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\iftex\ifvtex.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\iftex\ifvtex.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\iftex\ifvtex.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\iftex\ifvtex.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\iftex\ifvtex.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\iftex\ifvtex.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\iftex\iftex.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\iftex\iftex.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\iftex\iftex.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\iftex\iftex.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\iftex\iftex.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\iftex\iftex.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\iftex\iftex.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\iftex\iftex.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\iftex\iftex.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\iftex\iftex.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\iftex\iftex.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\parskip\parskip.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\parskip\parskip.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\parskip\parskip.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\parskip\parskip.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\parskip\parskip.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\parskip\parskip.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\parskip\parskip.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\parskip\parskip.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\parskip\parskip.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\parskip\parskip.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\parskip\parskip.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\kvsetkeys\kvsetkeys.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\kvsetkeys\kvsetkeys.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\kvsetkeys\kvsetkeys.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\kvsetkeys\kvsetkeys.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\kvsetkeys\kvsetkeys.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\kvsetkeys\kvsetkeys.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\kvsetkeys\kvsetkeys.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\kvsetkeys\kvsetkeys.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\kvsetkeys\kvsetkeys.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\kvsetkeys\kvsetkeys.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\kvsetkeys\kvsetkeys.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\l3backend\l3backend-pdftex.def
+INPUT .\dc_motor_state_space_derivation.aux
+INPUT dc_motor_state_space_derivation.aux
+INPUT dc_motor_state_space_derivation.aux
+OUTPUT dc_motor_state_space_derivation.aux
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\grfext\grfext.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\grfext\grfext.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\grfext\grfext.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\grfext\grfext.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\grfext\grfext.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\grfext\grfext.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\grfext\grfext.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\grfext\grfext.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\grfext\grfext.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\grfext\grfext.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\grfext\grfext.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\iftex\iftex.sty
+INPUT C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT .\motor_schematic\motor_schematic.pdf
+INPUT .\motor_schematic\motor_schematic.pdf
+INPUT motor_schematic\motor_schematic.pdf
+INPUT .\motor_schematic\motor_schematic.pdf
+OUTPUT dc_motor_state_space_derivation.pdf
+INPUT .\motor_schematic\motor_schematic.pdf
+INPUT .\motor_schematic\motor_schematic.pdf
+INPUT C:\Users\akern\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
+INPUT dc_motor_state_space_derivation.aux
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmss10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmss10.pfb

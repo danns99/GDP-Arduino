@@ -1,0 +1,23 @@
+\documentclass{standalone}
+\usepackage[siunitx]{circuitikz}
+
+\usetikzlibrary{arrows,shapes,calc,positioning}
+
+\newcommand{\mymotor}[2] % #1 = name , #2 = rotation angle
+{\draw[thick,rotate=#2] (#1) circle (10pt)
+	node[]{$\mathsf M$}
+	++(-12pt,3pt)--++(0,-6pt) --++(2.5pt,0) ++(-2.8pt,6pt)-- ++(2.5pt,0pt);
+	\draw[thick,rotate=#2] (#1) ++(12pt,3pt)--++(0,-6pt) --++(-2.5pt,0) ++(2.8pt,6pt)-- ++(-2.5pt,0pt);
+}
+
+\begin{document}
+\begin{circuitikz}
+	\draw (0,0) to[sinusoidal voltage source, l=$V$] (0,2);
+	\draw (0,2) -- (4,2);
+	\draw (4,2) to[generic=$R$] (6,2);
+	\draw (6,2) to[L=$L$] (8,2);
+	\draw (8,2) to[sV, color=white, name=M1] (8,0);
+	\mymotor{M1}{90}
+	\draw (8,0) -- (0,0);
+\end{circuitikz}
+\end{document}
