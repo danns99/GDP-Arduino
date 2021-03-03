@@ -9,14 +9,14 @@
  */
 double saturate_elevator(double current_elevator_angle){
     double saturated_elevator_angle;
-    double max_elevator_up_angle = 25*3/180;
-    double min_elevator_up_angle = -25*3/180;
+    double max_elevator_up_angle = 25.0*3.0/180.0;
+    double min_elevator_down_angle = -25.0*3.0/180.0;
 
     if(current_elevator_angle > max_elevator_up_angle){
         saturated_elevator_angle = max_elevator_up_angle;
     }
-    if(current_elevator_angle < min_elevator_up_angle){
-        saturated_elevator_angle = min_elevator_up_angle;
+    else if(current_elevator_angle < min_elevator_down_angle){
+        saturated_elevator_angle = min_elevator_down_angle;
     }
     else{
         saturated_elevator_angle = current_elevator_angle;
