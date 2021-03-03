@@ -9,13 +9,21 @@ The `Control_Model_Testing` folder contains the code for implementing and testin
 `source` contains all the C source code. The source code is organised into the following subfolders:
 - `control`
   - PID controller
-  - Main control loop
+  - `control_loops`
+    - Control loop for full longitudinal model
+    - Control loop for SPO model
+  - Elevator saturation
+  - Safety checks (not implemented)
 - `sim`
   - Initilisation of the simulation
   - Starting the simulation
   - Running the simulation
 - `state_space_equations`
-  - Numerical ODE solvers
+  - `numerical_ode_solvers`
+    - Analytic backwards Euler
+    - Backwards Euler Newton method
+    - Forward Euler
+    - 4th order Runge-Kutta 
   - State-space equations
 - `util`
   - Input/Output to external files
@@ -27,7 +35,7 @@ The simulation takes as input 3 files:
   
   The file is of the format:
   ```
-  Simulation time (seconds): <int>
+  Simulation time (seconds): <double>
   Simulation timestep (seconds): <double>
   Time to put in input (seconds): <double>
 
@@ -50,9 +58,14 @@ The format of the output is:
 ```
 time scout_data target_data modified_scout_data
 ```
-where `x_data` is 4 values:
+where `x_data` is 4 values for the full longitudinal model:
 ```
-horizontal_velocity _vertical_velocity pitch_rate pitch_angle
+horizontal_velocity vertical_velocity pitch_rate pitch_angle
+```
+
+And 2 values for the SPO model:
+```
+vertical_velocity pitch_rate
 ```
  
 ### Building executables
@@ -65,3 +78,5 @@ The preprocessor definition `STATE_SPACE_MATRIX_SIZE` is used for determining wh
 The SPO approximation reduces the full longitudinal model state matrices to:
 
 <img src="https://latex.codecogs.com/svg.latex?\begin{bmatrix}\mathring{Z_w}%20&%20\mathring{Z_q}+mU_\infty%20\\\mathring{M_w}%20&%20\mathring{M_q}%20\\\end{bmatrix}\begin{bmatrix}w%20\\q\end{bmatrix}" title="SPO_matrices" />
+
+For the full longitudinal model the state-space equations are solved with a 4th order Runge-Kutta method. For the SPO model an analytic backwards Euler method is used for the target and scout equations. With a backward Euler method that is solved with Newton's method for the modified Scout.
