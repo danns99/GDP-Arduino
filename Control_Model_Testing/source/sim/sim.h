@@ -8,6 +8,7 @@
 #include "..\\control\\control_loops\\control_loop_full_longitudinal_model.h"
 #include "..\\control\\control_loops\\control_loop_spo_model.h"
 
+
 int run_sim(double sim_time, double input_time, double dt, int steps,
             double *u, double u_old, double *x_sc, double *x_t,
             double *x_sc_mod, double **x_sc_store, double **x_t_store,
