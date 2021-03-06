@@ -135,6 +135,66 @@ This is shown in the diagram below:
 The voltage measurement can be done by the Arduino by tapping off of the centre of the potential divider ($R_1$ and $R_2$).
 The current sense resistor $R_2$ should be small so as to not affect the operation of the servo.
 A value of $\SI{1}{\ohm}$ is sufficient for $R_2$.
+
+\newpage
+\subsection{Current smoothing}
+The problem with measuring the current from a servo motor is it is driven by a pulse width modulation (PWM) signal.
+For a torque controller to work it must receive a continuous value for the current.
+Smoothing of the current signal can be achieved with a resistor capacitor (RC) circuit:
+\begin{figure}[h]
+  \centering
+  \includegraphics{rc_network_schematic/rc_network_schematic.pdf}
+  \caption{Electrical diagram of RC network.}
+\end{figure}
+
+The current flow is:
+\begin{equation}
+    i(t) = \frac{V_{in}}{R}
+    = \frac{V_R}{R}
+    = C \frac{dV}{dt}
+\end{equation}
+
+Also, for $V_{out}$:
+\begin{subequations}
+  \begin{align}
+    V_{out} &= V_C \\
+    &= \frac{Q}{C} \\
+    &= \frac{\int i(t)~dt}{C} \\
+    &= \frac{1}{C} \int i(t)~dt \\
+    &= \frac{1}{C} \int \frac{V_{in}}{R}~dt \\
+    &= \frac{1}{RC} \int V_{in}~dt \\
+    V_{out}(t) &= \frac{1}{RC} \int_0^t V_{in}~dt
+  \end{align}
+\end{subequations}
+
+A square pulse wave is a simple case of what the RC network will need to be able to smooth and can be defined as:
+\begin{equation}
+  f(x) =
+  \begin{cases}
+      1 & \text{if } x<T/2 \\
+      0 & \text{if } x>T/2
+  \end{cases}
+\end{equation}
+
+Therefore for a $\SI{5}{\volt}$ input square wave:
+\begingroup
+\allowdisplaybreaks
+\begin{subequations}
+  \begin{align}
+    V_{out}(t) &= \frac{1}{RC} \int_0^t V_{in}~dt \\
+    &= \frac{1}{RC} \int_0^T \begin{cases}
+        5 & \text{if } x<T/2 \\
+        0 & \text{if } x>T/2
+    \end{cases}~dt
+    \\
+    &= \frac{1}{RC}\left[\int_0^{T/2} 5 ~dt + \int_{T/2}^T 0 ~dt \right] \\
+    &= \frac{1}{RC}\left[\int_0^{T/2} 5 ~dt \right] \\
+    &= \frac{1}{RC}\left[5t \right]^{T/2}_0 \\
+    &= \frac{1}{RC}\frac{5T}{2} \\
+    &= \frac{5T}{2RC}
+  \end{align}
+\end{subequations}
+\endgroup
 %-----------------------------------------------------------------------------%
 \end{document}
 %-----------------------------------------------------------------------------%
