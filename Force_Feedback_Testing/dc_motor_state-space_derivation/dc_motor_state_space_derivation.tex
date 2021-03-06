@@ -5,6 +5,7 @@
 \raggedright
 \usepackage[parfill]{parskip}
 \usepackage{graphicx}
+\usepackage{siunitx}
 %-----------------------------------------------------------------------------%
 % Import packages
 %-----------------------------------------------------------------------------%
@@ -118,6 +119,22 @@ Using $V$ as the input, and the motor position as the output:
     \end{bmatrix}
   \end{align}
 \end{subequations}
+
+\section{Current Sensing}
+As the torque is proportional to the current draw, the torque the motor produces can be found by measuring the current.
+Current feedback can be achieved by connecting a small resistor from the servo ground to the circuit ground and measuring the voltage drop across it.
+From Ohm's law $V=IR$ so given the value of the resistor is known priori and $V$ can be measured the current can be found.
+
+This is shown in the diagram below:
+\begin{figure}[h]
+  \centering
+  \includegraphics{current_measure_schematic/current_measure_schematic.pdf}
+  \caption{Electrical diagram of current sensing.}
+\end{figure}
+
+The voltage measurement can be done by the Arduino by tapping off of the centre of the potential divider ($R_1$ and $R_2$).
+The current sense resistor $R_2$ should be small so as to not affect the operation of the servo.
+A value of $\SI{1}{\ohm}$ is sufficient for $R_2$.
 %-----------------------------------------------------------------------------%
 \end{document}
 %-----------------------------------------------------------------------------%
