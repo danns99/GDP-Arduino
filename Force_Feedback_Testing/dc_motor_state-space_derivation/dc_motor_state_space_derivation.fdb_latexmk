@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1615066854 "dc_motor_state_space_derivation.tex" "dc_motor_state_space_derivation.pdf" "dc_motor_state_space_derivation" 1615066855
+["pdflatex"] 1615139847 "dc_motor_state_space_derivation.tex" "dc_motor_state_space_derivation.pdf" "dc_motor_state_space_derivation" 1615139849
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmbx12.tfm" 1136765053 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -29,6 +29,7 @@
   "C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247593067 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb" 1247593066 24457 5cbb7bdf209d5d1ce9892a9b80a307cc ""
   "C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247593067 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1247593067 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
   "C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsbsy.sty" 1601804949 2283 ca7ce284ab93c8eecdc6029dc5ccbd73 ""
   "C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsgen.sty" 1601804951 4297 7f6eb9092061a11f87d08ed13515b48d ""
   "C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsmath.sty" 1601804952 90280 2c21ff5f2e32e1bf714e600924d810db ""
@@ -70,11 +71,11 @@
   "C:/Users/akern/AppData/Roaming/MiKTeX/2.9/tex/latex/translator/translator-basic-dictionary-English.dict" 1500798852 3435 0a4d096dde3f8fe682c2aedd33b8137d ""
   "C:/Users/akern/AppData/Roaming/MiKTeX/2.9/tex/latex/translator/translator.sty" 1559297644 8691 e154b4b39c7cd1cfa9301a391c44afdd ""
   "current_measure_schematic/current_measure_schematic.pdf" 1615054766 30522 c907316d6dfa9430d21302d5cf7c0d0b ""
-  "dc_motor_state_space_derivation.aux" 1615066855 964 08820a68b80ad49c2afc60f66ee22bbf "pdflatex"
-  "dc_motor_state_space_derivation.tex" 1615066853 6529 6f2268e07b2432f6512232572bbaa13f ""
+  "dc_motor_state_space_derivation.aux" 1615139849 964 08820a68b80ad49c2afc60f66ee22bbf "pdflatex"
+  "dc_motor_state_space_derivation.tex" 1615139847 8439 b39ef2d8f80b7e3f380d677f8d75ccd3 ""
   "motor_schematic/motor_schematic.pdf" 1614863725 18141 588ed3c80f7c917cb65551b0bf33bb59 ""
   "rc_network_schematic/rc_network_schematic.pdf" 1615060092 18874 3f1306c5fba8571a132ded40471df376 ""
   (generated)
   "dc_motor_state_space_derivation.pdf"
-  "dc_motor_state_space_derivation.log"
   "dc_motor_state_space_derivation.aux"
+  "dc_motor_state_space_derivation.log"

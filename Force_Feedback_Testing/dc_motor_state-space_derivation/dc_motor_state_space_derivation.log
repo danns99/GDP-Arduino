@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.6)  6 MAR 2021 21:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.6)  7 MAR 2021 17:57
 entering extended mode
 **./dc_motor_state_space_derivation.tex
 (dc_motor_state_space_derivation.tex
@@ -348,11 +348,11 @@ e_derivation.aux) )
 Here is how much of TeX's memory you used:
  5594 strings out of 479590
  116627 string characters out of 2871618
- 395932 words of memory out of 3000000
+ 393932 words of memory out of 3000000
  22715 multiletter control sequences out of 15000+200000
  410157 words of font info for 52 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,16n,74p,547b,782s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 70i,15n,74p,547b,782s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/P
@@ -363,10 +363,10 @@ ts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 mss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b>
-Output written on dc_motor_state_space_derivation.pdf (4 pages, 131511 bytes).
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on dc_motor_state_space_derivation.pdf (4 pages, 143580 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
+ 89 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
