@@ -244,9 +244,38 @@ For response analysis of the RC circuit it makes sense to evaluate the circuit a
   \end{align}
 \end{subequations}
 
-% \begin{equation}
-%   = \frac{k}{s} \frac{1-e^{-Ts/2}}{1-e^{-Ts}}
-% \end{equation}
+Similarly the pulse wave can be found as a transfer function:
+\begin{subequations}
+  \begin{align}
+    \mathcal{L} &= \frac{1}{1-e^{-sT}} \int_0^T e^{-st} f(t)~dt \\
+    &= \frac{1}{1-e^{-sT}} \int_0^{T/2} e^{-st} K~dt \\
+    &= \frac{K}{1-e^{-sT}} \int_0^{T/2} e^{-st}~dt \\
+    &= \frac{K}{1-e^{-sT}} \left[\frac{e^{-st}}{-s}\right]_0^{T/2} \\
+    &= \frac{K}{(-s)(1-e^{-sT})} \left[e^{-st}\right]_0^{T/2} \\
+    &= \frac{K}{(-s)(1-e^{-sT})} \left[e^{-Ts/2} - 1\right] \\
+    &= \frac{K(e^{-Ts/2}-1)}{(-s)(1-e^{-sT})} \\
+    &= \frac{K(1-e^{-Ts/2})}{(s)(1-e^{-sT})} \\
+    &= \frac{K}{s}\frac{1-e^{-Ts/2}}{1-e^{-sT}}
+  \end{align}
+\end{subequations}
+
+Combining the transfer functions:
+\begin{subequations}
+  \begin{align}
+    &= \frac{Cs}{RCs + 1} \frac{K}{s} \frac{1-e^{-Ts/2}}{1-e^{-Ts}} \\
+    &= \frac{KC}{s} \frac{s(1-e^{-Ts/2})}{(RCs + 1)(1-e^{-Ts})} \\
+    &= \frac{KC(1-e^{-Ts/2})}{(RCs + 1)(1-e^{-Ts})}
+  \end{align}
+\end{subequations}
+
+Using the final value theorem: $\lim\limits_{t\to \infty} f(t) = \lim\limits_{s\to 0} sF(s)$.
+\begin{subequations}
+  \begin{align}
+    sF(s) &= s\frac{KC(1-e^{-Ts/2})}{(RCs + 1)(1-e^{-Ts})} \\
+    &= \frac{sKC - sKCe^{-Ts/2}}{(RCs + 1)(1-e^{-Ts})} \\
+    &= \frac{sKC - sKCe^{-Ts/2}}{RCs - RCse^{-Ts} + 1 - e^{-Ts}}
+  \end{align}
+\end{subequations}
 
 % Given that $V_{out} = V_{C,charge}(t)-V_{C,discharge}(t)$:
 % \begin{subequations}
