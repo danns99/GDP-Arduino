@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.6)  7 MAR 2021 20:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.6)  10 MAR 2021 16:12
 entering extended mode
 **./dc_motor_state_space_derivation.tex
 (dc_motor_state_space_derivation.tex
@@ -348,7 +348,7 @@ space_derivation.aux) )
 Here is how much of TeX's memory you used:
  5594 strings out of 479590
  116627 string characters out of 2871618
- 402932 words of memory out of 3000000
+ 400932 words of memory out of 3000000
  22715 multiletter control sequences out of 15000+200000
  410157 words of font info for 52 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -364,7 +364,7 @@ pe1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on dc_motor_state_space_derivation.pdf (5 pages, 147398 bytes).
+Output written on dc_motor_state_space_derivation.pdf (5 pages, 147668 bytes).
 PDF statistics:
  92 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

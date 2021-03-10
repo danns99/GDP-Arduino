@@ -238,9 +238,22 @@ For response analysis of the RC circuit it makes sense to evaluate the circuit a
 \begin{subequations}
   \begin{align}
     V_{in}(t) &= i(t) R + \frac{1}{C} \int i(t)~dt \\
-    \mathcal{L}(V_{in}(t)) &= V_{in}(s) = I(s) R + \frac{1}{C}\frac{1}{s} I(s) \\
-    \frac{I(s)}{V_{in}(s)} &= \frac{1}{R+\frac{1}{Cs}} \\
-    G(s) &= \frac{Cs}{RCs + 1}
+    \mathcal{L}(V_{in}(t)) &= V_{in}(s) = I(s) R + \frac{1}{C}\frac{1}{s} I(s)
+  \end{align}
+\end{subequations}
+
+\begin{subequations}
+  \begin{align}
+    V_{out}(t) &= \frac{1}{C} \int i(t)~dt \\
+    \mathcal{L}(V_{in}(t)) &= V_{in}(s) = \frac{1}{C}\frac{1}{s} I(s)
+  \end{align}
+\end{subequations}
+
+\begin{subequations}
+  \begin{align}
+  \frac{V_{out}(s)}{V_{in}(s)} &= \frac{\frac{1}{Cs} I(s)}{I(s)R + \frac{1}{Cs} I(s)} \\
+  \frac{V_{out}(s)}{V_{in}(s)} &= \frac{\frac{1}{Cs}}{R+\frac{1}{Cs}} \\
+  G(s) &= \frac{1}{RCs + 1}
   \end{align}
 \end{subequations}
 
