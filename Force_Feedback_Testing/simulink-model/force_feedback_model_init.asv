@@ -1,0 +1,7 @@
+%% clear workspace and console
+clear all
+clc
+
+%% set values of RC filter
+R = 500  % Resistance (Ohm)
+C = 500e-6
