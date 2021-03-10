@@ -3,7 +3,7 @@ clear all
 clc
 
 %% simulation settings
-stop_time = 5;  % seconds
+stop_time = 10;  % seconds
 
 %% set value of load resistor
 R_load = 1000;  % Resistance (Ohm)
@@ -19,4 +19,4 @@ C = 500e-6;  % Capacitance (F)
 current_gain = 1/R_sense;
 
 %% run simulink model
-sim('force_feedback_model.slx')
+sim('rc_filter_test.slx')
