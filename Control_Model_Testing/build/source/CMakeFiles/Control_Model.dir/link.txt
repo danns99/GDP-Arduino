@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E remove -f CMakeFiles\Control_Model.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\Control_Model.dir/objects.a @CMakeFiles\Control_Model.dir\objects1.rsp
-C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\Control_Model.dir/objects.a -Wl,--no-whole-archive  -o Control_Model.exe -Wl,--out-implib,libControl_Model.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Control_Model.dir\linklibs.rsp
