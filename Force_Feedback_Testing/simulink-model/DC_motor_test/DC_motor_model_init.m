@@ -23,4 +23,4 @@ dc_motor_state_space_C = [0 0 1];
 dc_motor_state_space_D = 0;
 
 %% run simulink model
-sim('force_feedback_model.slx')
+sim('DC_motor_model.slx')
