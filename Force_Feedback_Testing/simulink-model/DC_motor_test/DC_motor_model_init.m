@@ -22,5 +22,9 @@ dc_motor_state_space_B = [0;
 dc_motor_state_space_C = [0 0 1];
 dc_motor_state_space_D = 0;
 
+%% set values of RC filter
+R = 500;  % Resistance (Ohm)
+C = 500e-6;  % Capacitance (F)
+
 %% run simulink model
 sim('DC_motor_model.slx')
