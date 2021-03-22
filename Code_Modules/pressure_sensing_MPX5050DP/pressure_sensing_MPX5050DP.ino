@@ -25,5 +25,5 @@ void loop() {
   airspeed=pow((2*kpa*1000)/density,0.5);
   Serial.print("airspeed: ");
   Serial.println(airspeed, 1);
-  delay(100);
+  delay(1000);
 }

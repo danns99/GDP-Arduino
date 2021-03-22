@@ -23,6 +23,8 @@
 
 Adafruit_MMA8451 mma = Adafruit_MMA8451();
 
+float accel_pitch;
+
 void setup(void) {
   Serial.begin(9600);
   
@@ -45,23 +47,26 @@ void setup(void) {
 void loop() {
   // Read the 'raw' data in 14-bit counts
   mma.read();
-  Serial.print("X:\t"); Serial.print(mma.x); 
-  Serial.print("\tY:\t"); Serial.print(mma.y); 
-  Serial.print("\tZ:\t"); Serial.print(mma.z); 
-  Serial.println();
+  //Serial.print("X:\t"); Serial.print(mma.x); 
+  //Serial.print("\tY:\t"); Serial.print(mma.y); 
+  //Serial.print("\tZ:\t"); Serial.print(mma.z); 
+  //Serial.println();
 
   /* Get a new sensor event */ 
   sensors_event_t event; 
   mma.getEvent(&event);
 
   /* Display the results (acceleration is measured in m/s^2) */
-  Serial.print("X: \t"); Serial.print(event.acceleration.x); Serial.print("\t");
-  Serial.print("Y: \t"); Serial.print(event.acceleration.y); Serial.print("\t");
-  Serial.print("Z: \t"); Serial.print(event.acceleration.z); Serial.print("\t");
-  Serial.println("m/s^2 ");
+  //Serial.print("X: \t"); Serial.print(event.acceleration.x); Serial.print("\t");
+  //Serial.print("Y: \t"); Serial.print(event.acceleration.y); Serial.print("\t");
+  //Serial.print("Z: \t"); Serial.print(event.acceleration.z); Serial.print("\t");
+  //Serial.println("m/s^2 ");
+
+  accel_pitch = -1*(atan2(event.acceleration.x, event.acceleration.z))*57.29579;
+  Serial.print("Aircraft Pitch : \t"); Serial.print(accel_pitch); Serial.println("degrees");
   
   /* Get the orientation of the sensor */
-  uint8_t o = mma.getOrientation();
+  /* uint8_t o = mma.getOrientation();
   
   switch (o) {
     case MMA8451_PL_PUF: 
@@ -88,7 +93,7 @@ void loop() {
     case MMA8451_PL_LLB: 
       Serial.println("Landscape Left Back");
       break;
-    }
+    }*/
   Serial.println();
   delay(500);
   
