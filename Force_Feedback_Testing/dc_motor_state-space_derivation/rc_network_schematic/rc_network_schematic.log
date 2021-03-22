@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.6)  4 MAR 2021 13:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.6)  6 MAR 2021 19:48
 entering extended mode
-**./motor_schematic.tex
-(motor_schematic.tex
+**./rc_network_schematic.tex
+(rc_network_schematic.tex
 LaTeX2e <2020-10-01> patch level 3
 L3 programming layer <2020-12-07> xparse <2020-03-03>
 (C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex/latex/standalone\standalone.cls
@@ -577,115 +577,34 @@ Package circuitikz Warning: You did not specify one of the voltage directions:
 (circuitikz)                Default directions may have changed, 
 (circuitikz)                please check the manual.
 
-)
-(C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/frontendlayer/tikz/l
-ibraries\tikzlibraryarrows.code.tex
-File: tikzlibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (rc_network_schematic.aux)
+\openout1 = `rc_network_schematic.aux'.
 
-(C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/libraries\pgflibrary
-arrows.code.tex
-File: pgflibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\arrowsize=\dimen285
-))
-(C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/frontendlayer/tikz/l
-ibraries\tikzlibraryshapes.code.tex
-File: tikzlibraryshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-
-(C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/frontendlayer/tikz/l
-ibraries\tikzlibraryshapes.geometric.code.tex
-File: tikzlibraryshapes.geometric.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-
-(C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/libraries/shapes\pgf
-libraryshapes.geometric.code.tex
-File: pgflibraryshapes.geometric.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-))
-(C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/frontendlayer/tikz/l
-ibraries\tikzlibraryshapes.misc.code.tex
-File: tikzlibraryshapes.misc.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-
-(C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/libraries/shapes\pgf
-libraryshapes.misc.code.tex
-File: pgflibraryshapes.misc.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-))
-(C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/frontendlayer/tikz/l
-ibraries\tikzlibraryshapes.symbols.code.tex
-File: tikzlibraryshapes.symbols.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-
-(C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/libraries/shapes\pgf
-libraryshapes.symbols.code.tex
-File: pgflibraryshapes.symbols.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-))
-(C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/frontendlayer/tikz/l
-ibraries\tikzlibraryshapes.arrows.code.tex
-File: tikzlibraryshapes.arrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-
-(C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/libraries/shapes\pgf
-libraryshapes.arrows.code.tex
-File: pgflibraryshapes.arrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-))
-(C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/frontendlayer/tikz/l
-ibraries\tikzlibraryshapes.callouts.code.tex
-(C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/libraries/shapes\pgf
-libraryshapes.callouts.code.tex))
-(C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/frontendlayer/tikz/l
-ibraries\tikzlibraryshapes.multipart.code.tex
-File: tikzlibraryshapes.multipart.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-
-(C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/libraries/shapes\pgf
-libraryshapes.multipart.code.tex
-File: pgflibraryshapes.multipart.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfnodepartlowerbox=\box69
-\pgfnodeparttwobox=\box70
-\pgfnodepartthreebox=\box71
-\pgfnodepartfourbox=\box72
-\pgfnodeparttwentybox=\box73
-\pgfnodepartnineteenbox=\box74
-\pgfnodeparteighteenbox=\box75
-\pgfnodepartseventeenbox=\box76
-\pgfnodepartsixteenbox=\box77
-\pgfnodepartfifteenbox=\box78
-\pgfnodepartfourteenbox=\box79
-\pgfnodepartthirteenbox=\box80
-\pgfnodeparttwelvebox=\box81
-\pgfnodepartelevenbox=\box82
-\pgfnodeparttenbox=\box83
-\pgfnodepartninebox=\box84
-\pgfnodeparteightbox=\box85
-\pgfnodepartsevenbox=\box86
-\pgfnodepartsixbox=\box87
-\pgfnodepartfivebox=\box88
-)))
-(C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/frontendlayer/tikz/l
-ibraries\tikzlibrarypositioning.code.tex
-File: tikzlibrarypositioning.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-) (motor_schematic.aux)
-\openout1 = `motor_schematic.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
 
 (C:\Users\akern\AppData\Roaming\MiKTeX\2.9\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count299
-\scratchdimen=\dimen286
-\scratchbox=\box89
+\scratchdimen=\dimen285
+\scratchbox=\box69
 \nofMPsegments=\count300
 \nofMParguments=\count301
 \everyMPshowfont=\toks31
 \MPscratchCnt=\count302
-\MPscratchDim=\dimen287
+\MPscratchDim=\dimen286
 \MPnumerator=\count303
 \makeMPintoPDFobject=\count304
 \everyMPtoPDFconversion=\toks32
@@ -705,24 +624,25 @@ c-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 13.
+(Font)              <7> on input line 4.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 13.
+(Font)              <5> on input line 4.
  [1
 
-{C:/Users/akern/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (motor_sche
-matic.aux) ) 
+{C:/Users/akern/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (rc_network
+_schematic.aux) ) 
 Here is how much of TeX's memory you used:
- 30740 strings out of 479590
- 806151 string characters out of 2871618
- 1237324 words of memory out of 3000000
- 47569 multiletter control sequences out of 15000+200000
+ 28224 strings out of 479590
+ 733140 string characters out of 2871618
+ 1145382 words of memory out of 3000000
+ 45102 multiletter control sequences out of 15000+200000
  404839 words of font info for 33 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,7n,118p,421b,812s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb>
-Output written on motor_schematic.pdf (1 page, 18141 bytes).
+ 122i,7n,118p,426b,769s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+mi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb>
+
+Output written on rc_network_schematic.pdf (1 page, 18874 bytes).
 PDF statistics:
  17 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
