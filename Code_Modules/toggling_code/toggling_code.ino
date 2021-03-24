@@ -1,10 +1,14 @@
 #include <ezButton.h>
 
-const int BUTTON_PIN = 2; // the number of the pushbutton pin
+const int BUTTON_PIN = 52; // the number of the pushbutton pin
 int number_of_states =4;
 int status = 1;
 int previous_status=1;
 
+const int LED1_pin=22;
+const int LED2_pin=24;
+const int LED3_pin=26;
+const int LED4_pin=28;
 
 ezButton button(BUTTON_PIN);  // create ezButton object that attach to pin 7;
 
@@ -13,10 +17,10 @@ void setup() {
   button.setDebounceTime(50); // set debounce time to 50 milliseconds
 
   
-pinMode(3, OUTPUT);
-pinMode(4, OUTPUT);
-pinMode(5, OUTPUT);
-pinMode(6, OUTPUT);
+pinMode(LED1_pin, OUTPUT);
+pinMode(LED2_pin, OUTPUT);
+pinMode(LED3_pin, OUTPUT);
+pinMode(LED4_pin, OUTPUT);
 
 Serial.println(status);
 }
@@ -35,7 +39,7 @@ status_check();
   if(status==4){
     status_3();
   } 
-  delay(5);
+  delay(50);
 }
 
 void status_check(){
@@ -52,27 +56,27 @@ void status_check(){
 }
 
 void status_OFF(){
-    digitalWrite(4,LOW);
-    digitalWrite(5,LOW);
-    digitalWrite(6,LOW);
-    digitalWrite(3, HIGH);
-    Serial.println("OFF");
+    digitalWrite(LED2_pin,LOW);
+    digitalWrite(LED3_pin,LOW);
+   digitalWrite(LED4_pin,LOW);
+    digitalWrite(LED1_pin, HIGH);
+    Serial.println("Mode : OFF");
 }
 
 void status_1(){
-    digitalWrite(3, LOW);
-    digitalWrite(4, HIGH);
-    Serial.println("1");
+    digitalWrite(LED1_pin, LOW);
+    digitalWrite(LED2_pin, HIGH);
+    Serial.println("Mode : 1");
 }
 
 void status_2(){
-    digitalWrite(3, LOW);
-    digitalWrite(5, HIGH);
-    Serial.println("2");
+    digitalWrite(LED1_pin, LOW);
+    digitalWrite(LED3_pin, HIGH);
+    Serial.println("Mode : 2");
 }
 
 void status_3(){
-    digitalWrite(3, LOW);
-    digitalWrite(6, HIGH);
-    Serial.println("3");
+    digitalWrite(LED1_pin, LOW);
+    digitalWrite(LED4_pin, HIGH);
+    Serial.println("Mode : 3");
 }
