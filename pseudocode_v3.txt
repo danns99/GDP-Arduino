@@ -1,0 +1,58 @@
+Initialise all Arduino modules
+
+INTERRUPT SEQUENCE  (~1kHz)
+	if STATE = OFF then
+		Run flight data update function
+		end
+	if STATE =! OFF then
+		Run flight data update function
+		Run safety check function
+		if safety check function returns unsafe then
+			Set system to OFF state
+			Light all LED's to inform pilots that system has been disabled
+			Record to SD card that system was disabled
+			end
+		else
+			Run control function
+			Send updated position requirement to actuator
+			end
+		end
+
+LOOP SEQUENCE
+	Run status check function
+	if status = OFF
+		Light the 'OFF' LED
+		end
+	if status = 1
+		Light the '1' LED
+		end
+	if status = 2
+		Light the '2' LED
+		end
+	if status = 3
+		Light the '3' LED
+		end
+	Write current flight data to SD card
+	delay
+
+FUNCTIONS
+
+Flight Data Update:
+	Update airspeed:
+		Read MPX5004DP sensor value using analogRead()
+		Calibrate sensor reading, using pre-defined sensor offset value
+		Convert result to voltage reading
+		Using equations from datasheet, convert voltage into differential pressure reading
+		Convert differential pressure reading into airspeed using rearranged Bernoulli equation
+	Update pitch and pitch angle:
+		Read x, y and z accelerations from MPU6050 sensor
+		Use trigonometry to calculate pitch angle
+		Read pitch rate from MPU6050 sensor
+
+Status Check Function:
+	if button is pressed & status is not OFF
+		Update status to OFF
+		end
+	else if button is pressed
+		Update status to the previous status + 1
+		end
