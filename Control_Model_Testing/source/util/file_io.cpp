@@ -138,31 +138,31 @@ int get_aircraft_state_space_matrices(double A_sc[STATE_SPACE_MATRIX_SIZE][STATE
 /*
  Writes the simulation data to a text file at the end of the simulation.
  */
-int write_sim_data_to_file(int steps, double dt, double **x_sc_store,
-                           double **x_t_store, double **x_sc_mod_store,
+int write_sim_data_to_file(int steps, double dt, double *x_sc_store,
+                           double *x_t_store, double *x_sc_mod_store,
                            double *u_store, double *u_sc_mod_store){
     int i;
     FILE *f_aircraft_states;
-    FILE *f_aircraft_inputs;
+    FILE *f_aircraft_inputs; 
 
     if(STATE_SPACE_MATRIX_SIZE == 4){
         f_aircraft_states=fopen("test_data_full_model.txt","w");
         for(i=0; i<steps; i++){
             fprintf(f_aircraft_states, "%f %f %f %f %f %f %f %f %f %f %f %f %f \n",
-                    i*(dt), x_sc_store[i][0], x_sc_store[i][1], x_sc_store[i][2],
-                    x_sc_store[i][3], x_t_store[i][0], x_t_store[i][1],
-                    x_t_store[i][2], x_t_store[i][3], x_sc_mod_store[i][0],
-                    x_sc_mod_store[i][1], x_sc_mod_store[i][2],
-                    x_sc_mod_store[i][3]);
+                    i*(dt), x_sc_store[i*4], x_sc_store[i*4 + 1], x_sc_store[i*4 + 2],
+                    x_sc_store[i*4 + 3], x_t_store[i*4], x_t_store[i*4 + 1],
+                    x_t_store[i*4 + 2], x_t_store[i*4 + 3], x_sc_mod_store[i*4],
+                    x_sc_mod_store[i*4 + 1], x_sc_mod_store[i*4 + 2],
+                    x_sc_mod_store[i*4 + 3]);
         }
     }
     if(STATE_SPACE_MATRIX_SIZE == 2){
         f_aircraft_states=fopen("test_data_spo_model.txt","w");
         for(i=0; i<steps; i++){
             fprintf(f_aircraft_states, "%f %f %f %f %f %f %f \n",
-                    i*(dt), x_sc_store[i][0], x_sc_store[i][1], x_t_store[i][0],
-                    x_t_store[i][1], x_sc_mod_store[i][0],
-                    x_sc_mod_store[i][1]);
+                i*(dt), x_sc_store[i*2], x_sc_store[i*2 + 1], x_t_store[i*2],
+                x_t_store[i*2 + 1], x_sc_mod_store[i*2],
+                x_sc_mod_store[i*2 + 1]); 
         }
     }
 
@@ -182,15 +182,18 @@ int write_sim_data_to_file(int steps, double dt, double **x_sc_store,
  */
 int store_timestep_data(int steps, double *x_sc, double *x_t, double *x_sc_mod,
                         double *u, double *u_into_modified_scout,
-                        double **x_sc_store, double **x_t_store,
-                        double **x_sc_mod_store, double *u_store,
+                        double *x_sc_store, double *x_t_store,
+                        double *x_sc_mod_store, double *u_store,
                         double *u_sc_mod_store){
     int i;
+    int array_loc;
+
+    array_loc = STATE_SPACE_MATRIX_SIZE * steps;
 
     for (i=0; i<STATE_SPACE_MATRIX_SIZE; i++){
-        x_sc_store[steps][i] = x_sc[i];
-        x_t_store[steps][i] = x_t[i];
-        x_sc_mod_store[steps][i] = x_sc_mod[i];
+        x_sc_store[array_loc + i] = x_sc[i];
+        x_t_store[array_loc + i] = x_t[i];
+        x_sc_mod_store[array_loc+ i] = x_sc_mod[i];
     }
 
     u_store[steps] = u[0];

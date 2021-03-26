@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "source/sim_runner_full_longitudinal_model.exe"
+			"path" : "source/sim_runner_SPO_model.exe"
 		},
 		{
-			"path" : "source/sim_runner_full_longitudinal_model.pdb"
+			"path" : "source/sim_runner_SPO_model.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -28,13 +28,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 29,
+				"line" : 37,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 41,
+				"line" : 47,
 				"parent" : 0
 			}
 		]
@@ -52,7 +52,7 @@
 			[
 				{
 					"backtrace" : 2,
-					"define" : "STATE_SPACE_MATRIX_SIZE=4"
+					"define" : "STATE_SPACE_MATRIX_SIZE=2"
 				}
 			],
 			"language" : "CXX",
@@ -71,12 +71,11 @@
 				20,
 				22,
 				24,
-				26,
-				28
+				26
 			]
 		}
 	],
-	"id" : "sim_runner_full_longitudinal_model::@411ffd8adc737496fe19",
+	"id" : "sim_runner_SPO_model::@411ffd8adc737496fe19",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -92,8 +91,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "sim_runner_full_longitudinal_model",
-	"nameOnDisk" : "sim_runner_full_longitudinal_model.exe",
+	"name" : "sim_runner_SPO_model",
+	"nameOnDisk" : "sim_runner_SPO_model.exe",
 	"paths" : 
 	{
 		"build" : "source",
@@ -118,8 +117,7 @@
 				20,
 				22,
 				24,
-				26,
-				28
+				26
 			]
 		},
 		{
@@ -139,8 +137,7 @@
 				21,
 				23,
 				25,
-				27,
-				29
+				27
 			]
 		}
 	],
@@ -292,23 +289,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "source/sim/sim_init.cpp",
+			"path" : "source/main/control.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "source/sim/sim_init.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "source/sim/sim_runner.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "source/sim/sim_runner.h",
+			"path" : "source/main/control.h",
 			"sourceGroupIndex" : 1
 		}
 	],
