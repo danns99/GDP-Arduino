@@ -6,12 +6,12 @@
  */
 int main(void){
     using namespace std;
-    int steps;
+    int steps=0;
     double sim_time;
     double dt;
 
     control_loop control_augmentation_system;
-    tie(steps, sim_time, dt) = control_augmentation_system.init();
+    tie(sim_time, dt) = control_augmentation_system.init();
 
     while(steps < sim_time*1/dt){
         control_augmentation_system.run();

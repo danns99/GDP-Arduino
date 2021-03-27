@@ -1,22 +1,22 @@
 #include "control.h"
 
 
-std::tuple<int, double, double> control_loop::init(){
+std::tuple<double, double> control_loop::init(){
     /* Read in the control model settings */
     read_sim_settings(&sim_time, &dt, &input_time, aircraft_data_folder_dir);
 
     /* Allocate memory for the storage arrays */
-    x_sc_store = memory_allocation_for_1_d_storage_arrays(sim_time, dt);
-    x_t_store = memory_allocation_for_1_d_storage_arrays(sim_time, dt);
-    x_sc_mod_store = memory_allocation_for_1_d_storage_arrays(sim_time, dt);
-    u_store = memory_allocation_for_1_d_storage_arrays(sim_time, dt);
-    u_sc_mod_store = memory_allocation_for_1_d_storage_arrays(sim_time, dt);
+    x_sc_store = memory_allocation_for_x_vector_storage_arrays(sim_time, dt);
+    x_t_store = memory_allocation_for_x_vector_storage_arrays(sim_time, dt);
+    x_sc_mod_store = memory_allocation_for_x_vector_storage_arrays(sim_time, dt);
+    u_store = memory_allocation_for_u_vector_storage_arrays(sim_time, dt);
+    u_sc_mod_store = memory_allocation_for_u_vector_storage_arrays(sim_time, dt);
 
     /* Get the aircraft state matrices from text files */
     get_aircraft_state_space_matrices(A_sc, B_sc, A_t, B_t,
                                       aircraft_data_folder_dir);
 
-    return std::make_tuple(steps, sim_time, dt);
+    return std::make_tuple(sim_time, dt);
 }
 
 void control_loop::run(){

@@ -10,7 +10,7 @@
 
 class control_loop{
     public:
-        std::tuple<int, double, double> init();
+        std::tuple<double, double> init();
         void run();
         void log_data();
         void cleanup();

@@ -5,11 +5,9 @@
 #include <stdlib.h>
 
 
-double** memory_allocation_for_storage_arrays(double sim_time, double dt);
+double* memory_allocation_for_x_vector_storage_arrays(double sim_time, double dt);
 
-double* memory_allocation_for_1_d_storage_arrays(double sim_time, double dt);
-
-double* memory_allocation_for_1_d_arrays(double sim_time, double dt);
+double* memory_allocation_for_u_vector_storage_arrays(double sim_time, double dt);
 
 void destroy_arrays(double* array);
 
