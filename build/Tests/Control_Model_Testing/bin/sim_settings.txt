@@ -1,0 +1,5 @@
+Simulation time (seconds): 0.1
+Simulation timestep (seconds): 0.01
+Time to put in input (seconds): 0
+
+Directory to aircraft state space matrices (relative or absolute): aircraft_data_phantom//

@@ -1,0 +1,68 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Arduino_Code",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "sim_runner_full_longitudinal_model::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sim_runner_full_longitudinal_model-Debug-b8fb5e53b2bea5b4fb09.json",
+					"name" : "sim_runner_full_longitudinal_model",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sim_runner_spo_model::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sim_runner_spo_model-Debug-5eda57919ad06f03cc1a.json",
+					"name" : "sim_runner_spo_model",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/build",
+		"source" : "D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}
