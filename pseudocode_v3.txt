@@ -1,9 +1,12 @@
+INITIALISATION SEQUENCE
+
 Initialise all Arduino modules
+Run control loop initialisation function
 
 INTERRUPT SEQUENCE  (~1kHz)
+
 	if STATE = OFF then
 		Run flight data update function
-		end
 	if STATE =! OFF then
 		Run flight data update function
 		Run safety check function
@@ -11,48 +14,88 @@ INTERRUPT SEQUENCE  (~1kHz)
 			Set system to OFF state
 			Light all LED's to inform pilots that system has been disabled
 			Record to SD card that system was disabled
-			end
 		else
 			Run control function
 			Send updated position requirement to actuator
-			end
-		end
 
-LOOP SEQUENCE
+LOOP SEQUENCE (~10Hz)
+
 	Run status check function
 	if status = OFF
 		Light the 'OFF' LED
-		end
 	if status = 1
 		Light the '1' LED
-		end
 	if status = 2
 		Light the '2' LED
-		end
 	if status = 3
 		Light the '3' LED
-		end
-	Write current flight data to SD card
+	Write current flight and control data to SD card
 	delay
 
 FUNCTIONS
 
-Flight Data Update:
-	Update airspeed:
-		Read MPX5004DP sensor value using analogRead()
-		Calibrate sensor reading, using pre-defined sensor offset value
-		Convert result to voltage reading
-		Using equations from datasheet, convert voltage into differential pressure reading
-		Convert differential pressure reading into airspeed using rearranged Bernoulli equation
-	Update pitch and pitch angle:
-		Read x, y and z accelerations from MPU6050 sensor
-		Use trigonometry to calculate pitch angle
-		Read pitch rate from MPU6050 sensor
+Func: Flight Data Update
+	Func: Update airspeed:
+		 Read MPX5004DP sensor value using analogRead()
+		 Calibrate sensor reading, using pre-defined sensor offset value
+		 Convert result to voltage reading
+		 Using equations from datasheet, convert voltage into differential pressure reading
+		 Convert differential pressure reading into airspeed using rearranged Bernoulli equation
+	Func: Update pitch and pitch angle:
+		 Read x, y and z accelerations from MPU6050 sensor
+		 Use trigonometry to calculate pitch angle
+		 Read pitch rate from MPU6050 sensor
 
-Status Check Function:
-	if button is pressed & status is not OFF
-		Update status to OFF
-		end
-	else if button is pressed
-		Update status to the previous status + 1
-		end
+Func: Status Check
+	if position of rotary switch has changed
+		Change system mode to new position of rotary switch
+
+Func: Safety Check
+		Check g loading not exceeded
+		Check flight speed not exceeded
+		Check aircraft angle of attack not exceeded
+		Check elevator deflection not exceeded
+		Check that dead mans switches are still pressed
+		if all of the conditions are true
+			return TRUE
+		else
+			return FALSE
+
+Func: Initialise variables for the control loop
+	timestep size
+	timestep counter
+	u vector
+	old u value
+	x vector for target aircraft
+	x vector for modified Scout
+	array for storing x vector at each timestep for target aircraft
+ 	array for storing x vector at each timestep for modified Scout
+	array for storing unmodified u vector at each timestep for target aircraft
+	array for storing modified u vector at each timestep for modified Scout
+	u vector for modified Scout
+	integral term used in PD controller
+	array for storing the state-space matrices for the Scout
+	array for storing the state-space matrices for the target aircraft
+	Func: Read in aircraft state-space matrices
+		read in state-space matrices for the Scout
+		read in state-space matrices for the target aircraft
+
+Func: Run the control loop
+		Func: Store the current values of the x vectors and u vectors
+		Update the timestep counter
+		Func: Solve the target aircraft states
+		get the pitch rate output of the target aircraft
+		Func: Solve the modified Scout states
+			initialise the iteratation counter
+			Func: Forward Euler method to guess the new states
+			Do:
+				Func: Get the input into the modifed Scout using the PD controller
+				Func: Limit the control input to the permissable range of elevator inputs
+				Solve the inverse of the Jacobian matrix
+				Update the modified Scout states
+				Increment the iteration counter
+			While: max number of iterations has not been reached or the u vector into the modified Scout has not converged
+		Output the required elevator command
+
+
+	
