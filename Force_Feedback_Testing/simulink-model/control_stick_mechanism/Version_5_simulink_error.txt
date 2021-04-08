@@ -1,0 +1,4 @@
+Constrained Instances: 'AileronStub-1', 'Stick-Triangle Pin-1'
+Constraint Name: Tangent16
+Error Details: Constraint geometry is not supported. The constraint geometry has been exported as unknown geometry.
+---------------------------------------------------------------------------------

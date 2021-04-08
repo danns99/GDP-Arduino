@@ -1,0 +1,1924 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimscapeMultibodyImportXML version="2.0" xmlns="urn:mathworks:SimscapeMultibody:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="" on="04/01/21||18:20:56" using="Simscape Multibody Link Version 7.2" from="SolidWorks 28.3.0"/>
+<ModelUnits mass="kilogram" length="millimeter"/>
+<DataUnits mass="kilogram" length="meter"/>
+<RootAssembly name="Version_5_simulink" uid="Version_5_simulink" version="2600">
+<AssemblyFile name="Version_5_simulink.SLDASM" type="SolidWorks Assembly"/>
+<InstanceTree>
+<Instance name="WDS851-810-1" uid="WDS851-810-1" entityUid="WDS851-810*:*851-810">
+<Transform>
+<Rotation>-0.99992864905978562 0.0095590137638361539 -0.0071639406289334294 -0.011865560392887964 -0.72549969017283533 0.68812019882843356 0.0013803137450668754 0.68815610497545021 0.7255613481429275</Rotation>
+<Translation>0.96490877628543859 2.3592808766501658 5.1087894599544601</Translation>
+</Transform>
+</Instance>
+<Instance name="WDS551-110-3" uid="WDS551-110-3" entityUid="WDS551-110*:*551-110">
+<Transform>
+<Rotation>0.005049926844346902 0.9999561669374436 -0.007884316244421213 -0.31516561931094639 0.0090741243973975448 0.94899330486087652 0.94902325084436912 -0.002307481353306075 0.31519762830102283</Rotation>
+<Translation>0.97588231365357647 2.2985965958180881 5.2918647911059491</Translation>
+</Transform>
+</Instance>
+<Instance name="WDS551-110-1" uid="WDS551-110-1" entityUid="WDS551-110*:*551-110">
+<Transform>
+<Rotation>-0.0050499268443480747 -0.9999286490597864 -0.010825665260727564 0.3151656193109475 -0.011865560392810025 0.94896250762657186 -0.94902325084436867 0.0013803137451930769 0.31520305215963751</Rotation>
+<Translation>0.97519590860699301 2.3414350919533029 5.1628699821150112</Translation>
+</Transform>
+</Instance>
+<Instance name="WDS851-410-2" uid="WDS851-410-2" entityUid="WDS851-410*:*851-410">
+<Transform>
+<Rotation>0.0085958404775181262 0.0037115670895676331 -0.9999561669374436 -0.98741190758906805 -0.15790942029447913 -0.0090741243973975448 -0.1579361778624612 0.98744662602694688 0.0023074813533060755</Rotation>
+<Translation>0.97651399310280496 2.2411356792138006 5.3396416692895796</Translation>
+</Transform>
+</Instance>
+<Instance name="BearingMount Bottom-4" uid="BearingMount Bottom-4" entityUid="BearingMount Bottom*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>1.0350772406494833 2.2256294746702099 5.119794567392816</Translation>
+</Transform>
+</Instance>
+<Instance name="BearingMount Bottom-3" uid="BearingMount Bottom-3" entityUid="BearingMount Bottom*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.89354724064948188 2.2256294746702099 5.0134845673928163</Translation>
+</Transform>
+</Instance>
+<Instance name="WDS851-410-1" uid="WDS851-410-1" entityUid="WDS851-410*:*851-410">
+<Transform>
+<Rotation>2.4225180219063974e-14 0.011945576146447983 -0.99992864905978629 -0.11555020271062956 -0.99323076831625434 -0.011865560392809839 -0.99330164132227849 0.11554195809502456 0.0013803137451932645</Rotation>
+<Translation>0.97490806277686604 2.3547775241456019 5.0690435911639922</Translation>
+</Transform>
+</Instance>
+<Instance name="DA 30-HT_Servo with Arm_02-8" uid="DA 30-HT_Servo with Arm_02-8" entityUid="DA 30-HT_Servo with Arm_02" rigid="true">
+<Transform>
+<Rotation>2.0556473190325164e-16 0.99970346502212459 -0.024351222202548022 -0.97965417498956597 0.0048871208795580358 0.20063353028599618 0.20069304279300057 0.023855776496824736 0.97936367326045981</Rotation>
+<Translation>0.94846719169249105 2.1669395257753843 5.3271117951644325</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.7803921568627451" g="0.76078431372549016" b="0.74117647058823533" a="1"/>
+<Diffuse r="0.7803921568627451" g="0.76078431372549016" b="0.74117647058823533" a="1"/>
+<Specular r="0.62431372549019615" g="0.60862745098039217" b="0.5929411764705883" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+<Instance name="DA 30-HT_Servo with Arm_02.STEP-1" uid="DA 30-HT_Servo with Arm_02.STEP-1" grounded="true" entityUid="DA 30-HT_Servo with Arm_02.STEP" rigid="true">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+<Instance name="DA 30-HT_Servo_02.STEP-1" uid="DA 30-HT_Servo_02.STEP-1" grounded="true" entityUid="DA 30-HT_Servo_02.STEP*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="DA 30_Servo Arm_04.STEP-1" visible="false" uid="DA 30_Servo Arm_04.STEP-1" grounded="true" entityUid="DA 30_Servo Arm_04.STEP*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+</Instance>
+<Instance name="WDS851-810-2" uid="WDS851-810-2" entityUid="WDS851-810*:*851-810">
+<Transform>
+<Rotation>0.99995616693744094 -0.0092088551819708622 -0.0016915052521968834 0.0090741243977523547 0.90864360168984004 0.41747390981297217 -0.002307481353085361 -0.4174709595820445 0.90868733535548529</Rotation>
+<Translation>0.98616972115111723 2.2807228967589341 5.3459360415919326</Translation>
+</Transform>
+</Instance>
+<Instance name="Servo Arm-2" uid="Servo Arm-2" entityUid="Servo Arm*:*Default">
+<Transform>
+<Rotation>0.99970346502212448 0.022783624585280406 -0.008595840477517833 0.0048871208795580193 0.15809440471066236 0.98741190758907194 0.023855776496825999 -0.98716111433237597 0.15793617786243649</Rotation>
+<Translation>0.96966090515095293 2.1670431327380242 5.3276175376261703</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.7803921568627451" g="0.76078431372549016" b="0.74117647058823533" a="1"/>
+<Diffuse r="0.7803921568627451" g="0.76078431372549016" b="0.74117647058823533" a="1"/>
+<Specular r="0.62431372549019615" g="0.60862745098039217" b="0.5929411764705883" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="AileronStub-1" uid="AileronStub-1" entityUid="AileronStub*:*Default">
+<Transform>
+<Rotation>0.99978647056797099 0.02066429938903918 0 -0.02066429938903918 0.99978647056797099 -2.8192725847986525e-14 -5.8472373545929028e-16 2.8186661623473382e-14 1</Rotation>
+<Translation>0.97129241819530676 2.1796454893774819 5.0673345673928702</Translation>
+</Transform>
+</Instance>
+<Instance name="TriangleStickLink-2" uid="TriangleStickLink-2" entityUid="TriangleStickLink*:*Default">
+<Transform>
+<Rotation>-0.99978358191171002 -0.016025393956016175 0.013265597926424023 0.020664239684231478 -0.69131159189148439 0.72226122152219552 -0.0024038589941380744 0.72237903462449393 0.69149313214009622</Rotation>
+<Translation>0.97803209647397127 2.3098812665054518 5.0477841792639557</Translation>
+</Transform>
+</Instance>
+<Instance name="TriangleStickLink-1" uid="TriangleStickLink-1" entityUid="TriangleStickLink*:*Default">
+<Transform>
+<Rotation>0.99978358191171002 0.020456649701290061 -0.0037834934636892998 -0.020664239684231585 0.99753984945453922 -0.066986849071199631 0.0024038589941381395 0.067050534921160462 0.99774668489989116</Rotation>
+<Translation>0.96977809144782612 2.2982078593640241 5.052358751683399</Translation>
+</Transform>
+</Instance>
+<Instance name="BearingPivot-2" uid="BearingPivot-2" entityUid="BearingPivot*:*Default">
+<Transform>
+<Rotation>-1 0 0 0 -0.99330164132227716 0.11555020271064124 0 0.11555020271064124 0.99330164132227716</Rotation>
+<Translation>1.0271072406494832 2.2452250489605952 5.0631630116482436</Translation>
+</Transform>
+</Instance>
+<Instance name="BearingMount-1" uid="BearingMount-1" entityUid="BearingMount*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.89931224064948323 2.2306294746702089 5.0616395673928158</Translation>
+</Transform>
+</Instance>
+<Instance name="Fuselage Tubes rev 3-1" uid="Fuselage Tubes rev 3-1" grounded="true" entityUid="Fuselage Tubes rev 3*:*Default&lt;As Machined&gt;">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>1.1905822406494837 2.7005294746700823 5.7055788622584407</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="0.69999999999999996" g="0.69999999999999996" b="0.69999999999999996" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="n-Bracket - Copy-1" uid="n-Bracket - Copy-1" entityUid="n-Bracket - Copy*:*Default">
+<Transform>
+<Rotation>0.99992864905978629 -0.011945576146447983 -2.4219759208201546e-14 0.011865560392809841 0.99323076831625434 0.11555020271062955 -0.0013803137451932697 -0.11554195809502456 0.99330164132227849</Rotation>
+<Translation>0.97502751853833081 2.3431119634217805 5.0552994861251088</Translation>
+</Transform>
+</Instance>
+<Instance name="StickBottom-1" uid="StickBottom-1" entityUid="StickBottom*:*Default">
+<Transform>
+<Rotation>0.99978358191170968 0.020803589589095266 -2.4223661293044446e-14 -0.020664239684240557 0.9930866728799681 0.11555020271062957 0.0024038589941526673 -0.11552519555665695 0.99330164132227849</Rotation>
+<Translation>0.9743879730371392 2.3282459918336218 5.0572805218434054</Translation>
+</Transform>
+</Instance>
+<Instance name="Rotator-1" visible="false" uid="Rotator-1" entityUid="Rotator*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.97284224064948177 2.1796294746702247 5.067334567392809</Translation>
+</Transform>
+</Instance>
+<Instance name="TriangleTopper-1" uid="TriangleTopper-1" entityUid="TriangleTopper*:*Default">
+<Transform>
+<Rotation>0.99978358191171068 -0.020664299389038656 0.0024033456991894037 -0.020664239684232311 -0.9997864705679711 -4.9674061909366149e-05 0.0024038589938343916 -2.8188099478917897e-14 -0.99999711072679498</Rotation>
+<Translation>0.97356549112964053 2.2896220011399273 5.0673345673925922</Translation>
+</Transform>
+</Instance>
+<Instance name="Bottom Triangle-1" uid="Bottom Triangle-1" entityUid="Bottom Triangle*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.97284224064948188 2.2546294746702249 5.0803345673928089</Translation>
+</Transform>
+</Instance>
+<Instance name="Stick-Triangle Pin-1" uid="Stick-Triangle Pin-1" entityUid="Stick-Triangle Pin*:*Default">
+<Transform>
+<Rotation>0.96552254576301877 0.26031944534225532 0 -0.26031944534225543 0.96552254576301877 -2.8192725931575069e-14 -7.3413497503338476e-15 2.7207402997220242e-14 1.0000000000000002</Rotation>
+<Translation>0.97284224064948344 2.2546294746700819 5.051334567392872</Translation>
+</Transform>
+</Instance>
+<Instance name="BearingMount-2" uid="BearingMount-2" entityUid="BearingMount*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>1.0408422406494833 2.2306294746702089 5.0616395673928158</Translation>
+</Transform>
+</Instance>
+<Instance name="BearingPivot-1" uid="BearingPivot-1" entityUid="BearingPivot*:*Default">
+<Transform>
+<Rotation>1 0 0 0 0.99330164132227716 0.11555020271064124 0 -0.11555020271064124 0.99330164132227716</Rotation>
+<Translation>0.91304724064948317 2.2452250489605952 5.0631630116482436</Translation>
+</Transform>
+</Instance>
+<Instance name="Pin2-1" uid="Pin2-1" entityUid="Pin2*:*Default">
+<Transform>
+<Rotation>0.83577483704073929 0.54907232835895659 -2.421975920820153e-14 -0.54539444496359435 0.83017651740842779 0.11555020271062956 0.063445418844694873 -0.096573951840487574 0.99330164132227861</Rotation>
+<Translation>0.97490806277686648 2.3513110180642829 5.0392445419243241</Translation>
+</Transform>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.45294117647058824" g="0.43372549019607842" b="0.41176470588235292" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Instance>
+<Instance name="Stick-1" uid="Stick-1" entityUid="Stick*:*Default">
+<Transform>
+<Rotation>-0.99978358191170968 0.020803589589095152 2.4219759208201543e-14 0.020664239684240481 0.99308667287996799 -0.11555020271062953 -0.0024038589941527393 -0.11552519555665684 -0.99330164132227838</Rotation>
+<Translation>0.9749080627768667 2.3530731586556199 5.0543923919544893</Translation>
+</Transform>
+</Instance>
+<Instance name="Floor-1" uid="Floor-1" entityUid="Floor*:*Default">
+<Transform>
+<Rotation>1.0000000000000002 -2.1076890233118206e-16 0 2.529399066830053e-16 0.97965417498956597 0.20069304279300049 1.0408340855860843e-16 -0.20069304279300054 0.97965417498956586</Rotation>
+<Translation>1.0489983976214157 2.1361882002821346 5.4079533398849167</Translation>
+</Transform>
+</Instance>
+<Instance name="siderod - Copy-2" uid="siderod - Copy-2" entityUid="siderod - Copy*:*Default">
+<Transform>
+<Rotation>-1.6624878896953619e-15 -0.095054626489757391 0.99547205786144133 0.11555020271064088 -0.98880402896423447 -0.094417916507551825 0.99330164132227716 0.11502699807866824 0.010983581359477365</Rotation>
+<Translation>1.0191919422858835 2.3461621911053876 5.054944654911214</Translation>
+</Transform>
+</Instance>
+<Instance name="siderod - Copy-3" uid="siderod - Copy-3" entityUid="siderod - Copy*:*Default">
+<Transform>
+<Rotation>1.8668096007485195e-15 0.0059131268212159306 -0.99998251731277599 -0.11555020271064134 -0.99328427574036293 -0.0058735185768607791 -0.99330164132227716 0.11554818258258877 0.0006832630028433778</Rotation>
+<Translation>0.92995562202033522 2.3450606888192143 5.0550727920320639</Translation>
+</Transform>
+</Instance>
+<Instance name="Servo_Stick_Link-2" uid="Servo_Stick_Link-2" entityUid="Servo_Stick_Link*:*Default">
+<Transform>
+<Rotation>0.15300543020653706 -0.0050499268443481085 -0.98821244505732642 0.93810402826870076 0.31516561931094761 0.14363657107569602 0.31072523308117278 -0.94902325084436867 0.052959407884126425</Rotation>
+<Translation>0.97603147899760845 2.2892871960028782 5.3198971535678066</Translation>
+</Transform>
+</Instance>
+<Instance name="Diagonal Front Servo Attachment-1" uid="Diagonal Front Servo Attachment-1" entityUid="Diagonal Front Servo Attachment*:*Default">
+<Transform>
+<Rotation>0.68967818494323252 3.0720243890549518e-16 0.72411601364243305 -0.1453250461130374 0.97965417498956597 0.1384136134842103 -0.7093832759416111 -0.20069304279299968 0.6756461132788637</Rotation>
+<Translation>1.498492212428705 2.1387609449023186 5.3888714627140972</Translation>
+</Transform>
+</Instance>
+<Instance name="Diagonal Front Servo Attachment Mirrored-1" uid="Diagonal Front Servo Attachment Mirrored-1" entityUid="Diagonal Front Servo Attachment Mirrored*:*Default">
+<Transform>
+<Rotation>0.7241160136424365 -6.3533436976047392e-15 0.68967818494322874 -0.13841361348420092 0.97965417498956731 0.14532504611303762 -0.67564611327886193 -0.20069304279299341 0.70938327594161454</Rotation>
+<Translation>0.86734161916874886 2.1355305580009016 5.3731027944497098</Translation>
+</Transform>
+</Instance>
+<Instance name="Diagonal Front Servo Attachment Mirrored-2" uid="Diagonal Front Servo Attachment Mirrored-2" entityUid="Diagonal Front Servo Attachment Mirrored*:*Default">
+<Transform>
+<Rotation>-0.7241160136424335 -1.6826817716975029e-16 -0.68967818494323241 -0.13841361348421127 -0.97965417498956564 0.14532504611303831 -0.67564611327886337 0.20069304279300104 0.7093832759416111</Rotation>
+<Translation>1.4984922124287059 2.1387609449023186 5.3888714627140972</Translation>
+</Transform>
+</Instance>
+<Instance name="Diagonal Front Servo Attachment-3" uid="Diagonal Front Servo Attachment-3" entityUid="Diagonal Front Servo Attachment*:*Default">
+<Transform>
+<Rotation>0.68967818494323019 6.301816707354746e-15 0.72411601364243516 0.14532504611303756 -0.97965417498956708 -0.13841361348420145 0.70938327594161321 0.20069304279299366 -0.67564611327886315</Rotation>
+<Translation>0.86734161916874808 2.1355305580009052 5.3731027944497081</Translation>
+</Transform>
+</Instance>
+<Instance name="Front Servo Mount-1" uid="Front Servo Mount-1" entityUid="Front Servo Mount*:*Default">
+<Transform>
+<Rotation>-0.02435122220254924 -2.0469737016526324e-16 -0.99970346502212437 0.20063353028599609 0.97965417498956597 -0.004887120879558283 0.97936367326045948 -0.20069304279300051 -0.023855776496825923</Rotation>
+<Translation>0.8886612249393171 2.146471986033637 5.3517707926630962</Translation>
+</Transform>
+</Instance>
+<Instance name="BearingMount Bottom-1" uid="BearingMount Bottom-1" entityUid="BearingMount Bottom*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.89354724064948343 2.2256294746702099 5.119794567392816</Translation>
+</Transform>
+</Instance>
+<Instance name="BearingMount Bottom-2" uid="BearingMount Bottom-2" entityUid="BearingMount Bottom*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>1.0350772406494833 2.2256294746702099 5.0134845673928163</Translation>
+</Transform>
+</Instance>
+</InstanceTree>
+<Constraints>
+<Concentric name="Concentric2">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Fuselage Tubes rev 3-1</Uid>
+</InstancePath>
+<Position>-0.11747500000000044 -0.4698999999999991 -0.69209429486556928</Position>
+<Axis>0 -2.8196734938514411e-14 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Rotator-1</Uid>
+</InstancePath>
+<Position>0.10026499999999994 0.051000000000000156 0.048499999999999766</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Distance name="Distance2">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Rotator-1</Uid>
+</InstancePath>
+<Position>0.105765 0.05699999999999994 -0.022499999999999964</Position>
+<Axis>3.0090606695174454e-16 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Fuselage Tubes rev 3-1</Uid>
+</InstancePath>
+<Position>0.4483508520204349 -0.4698999999999991 -0.69209429486556839</Position>
+<Axis>-1 0 -1.2381185675041127e-15</Axis>
+</ConstraintGeometry>
+</Distance>
+<Parallel name="Parallel2">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Fuselage Tubes rev 3-1</Uid>
+</InstancePath>
+<Position>-0.028574999999999351 -0.59203342400049097 -1.3798438385431488</Position>
+<Axis>1 1.3052624052053169e-14 -1.0538912800341538e-15</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Rotator-1</Uid>
+</InstancePath>
+<Position>0.105765 0.05699999999999994 -0.017500000000000071</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Parallel>
+<Concentric name="Concentric3">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Rotator-1</Uid>
+</InstancePath>
+<Position>-0.065000000000000058 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Bottom Triangle-1</Uid>
+</InstancePath>
+<Position>-0.064999999999999947 -0.075000000000000178 -0.012999999999999901</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident3">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>Rotator-1</Uid>
+</InstancePath>
+<Position>0.065000000000000058 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>Bottom Triangle-1</Uid>
+</InstancePath>
+<Position>0.064999999999999947 -0.075000000000000178 -0.012999999999999901</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident4">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>Bottom Triangle-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>Stick-Triangle Pin-1</Uid>
+</InstancePath>
+<Position>0 4.4408920985006262e-16 0.028999999999999915</Position>
+<Axis>0 0 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident7">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>TriangleStickLink-1</Uid>
+</InstancePath>
+<Position>0.0040000000000000036 -4.4408920985006262e-16 -0.015000000000000568</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>TriangleStickLink-2</Uid>
+</InstancePath>
+<Position>0.0040000000000000036 0 -0.015000000000000568</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident9">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>n-Bracket - Copy-1</Uid>
+</InstancePath>
+<Position>-1.1102230246251565e-16 0.010000000000000231 -0.01499999999999968</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>Pin2-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 1.0000000000000002</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric7">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>StickBottom-1</Uid>
+</InstancePath>
+<Position>-1.1102230246251565e-16 0.024999999999999911 0.01499999999999968</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Pin2-1</Uid>
+</InstancePath>
+<Position>0 0 0.030000000000001137</Position>
+<Axis>0 0 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Distance name="Distance3">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>StickBottom-1</Uid>
+</InstancePath>
+<Position>-1.1102230246251565e-16 0.045000000000000373 -8.8817841970012523e-16</Position>
+<Axis>0 -1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>n-Bracket - Copy-1</Uid>
+</InstancePath>
+<Position>-0.025000000000000133 0.02000000000000024 -0.012499999999999289</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Distance>
+<Concentric name="Concentric10">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>StickBottom-1</Uid>
+</InstancePath>
+<Position>-1.1102230246251565e-16 0.045000000000000373 -8.8817841970012523e-16</Position>
+<Axis>0 -1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Stick-1</Uid>
+</InstancePath>
+<Position>0 0.035000000000000142 0</Position>
+<Axis>0 -1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric11">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Pin2-1</Uid>
+</InstancePath>
+<Position>0 0 0.030000000000001137</Position>
+<Axis>0 0 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Stick-1</Uid>
+</InstancePath>
+<Position>0 0 -0.012500000000000178</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric13">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>AileronStub-1</Uid>
+</InstancePath>
+<Position>0 0.074999999999999734 -0.0075000000000002842</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Stick-Triangle Pin-1</Uid>
+</InstancePath>
+<Position>0 4.4408920985006262e-16 0.032000000000000028</Position>
+<Axis>0 0 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Tangent name="Tangent4">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Fuselage Tubes rev 3-1</Uid>
+</InstancePath>
+<Position>-0.44449999999999978 -0.59054999999999991 -0.45720000000000383</Position>
+<Axis>0.68967818494322974 0.1453250461130377 0.70938327594161377</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Floor-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 -1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+</Tangent>
+<Tangent name="Tangent5">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Fuselage Tubes rev 3-1</Uid>
+</InstancePath>
+<Position>0 -0.49688750000000015 0</Position>
+<Axis>0.68967818494323274 -0.14532504611303826 -0.70938327594161088</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Floor-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 -1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+</Tangent>
+<Parallel name="Parallel4">
+<ConstraintGeometry geomType="line">
+<InstancePath>
+<Uid>Fuselage Tubes rev 3-1</Uid>
+</InstancePath>
+<Position>-0.39052500000000001 -0.49529999999999985 0</Position>
+<Axis>1 2.1321740438355228e-16 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="line">
+<InstancePath>
+<Uid>Floor-1</Uid>
+</InstancePath>
+<Position>-0.24271320314122469 0.00099999999999988987 0.30585256024116347</Position>
+<Axis>1 0 1.0936093835815518e-16</Axis>
+</ConstraintGeometry>
+</Parallel>
+<Coincident name="Coincident22">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>TriangleTopper-1</Uid>
+</InstancePath>
+<Position>0.0040000000000001146 -0.0074999999999998401 8.8817841970012523e-16</Position>
+<Axis>1 1.1612047200204754e-16 1.0668549377257364e-16</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>TriangleStickLink-1</Uid>
+</InstancePath>
+<Position>0.0080000000000001181 -4.4408920985006262e-16 0.014999999999998792</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric31">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>BearingPivot-2</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>siderod - Copy-2</Uid>
+</InstancePath>
+<Position>-0.0035000000000007248 0.099999999999999645 0.01749999999999996</Position>
+<Axis>-1.0000000000000002 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident85">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>BearingPivot-2</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>siderod - Copy-2</Uid>
+</InstancePath>
+<Position>-0.0035000000000016129 0.093366750419288991 0.0249999999999998</Position>
+<Axis>1.0000000000000002 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident88">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>BearingPivot-1</Uid>
+</InstancePath>
+<Position>0 0 0.0070000000000005613</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>siderod - Copy-3</Uid>
+</InstancePath>
+<Position>-0.0034999999999998366 0.099999999999999645 0.017500000000000071</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric61">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Fuselage Tubes rev 3-1</Uid>
+</InstancePath>
+<Position>0 -0.49688750000000015 0</Position>
+<Axis>0.68967818494323274 -0.14532504611303826 -0.70938327594161088</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Diagonal Front Servo Attachment-1</Uid>
+</InstancePath>
+<Position>0.029999999999999805 0 8.8817841970012523e-16</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric62">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Fuselage Tubes rev 3-1</Uid>
+</InstancePath>
+<Position>-0.44449999999999978 -0.59054999999999991 -0.45720000000000383</Position>
+<Axis>0.68967818494322974 0.1453250461130377 0.70938327594161377</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Diagonal Front Servo Attachment Mirrored-1</Uid>
+</InstancePath>
+<Position>0 0 -0.030000000000000249</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric63">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Fuselage Tubes rev 3-1</Uid>
+</InstancePath>
+<Position>0 -0.49688750000000015 0</Position>
+<Axis>0.68967818494323274 -0.14532504611303826 -0.70938327594161088</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Diagonal Front Servo Attachment Mirrored-2</Uid>
+</InstancePath>
+<Position>0 0 -0.029999999999999805</Position>
+<Axis>2.2204460492503131e-16 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident137">
+<ConstraintGeometry geomType="line">
+<InstancePath>
+<Uid>Diagonal Front Servo Attachment-1</Uid>
+</InstancePath>
+<Position>-0.029999999999999805 0 0.010000000000000675</Position>
+<Axis>0.70710678118654768 0 0.70710678118654735</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="line">
+<InstancePath>
+<Uid>Diagonal Front Servo Attachment Mirrored-2</Uid>
+</InstancePath>
+<Position>-0.030000000000000249 0 0.010000000000000231</Position>
+<Axis>0.70710678118654768 0 0.70710678118654757</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric64">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Fuselage Tubes rev 3-1</Uid>
+</InstancePath>
+<Position>-0.44449999999999978 -0.59054999999999991 -0.45720000000000383</Position>
+<Axis>0.68967818494322974 0.1453250461130377 0.70938327594161377</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Diagonal Front Servo Attachment-3</Uid>
+</InstancePath>
+<Position>0.030000000000000249 4.4408920985006262e-16 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident139">
+<ConstraintGeometry geomType="line">
+<InstancePath>
+<Uid>Diagonal Front Servo Attachment Mirrored-1</Uid>
+</InstancePath>
+<Position>-0.029999999999999361 0 0.0099999999999997868</Position>
+<Axis>0.70710678118654757 0 0.70710678118654746</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="line">
+<InstancePath>
+<Uid>Diagonal Front Servo Attachment-3</Uid>
+</InstancePath>
+<Position>0.030000000000000249 4.4408920985006262e-16 -0.0099999999999997868</Position>
+<Axis>-0.70710678118654868 0 -0.70710678118654624</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Parallel name="Parallel27">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Floor-1</Uid>
+</InstancePath>
+<Position>0 0.0010000000000001119 8.8817841970012523e-16</Position>
+<Axis>0 1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Diagonal Front Servo Attachment Mirrored-1</Uid>
+</InstancePath>
+<Position>0 0.014999999999999902 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Parallel>
+<Parallel name="Parallel28">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Floor-1</Uid>
+</InstancePath>
+<Position>0 0.0010000000000001119 8.8817841970012523e-16</Position>
+<Axis>0 1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Diagonal Front Servo Attachment-1</Uid>
+</InstancePath>
+<Position>0 0.014999999999999902 0</Position>
+<Axis>0 1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+</Parallel>
+<Coincident name="Coincident166">
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>Diagonal Front Servo Attachment Mirrored-1</Uid>
+</InstancePath>
+<Position>-0.029999999999999361 0.014999999999999902 0.0099999999999997868</Position>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="line">
+<InstancePath>
+<Uid>Front Servo Mount-1</Uid>
+</InstancePath>
+<Position>0.047499999999999432 4.4408920985006262e-16 0.039999999999999925</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident168">
+<ConstraintGeometry geomType="line">
+<InstancePath>
+<Uid>Diagonal Front Servo Attachment-1</Uid>
+</InstancePath>
+<Position>-0.010000000000000231 0.01499999999999968 0.030000000000000249</Position>
+<Axis>0.70710678118654757 0 -0.70710678118654746</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>Front Servo Mount-1</Uid>
+</InstancePath>
+<Position>0.04750000000000032 -2.2204460492503131e-16 -0.62600000000000011</Position>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident169">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Diagonal Front Servo Attachment Mirrored-1</Uid>
+</InstancePath>
+<Position>0 0.014999999999999902 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Front Servo Mount-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 -1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident170">
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>Diagonal Front Servo Attachment-1</Uid>
+</InstancePath>
+<Position>-0.010000000000000231 0.01499999999999968 0.030000000000000249</Position>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Front Servo Mount-1</Uid>
+</InstancePath>
+<Position>0.047499999999999432 0.010000000000000231 -0.032000000000000028</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric71">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Fuselage Tubes rev 3-1</Uid>
+</InstancePath>
+<Position>0.4483508520204349 -0.4698999999999991 -0.69209429486556839</Position>
+<Axis>-1 0 -1.2381185675041127e-15</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>BearingMount-2</Uid>
+</InstancePath>
+<Position>0.0057650000000000201 0 -0.048155000000000392</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric72">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Fuselage Tubes rev 3-1</Uid>
+</InstancePath>
+<Position>-0.44822088576474584 -0.46990000000000176 -0.58578403698282155</Position>
+<Axis>1 0 2.1054119605215846e-15</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>BearingMount-1</Uid>
+</InstancePath>
+<Position>0.0057650000000000201 0 0.058155000000000179</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric73">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Fuselage Tubes rev 3-1</Uid>
+</InstancePath>
+<Position>-0.44822088576474584 -0.46990000000000176 -0.58578403698282155</Position>
+<Axis>1 0 2.1054119605215846e-15</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>BearingMount-2</Uid>
+</InstancePath>
+<Position>0.0057650000000000201 0 0.058155000000000179</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric74">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Fuselage Tubes rev 3-1</Uid>
+</InstancePath>
+<Position>0.4483508520204349 -0.4698999999999991 -0.69209429486556839</Position>
+<Axis>-1 0 -1.2381185675041127e-15</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>BearingMount-1</Uid>
+</InstancePath>
+<Position>0.0057650000000000201 0 -0.048155000000000392</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident181">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>BearingMount-1</Uid>
+</InstancePath>
+<Position>-0.0057650000000000201 0.015000000000000124 0.0049999999999998934</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>BearingPivot-1</Uid>
+</InstancePath>
+<Position>-0.019499999999999962 0 0.0035000000000007248</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident182">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>BearingMount-2</Uid>
+</InstancePath>
+<Position>0.0057650000000000201 0.015000000000000124 0.0049999999999998934</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>BearingPivot-2</Uid>
+</InstancePath>
+<Position>-0.019500000000000073 0 0.0035000000000007248</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident183">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>BearingMount-2</Uid>
+</InstancePath>
+<Position>-0.00026499999999995971 0 -0.056809999999999583</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>BearingMount Bottom-2</Uid>
+</InstancePath>
+<Position>0.0055000000000000604 0.0049999999999998934 -0.0086550000000000793</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident184">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>BearingMount-1</Uid>
+</InstancePath>
+<Position>-0.00026499999999995971 0 -0.056809999999999583</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>BearingMount Bottom-3</Uid>
+</InstancePath>
+<Position>0.0054999999999999494 0.0049999999999998934 -0.0086550000000000793</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident185">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>BearingMount-1</Uid>
+</InstancePath>
+<Position>-0.00026499999999995971 0 0.049500000000000099</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>BearingMount Bottom-1</Uid>
+</InstancePath>
+<Position>0.0054999999999999494 0.0049999999999998934 -0.0086550000000000793</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident186">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>BearingMount-2</Uid>
+</InstancePath>
+<Position>-0.00026499999999995971 0 0.049500000000000099</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>BearingMount Bottom-4</Uid>
+</InstancePath>
+<Position>0.0055000000000000604 0.0049999999999998934 -0.0086550000000000793</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric90">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Servo_Stick_Link-2</Uid>
+</InstancePath>
+<Position>0 0.19500000000000028 0</Position>
+<Axis>0 -1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>WDS551-110-1</Uid>
+</InstancePath>
+<Position>0.030000000000001137 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident220">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Servo_Stick_Link-2</Uid>
+</InstancePath>
+<Position>0 0.19500000000000028 0</Position>
+<Axis>0 1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>WDS551-110-1</Uid>
+</InstancePath>
+<Position>0.029538119784648487 1.1102230246251565e-16 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric92">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>WDS851-410-1</Uid>
+</InstancePath>
+<Position>-0.040000000000000924 2.2204460492503131e-16 -0.010000024999999857</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>WDS551-110-1</Uid>
+</InstancePath>
+<Position>0.057000000000000384 -0.010000000000000009 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric93">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>WDS851-410-1</Uid>
+</InstancePath>
+<Position>-0.040000000000000924 2.2204460492503131e-16 -0.010000024999999857</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>WDS851-810-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident222">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>WDS551-110-1</Uid>
+</InstancePath>
+<Position>0.030000000000001137 0.010000000000000009 0.010000000000000231</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>WDS851-810-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident223">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>WDS851-410-1</Uid>
+</InstancePath>
+<Position>-0.025000000000000355 0.010000000000000453 0.0050000000000001155</Position>
+<Axis>1.2880321809127793e-16 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>WDS551-110-1</Uid>
+</InstancePath>
+<Position>0.069000000000000838 0.0050000000000000044 0.010000000000000231</Position>
+<Axis>1.0885389811754465e-16 -1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Distance name="Distance16">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>BearingMount-1</Uid>
+</InstancePath>
+<Position>0.0057650000000000201 0.0099999999999997868 0.0099999999999997868</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>BearingMount-2</Uid>
+</InstancePath>
+<Position>-0.0057650000000000201 0.0099999999999997868 0.0099999999999997868</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Distance>
+<Distance name="Distance17">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Rotator-1</Uid>
+</InstancePath>
+<Position>0.094234999999999958 0.05699999999999994 -0.017500000000000071</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>BearingMount-2</Uid>
+</InstancePath>
+<Position>-0.0057650000000000201 0.0099999999999997868 0.0099999999999997868</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Distance>
+<Parallel name="Parallel36">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Diagonal Front Servo Attachment Mirrored-1</Uid>
+</InstancePath>
+<Position>-0.029999999999999361 0.014999999999999902 0.0099999999999997868</Position>
+<Axis>-0.70710678118654746 0 0.70710678118654768</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Front Servo Mount-1</Uid>
+</InstancePath>
+<Position>0.047499999999999432 0.010000000000000231 -0.032000000000000028</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Parallel>
+<Concentric name="Concentric95">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Front Servo Mount-1</Uid>
+</InstancePath>
+<Position>-0.042499999999999538 -2.2204460492503131e-16 -0.067000000000000171</Position>
+<Axis>0 1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>DA 30-HT_Servo with Arm_02-8</Uid>
+<Uid>DA 30-HT_Servo with Arm_02.STEP-1</Uid>
+<Uid>DA 30-HT_Servo_02.STEP-1</Uid>
+</InstancePath>
+<Position>0.0025000000000001688 0.0076999999999998181 -0.020999999999999908</Position>
+<Axis>-1.0000000000000002 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric96">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Front Servo Mount-1</Uid>
+</InstancePath>
+<Position>0.042500000000000426 -4.4408920985006262e-16 -0.067000000000000171</Position>
+<Axis>0 1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>DA 30-HT_Servo with Arm_02-8</Uid>
+<Uid>DA 30-HT_Servo with Arm_02.STEP-1</Uid>
+<Uid>DA 30-HT_Servo_02.STEP-1</Uid>
+</InstancePath>
+<Position>0.0024999999999999467 0.0076999999999998181 0.063999999999999169</Position>
+<Axis>-1.0000000000000002 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric99">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>DA 30-HT_Servo with Arm_02-8</Uid>
+<Uid>DA 30-HT_Servo with Arm_02.STEP-1</Uid>
+<Uid>DA 30-HT_Servo_02.STEP-1</Uid>
+</InstancePath>
+<Position>2.2204460492503131e-16 0.024699999999999722 0</Position>
+<Axis>0 -1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Servo Arm-2</Uid>
+</InstancePath>
+<Position>0.014999999999999902 -8.8817841970012523e-16 4.4408920985006262e-16</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Distance name="Distance18">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Servo Arm-2</Uid>
+</InstancePath>
+<Position>0.014999999999999902 -8.8817841970012523e-16 4.4408920985006262e-16</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>DA 30-HT_Servo with Arm_02-8</Uid>
+<Uid>DA 30-HT_Servo with Arm_02.STEP-1</Uid>
+<Uid>DA 30-HT_Servo_02.STEP-1</Uid>
+</InstancePath>
+<Position>-0.0030000000000001137 0.041199999999999903 0.005196152422707101</Position>
+<Axis>0 1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+</Distance>
+<Coincident name="Coincident230">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Front Servo Mount-1</Uid>
+</InstancePath>
+<Position>0 0.0099999999999997868 0</Position>
+<Axis>0 1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>DA 30-HT_Servo with Arm_02-8</Uid>
+<Uid>DA 30-HT_Servo with Arm_02.STEP-1</Uid>
+<Uid>DA 30-HT_Servo_02.STEP-1</Uid>
+</InstancePath>
+<Position>0.015000000000000124 0.020699999999999941 8.8817841970012523e-16</Position>
+<Axis>1.0000000000000002 0 -3.0531133177191805e-16</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric100">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Servo_Stick_Link-2</Uid>
+</InstancePath>
+<Position>0 0.19500000000000028 0</Position>
+<Axis>0 -1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>WDS551-110-3</Uid>
+</InstancePath>
+<Position>0.030000000000000249 0 0</Position>
+<Axis>-1 0 1.6653345369377348e-16</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident231">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>Servo_Stick_Link-2</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>WDS551-110-3</Uid>
+</InstancePath>
+<Position>0.029538119784648487 -1.1102230246251565e-16 0</Position>
+<Axis>-1 0 2.7755575615628914e-16</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Distance name="Distance19">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Front Servo Mount-1</Uid>
+</InstancePath>
+<Position>-0.04750000000000032 0.010000000000000009 0.06999999999999984</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Diagonal Front Servo Attachment Mirrored-1</Uid>
+</InstancePath>
+<Position>-0.010000000000000231 0.01499999999999968 -0.010000000000000675</Position>
+<Axis>-0.70710678118654746 0 -0.70710678118654746</Axis>
+</ConstraintGeometry>
+</Distance>
+<Concentric name="Concentric102">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>WDS551-110-3</Uid>
+</InstancePath>
+<Position>0.057000000000000384 -0.01000000000000012 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>WDS851-410-2</Uid>
+</InstancePath>
+<Position>-0.039999999999999591 0 -0.010000025000000079</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident235">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>WDS551-110-3</Uid>
+</InstancePath>
+<Position>0.056999999999999496 0.0094999999999999529 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>WDS851-810-2</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Tangent name="Tangent16">
+<ConstraintGeometry geomType="Unknown">
+<InstancePath>
+<Uid>AileronStub-1</Uid>
+</InstancePath>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>Stick-Triangle Pin-1</Uid>
+</InstancePath>
+<Position>0 0 0.00849999999999973</Position>
+<Axis>0 0 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+</Tangent>
+<Parallel name="Parallel37">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Bottom Triangle-1</Uid>
+</InstancePath>
+<Position>0 0 -0.027999999999999581</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>BearingMount Bottom-3</Uid>
+</InstancePath>
+<Position>0.01153000000000004 0 -0.011154999999999582</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Parallel>
+<Coincident name="Coincident241">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>WDS551-110-3</Uid>
+</InstancePath>
+<Position>0.030000000000000249 0.010000000000000009 0.0099999999999997868</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>WDS851-810-2</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident242">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>WDS551-110-3</Uid>
+</InstancePath>
+<Position>0.06899999999999995 0.0049999999999997824 0.0099999999999997868</Position>
+<Axis>1.4094628242311558e-16 -1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>WDS851-410-2</Uid>
+</InstancePath>
+<Position>-0.024999999999999467 0.0099999999999997868 -0.0049999999999998934</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident314">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>n-Bracket - Copy-1</Uid>
+</InstancePath>
+<Position>-0.04500000000000004 0.010000000000000009 -0.0034999999999998366</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>siderod - Copy-3</Uid>
+</InstancePath>
+<Position>0.0035000000000007248 -0.0075000000000002842 -1.1102230246251565e-16</Position>
+<Axis>-1 0 -1.4354836763708079e-16</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident315">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>n-Bracket - Copy-1</Uid>
+</InstancePath>
+<Position>0.044999999999999818 0.010000000000000009 -0.0034999999999998366</Position>
+<Axis>-1.1579279202145187e-16 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>siderod - Copy-2</Uid>
+</InstancePath>
+<Position>-0.0035000000000007248 -0.0075000000000007283 -3.3306690738754696e-16</Position>
+<Axis>-1.0000000000000002 0 -1.1622647289044608e-16</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident317">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>StickBottom-1</Uid>
+</InstancePath>
+<Position>-0.0040000000000000036 -0.0075000000000002842 -8.8817841970012523e-16</Position>
+<Axis>0.99999999999999989 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>TriangleStickLink-2</Uid>
+</InstancePath>
+<Position>0.0080000000000000071 -4.4408920985006262e-16 0.01499999999999968</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric157">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>TriangleTopper-1</Uid>
+</InstancePath>
+<Position>1.1102230246251565e-16 0.0050000000000003375 0</Position>
+<Axis>1.1612047200204626e-16 1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>AileronStub-1</Uid>
+</InstancePath>
+<Position>0 0.10500000000000043 -8.8817841970012523e-16</Position>
+<Axis>0 -1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident321">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>TriangleTopper-1</Uid>
+</InstancePath>
+<Position>1.1102230246251565e-16 0.0050000000000003375 0</Position>
+<Axis>1.1612047200204626e-16 1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>AileronStub-1</Uid>
+</InstancePath>
+<Position>0 0.10500000000000043 -8.8817841970012523e-16</Position>
+<Axis>0 1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric158">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>Pin2-1</Uid>
+</InstancePath>
+<Position>0 0 0.030000000000001137</Position>
+<Axis>0 0 1.0000000000000002</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>WDS851-410-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>-1 -1.2490009027033011e-16 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident322">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>n-Bracket - Copy-1</Uid>
+</InstancePath>
+<Position>-0.02750000000000008 0.02000000000000024 0.015000000000000568</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>WDS851-410-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident323">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>Servo Arm-2</Uid>
+</InstancePath>
+<Position>0.0074999999999998401 -8.8817841970012523e-16 0.074999999999999734</Position>
+<Axis>0 0 1.0000000000000002</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>WDS851-410-2</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>-1.0000000000000002 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Parallel name="Parallel39">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>n-Bracket - Copy-1</Uid>
+</InstancePath>
+<Position>0 0.019999999999999796 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>WDS851-410-1</Uid>
+</InstancePath>
+<Position>-0.053284271247462378 -0.0099999999999991207 0.01000000000000012</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Parallel>
+</Constraints>
+</RootAssembly>
+<Assemblies>
+<Assembly name="DA 30-HT_Servo with Arm_02" uid="DA 30-HT_Servo with Arm_02" version="107">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="DA 30-HT_Servo with Arm_02.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="DA 30-HT_Servo with Arm_02.STEP" uid="DA 30-HT_Servo with Arm_02.STEP" version="104">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="DA 30-HT_Servo with Arm_02.STEP.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+</Assemblies>
+<Parts>
+<Part name="AileronStub" uid="AileronStub*:*Default" version="200">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="AileronStub.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.018018887572006526</Mass>
+<CenterOfMass>2.4935665768429138e-08 0.051924328937895642 -3.5592861291942675e-08</CenterOfMass>
+<Inertia>1.7134453719030919e-05 5.194328670034675e-07 1.7132203876098354e-05 2.2090664180636878e-11 -2.5036859065436528e-12 -2.6452124121320339e-11</Inertia>
+</MassProperties>
+<GeometryFile name="AileronStub_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.45294117647058824" g="0.43372549019607842" b="0.41176470588235292" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="BearingMount Bottom" uid="BearingMount Bottom*:*Default" version="121">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="BearingMount Bottom.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0017006791763391907</Mass>
+<CenterOfMass>0.005787028547720975 -0.00098978462771351339 0</CenterOfMass>
+<Inertia>1.0131875292984677e-07 1.08981044344608e-07 3.2971142153499182e-08 0 0 -3.7080788872099504e-11</Inertia>
+</MassProperties>
+<GeometryFile name="BearingMount Bottom_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.52078432148578124" g="0.49568628189610503" b="0.47058824230642882" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.10000000149011612</Shininess>
+</VisualProperties>
+</Part>
+<Part name="BearingMount" uid="BearingMount*:*Default" version="324">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="BearingMount.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.017292646117098246</Mass>
+<CenterOfMass>4.3328814040803448e-06 0.013148580312320871 0.0049999424271423877</CenterOfMass>
+<Inertia>2.8680743787627385e-05 2.851640564803512e-05 5.5339437475478258e-07 -8.1126210561416117e-12 -2.6814432936340977e-13 6.1054855310601396e-10</Inertia>
+</MassProperties>
+<GeometryFile name="BearingMount_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.45294117647058824" g="0.43372549019607842" b="0.41176470588235292" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="BearingPivot" uid="BearingPivot*:*Default" version="119">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="BearingPivot.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.001727563593239954</Mass>
+<CenterOfMass>-0.0036088342249424726 0 0.0035000000000000005</CenterOfMass>
+<Inertia>3.6441129617474498e-08 1.0223497357150541e-07 1.2551053767267892e-07 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="BearingPivot_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.45294117647058824" g="0.43372549019607842" b="0.41176470588235292" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Bottom Triangle" uid="Bottom Triangle*:*Default" version="212">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Bottom Triangle.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.042242274795392824</Mass>
+<CenterOfMass>3.2192891951685e-10 -0.049718926341364961 -0.01299966880169879</CenterOfMass>
+<Inertia>3.9134322057650339e-05 4.9947050789451381e-05 7.6232287238077722e-05 3.3254640806029681e-10 2.4572613187281974e-10 3.2780178163103927e-12</Inertia>
+</MassProperties>
+<GeometryFile name="Bottom Triangle_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.52078432148578124" g="0.49568628189610503" b="0.47058824230642882" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.10000000149011612</Shininess>
+</VisualProperties>
+</Part>
+<Part name="DA 30-HT_Servo_02.STEP" uid="DA 30-HT_Servo_02.STEP*:*Default" version="102">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="DA 30-HT_Servo_02.STEP.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.35154960861694268</Mass>
+<CenterOfMass>6.2257647594420105e-08 -0.048441721829972605 0.022118816896711239</CenterOfMass>
+<Inertia>0.00074178098745814893 0.00019341237035994113 0.00061506640875053976 8.6727614499556696e-06 5.3055434369691644e-10 1.6106831388727019e-09</Inertia>
+</MassProperties>
+<GeometryFile name="DA 30-HT_Servo_02.STEP_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.79607843137254897" g="0.82352941176470584" b="0.93725490196078431" a="1"/>
+<Diffuse r="0.79607843137254897" g="0.82352941176470584" b="0.93725490196078431" a="1"/>
+<Specular r="0.39803921568627448" g="0.41176470588235292" b="0.46862745098039216" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="DA 30_Servo Arm_04.STEP" uid="DA 30_Servo Arm_04.STEP*:*Default" version="103">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="DA 30_Servo Arm_04.STEP.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.009479875005972551</Mass>
+<CenterOfMass>-0.0086586060393993285 0.034700079370474986 0.014821548450181356</CenterOfMass>
+<Inertia>3.5374953786450778e-06 4.8150043886237651e-06 1.4257298691324461e-06 1.5037319226590368e-11 1.7855129325606388e-06 -4.6147117910839285e-12</Inertia>
+</MassProperties>
+<GeometryFile name="DA 30_Servo Arm_04.STEP_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.79607843137254897" g="0.82352941176470584" b="0.93725490196078431" a="1"/>
+<Diffuse r="0.79607843137254897" g="0.82352941176470584" b="0.93725490196078431" a="1"/>
+<Specular r="0.39803921568627448" g="0.41176470588235292" b="0.46862745098039216" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Diagonal Front Servo Attachment Mirrored" uid="Diagonal Front Servo Attachment Mirrored*:*Default" version="190">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Diagonal Front Servo Attachment Mirrored.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.021465662257299369</Mass>
+<CenterOfMass>-2.2129147997397407e-11 0.0080673644533344416 0</CenterOfMass>
+<Inertia>4.0139425390487095e-06 7.6108560159498488e-06 4.3519350825400163e-06 0 2.3744242675527599e-06 -2.5472176609274076e-13</Inertia>
+</MassProperties>
+<GeometryFile name="Diagonal Front Servo Attachment Mirrored_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.52078432148578124" g="0.49568628189610503" b="0.47058824230642882" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.10000000149011612</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Diagonal Front Servo Attachment" uid="Diagonal Front Servo Attachment*:*Default" version="176">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Diagonal Front Servo Attachment.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.021465662209796871</Mass>
+<CenterOfMass>0 0.0080673655659145114 -2.2129141508095627e-11</CenterOfMass>
+<Inertia>4.3519347527948799e-06 7.6108560301125294e-06 4.013942235673308e-06 -2.5472176663812955e-13 2.3744242857848666e-06 0</Inertia>
+</MassProperties>
+<GeometryFile name="Diagonal Front Servo Attachment_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.52078432148578124" g="0.49568628189610503" b="0.47058824230642882" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.10000000149011612</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Floor" uid="Floor*:*Default" version="106">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Floor.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.38595000000000007</Mass>
+<CenterOfMass>0.14728679685877538 0.0004999999999999999 0.068683885542367845</CenterOfMass>
+<Inertia>0.0069459563567771101 0.029183076694277117 0.022237184662500006 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Floor_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.19215686274509802" g="0.20392156862745098" b="0.20392156862745098" a="1"/>
+<Diffuse r="0.19215686274509802" g="0.20392156862745098" b="0.20392156862745098" a="1"/>
+<Specular r="0.19215686274509802" g="0.20392156862745098" b="0.20392156862745098" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Front Servo Mount" uid="Front Servo Mount*:*Default" version="307">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Front Servo Mount.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.16315790534017316</Mass>
+<CenterOfMass>0.025015703656870458 0.0050000000000000001 -0.24260647518542669</CenterOfMass>
+<Inertia>0.0068762727785780919 0.0069927795393168899 0.00011922605916113493 0 0.00045429615413709727 0</Inertia>
+</MassProperties>
+<GeometryFile name="Front Servo Mount_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.52078432148578124" g="0.49568628189610503" b="0.47058824230642882" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.10000000149011612</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Fuselage Tubes rev 3" uid="Fuselage Tubes rev 3*:*Default&lt;As Machined&gt;" version="76176">
+<ModelUnits mass="kilogram" length="inch"/>
+<PartFile name="Fuselage Tubes rev 3.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>3.6458974735686649</Mass>
+<CenterOfMass>0.00053157594758663509 -0.17650324618724142 -1.6199708954978544</CenterOfMass>
+<Inertia>5.7095332062464825 5.6021180853240891 0.79420234528040068 0.102286977328284 0.0015623164283616122 -0.00084608245210951449</Inertia>
+</MassProperties>
+<GeometryFile name="Fuselage Tubes rev 3_Default&lt;As Machined&gt;_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.89803921568627454" g="0.89803921568627454" b="0.89803921568627454" a="1"/>
+<Diffuse r="0.89803921568627454" g="0.89803921568627454" b="0.89803921568627454" a="1"/>
+<Specular r="0.62862745098039219" g="0.62862745098039219" b="0.62862745098039219" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Pin2" uid="Pin2*:*Default" version="105">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Pin2.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0013253594007331937</Mass>
+<CenterOfMass>0 0 0.014999999999999998</CenterOfMass>
+<Inertia>1.0406142169819217e-07 1.0406142169819217e-07 9.3189332864052709e-09 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Pin2_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Rotator" uid="Rotator*:*Default" version="338">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Rotator.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.076674414221650819</Mass>
+<CenterOfMass>-4.930614919481187e-06 0.0019276430178768256 0</CenterOfMass>
+<Inertia>1.3589254568622719e-05 0.00017459560346366439 0.00017807277546687139 0 -5.9644255706983189e-10 1.8551903227306114e-08</Inertia>
+</MassProperties>
+<GeometryFile name="Rotator_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.7803921568627451" g="0.76078431372549016" b="0.74117647058823533" a="1"/>
+<Diffuse r="0.7803921568627451" g="0.76078431372549016" b="0.74117647058823533" a="1"/>
+<Specular r="0.62431372549019615" g="0.60862745098039217" b="0.5929411764705883" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Servo Arm" uid="Servo Arm*:*Default" version="147">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Servo Arm.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.043411971802047956</Mass>
+<CenterOfMass>0.007499999999999998 0 0.016700315419105563</CenterOfMass>
+<Inertia>3.4861891604265201e-05 3.0266922464291745e-05 6.2818229448050616e-06 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Servo Arm_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Servo_Stick_Link" uid="Servo_Stick_Link*:*Default" version="137">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Servo_Stick_Link.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.019144080232812805</Mass>
+<CenterOfMass>0 0.097500000000000017 0</CenterOfMass>
+<Inertia>6.1051668367454652e-05 7.7772825945801994e-07 6.1051668367454652e-05 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Servo_Stick_Link_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Stick" uid="Stick*:*Default" version="607">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Stick.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.19063095578484388</Mass>
+<CenterOfMass>6.0335527668166399e-09 0.19323063603202553 0.018012011045203107</CenterOfMass>
+<Inertia>0.002010605172449849 5.1811473917427412e-05 0.0019765870361902697 -0.00024420302103986535 -4.2099642154545898e-12 7.5168288336306063e-11</Inertia>
+</MassProperties>
+<GeometryFile name="Stick_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Stick-Triangle Pin" uid="Stick-Triangle Pin*:*Default" version="124">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Stick-Triangle Pin.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0017074556072260521</Mass>
+<CenterOfMass>0 0 0.016</CenterOfMass>
+<Inertia>1.5989821397592055e-07 1.5989821397592055e-07 1.531928935183765e-08 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Stick-Triangle Pin_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.45294117647058824" g="0.43372549019607842" b="0.41176470588235292" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="StickBottom" uid="StickBottom*:*Default" version="134">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="StickBottom.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.011185589098557554</Mass>
+<CenterOfMass>-2.4004705393525241e-08 0.019374083137775749 -5.3178071422878156e-08</CenterOfMass>
+<Inertia>2.9211145770291762e-06 4.5089729015169731e-07 2.9598773754144431e-06 2.1971059233046846e-12 -8.1448598870979305e-12 -9.1736220895246746e-12</Inertia>
+</MassProperties>
+<GeometryFile name="StickBottom_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.45294117647058824" g="0.43372549019607842" b="0.41176470588235292" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="TriangleStickLink" uid="TriangleStickLink*:*Default" version="156">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="TriangleStickLink.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0022674491344513428</Mass>
+<CenterOfMass>0.0050900499238316806 0 0.0033322779335262578</CenterOfMass>
+<Inertia>3.8565943555460328e-07 3.6455733800658881e-07 3.9899815453337391e-08 0 2.3347708725853047e-08 0</Inertia>
+</MassProperties>
+<GeometryFile name="TriangleStickLink_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.45294117647058824" g="0.43372549019607842" b="0.41176470588235292" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="TriangleTopper" uid="TriangleTopper*:*Default" version="221">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="TriangleTopper.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0058862396474729682</Mass>
+<CenterOfMass>-1.3673417015552177e-08 0.0047735120029046502 -3.448783917556247e-08</CenterOfMass>
+<Inertia>8.2636501672684456e-07 3.9302403017714626e-07 8.8223551021592221e-07 -6.8267726771029972e-13 -8.0506941331168372e-12 -2.0497401027242415e-13</Inertia>
+</MassProperties>
+<GeometryFile name="TriangleTopper_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.45294117647058824" g="0.43372549019607842" b="0.41176470588235292" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="WDS551-110" uid="WDS551-110*:*551-110" version="551">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="WDS551-110.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.074596511036999838</Mass>
+<CenterOfMass>0.038424700802142171 1.1485542197580276e-07 -2.2319387083708746e-08</CenterOfMass>
+<Inertia>4.8993375681741074e-06 2.3117990371060842e-05 2.3960992807761852e-05 -3.0076283780376496e-12 -1.5299243487536686e-11 1.0400235070153017e-12</Inertia>
+</MassProperties>
+<GeometryFile name="WDS551-110_551-110_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.52941176470588236" g="0.5490196078431373" b="0.5490196078431373" a="1"/>
+<Diffuse r="0.52941176470588236" g="0.5490196078431373" b="0.5490196078431373" a="1"/>
+<Specular r="0.37058823529411761" g="0.3843137254901961" b="0.3843137254901961" a="1"/>
+<Emissive r="0.11117647058823529" g="0.11529411764705882" b="0.11529411764705882" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="WDS851-410" uid="WDS851-410*:*851-410" version="1123">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="WDS851-410.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.098938403827622978</Mass>
+<CenterOfMass>-0.021774360703571354 7.0007246823777823e-09 -8.2272922778451661e-08</CenterOfMass>
+<Inertia>6.5325356063526337e-06 2.2557497056651827e-05 2.356613622012306e-05 -2.6206095387931665e-11 1.5723430099810493e-10 -1.2578514865838131e-11</Inertia>
+</MassProperties>
+<GeometryFile name="WDS851-410_851-410_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.45294117647058824" g="0.43372549019607842" b="0.41176470588235292" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="WDS851-810" uid="WDS851-810*:*851-810" version="240">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="WDS851-810.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.019123553949875454</Mass>
+<CenterOfMass>-0.012179194997524375 -2.0989539858911435e-09 -3.5972398422472169e-09</CenterOfMass>
+<Inertia>2.6257944791711467e-07 1.6938637150658623e-06 1.6985012646279416e-06 7.1355989119832308e-14 -4.8892142672814177e-13 -3.9782317760769812e-13</Inertia>
+</MassProperties>
+<GeometryFile name="WDS851-810_851-810_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.45294117647058824" g="0.43372549019607842" b="0.41176470588235292" a="1"/>
+<Emissive r="0.12941176663426793" g="0.12392157047402626" b="0.1176470605766072" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="n-Bracket - Copy" uid="n-Bracket - Copy*:*Default" version="341">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="n-Bracket - Copy.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.014206540154775273</Mass>
+<CenterOfMass>0 0.01 0</CenterOfMass>
+<Inertia>1.6527210434342296e-06 1.4067929989640779e-05 1.3176420981294388e-05 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="n-Bracket - Copy_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.45294117647058824" g="0.43372549019607842" b="0.41176470588235292" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="siderod - Copy" uid="siderod - Copy*:*Default" version="223">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="siderod - Copy.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.021315009700011319</Mass>
+<CenterOfMass>1.170825557478016e-07 0.05271031318321006 0.00092741035997739299</CenterOfMass>
+<Inertia>2.5527723480279047e-05 8.752052537383367e-07 2.5248869638643496e-05 -9.3789742285643408e-07 -2.4370015872412565e-11 -9.570385792307146e-11</Inertia>
+</MassProperties>
+<GeometryFile name="siderod - Copy_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.45294117647058824" g="0.43372549019607842" b="0.41176470588235292" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+</Parts>
+</SimscapeMultibodyImportXML>
