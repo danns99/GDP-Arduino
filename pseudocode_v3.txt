@@ -15,6 +15,7 @@ INTERRUPT SEQUENCE  (~1kHz)
 			Light all LED's to inform pilots that system has been disabled
 			Record to SD card that system was disabled
 		else
+			Light dead mans switch LED to indicate depression of dead mans switches
 			Run control function
 			Send updated position requirement to actuator
 
