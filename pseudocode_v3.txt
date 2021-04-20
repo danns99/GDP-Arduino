@@ -17,7 +17,7 @@ INTERRUPT SEQUENCE  (~1kHz)
 		else
 			Light dead mans switch LED to indicate depression of dead mans switches
 			Run control function
-			Send updated position requirement to actuator
+			Send updated position requirement to actuators
 
 LOOP SEQUENCE (~10Hz)
 
