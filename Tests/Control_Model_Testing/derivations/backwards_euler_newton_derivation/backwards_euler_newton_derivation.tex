@@ -1,0 +1,195 @@
+% Document setup
+%-----------------------------------------------------------------------------%
+\documentclass[11pt]{article}
+\usepackage[a4paper, margin=1.5cm]{geometry}
+\raggedright
+\usepackage[parfill]{parskip}
+%-----------------------------------------------------------------------------%
+% Import packages
+%-----------------------------------------------------------------------------%
+\usepackage{amsmath}
+%-----------------------------------------------------------------------------%
+
+% The document itself
+%-----------------------------------------------------------------------------%
+\begin{document}
+%-----------------------------------------------------------------------------%
+(Note that $n$ is used to index discrete steps in time and $k$ is used to denote discrete iterations within a time step).
+%-----------------------------------------------------------------------------%
+\section{Backwards Euler}
+The Backwards Euler method is:
+\begin{equation}
+  x_{n+1} = x_n + \Delta t \left[g\left(x_{n+1}\right)\right]
+\end{equation}
+
+Or for a system of ODEs:
+\begin{equation}
+  \mathbf{X}_{n+1} = \mathbf{X}_n + \Delta t \left[G\left(\mathbf{X}_{n+1}\right)\right]
+\end{equation}
+%-----------------------------------------------------------------------------%
+\section{Newton's Method}
+Newton's method is given as:
+\begin{equation}
+x^{k+1} = x^k - \frac{f(x^k)}{f^\prime(x^k)}
+\end{equation}
+
+For a system of equations Newton's method becomes
+\begin{equation}
+  \mathbf{X}^{k+1} = \mathbf{X}^k - J^{-1}(\mathbf{X}^k) F(\mathbf{X}^k)
+\end{equation}
+
+Where $J$ is the Jacobian matrix:
+\begin{equation}
+  J(\mathbf{X}^k) =
+  \begin{bmatrix}
+    \frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} & \cdots & \frac{\partial f_1}{\partial x_n}\\
+    \frac{\partial f_2}{\partial x_1} & \frac{\partial f_2}{\partial x_2} & \cdots & \frac{\partial f_2}{\partial x_n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    \frac{\partial f_n}{\partial x_1} & \frac{\partial f_n}{\partial x_2} & \cdots & \frac{\partial f_n}{\partial x_n} \\
+  \end{bmatrix}
+\end{equation}
+
+In general the product $J^{-1}(\mathbf{X}^k) F(\mathbf{X}^k)$ may be found by solving
+\begin{equation}
+  J(\mathbf{X}^k) \mathbf{S}^k = -F(\mathbf{X}^k)
+\end{equation}
+
+For $\mathbf{S}^k$. Then the Newton iteration is:
+\begin{equation}
+  \mathbf{X}^{k+1} = \mathbf{X}^k + \mathbf{S}^k
+\end{equation}
+
+As the partial derivatives in the Jacobian may not be able to be determined analytically a finite difference method can be utilised.
+For example, a central difference method:
+\begin{equation}
+  \frac{\partial f_n}{\partial x_n} \approx \frac{f_n(x_0,\dots,x_{n-1},x_n+h) - f_n(x_0,\dots,x_{n-1},x_n-h)}{2h}
+\end{equation}
+%-----------------------------------------------------------------------------%
+\section{Combining the Backwards Euler Method and Newton's Method}
+Rearranging the backwards Euler equation:
+\begin{subequations}
+  \begin{align}
+    \mathbf{X}_{n+1} &= \mathbf{X}_n + \Delta t \left[G\left(\mathbf{X}_{n+1}\right)\right] \\
+    F(\mathbf{X}_{n+1}) &= \mathbf{X}_{n+1} - \mathbf{X}_n - \Delta t \left[G\left(\mathbf{X}_{n+1}\right)\right] = 0
+  \end{align}
+\end{subequations}
+
+When solving using Newton's method the $X_n$ term in the backwards Euler method at the start of the iteration process and will be referred to as $X_0$.
+
+Substituting into Newton's method:
+\begin{subequations}
+  \begin{align}
+    \mathbf{X}^{k+1} &= \mathbf{X}^k - J^{-1}(\mathbf{X}^k) F(\mathbf{X}^k) \\
+    \mathbf{X}^{k+1} &= \mathbf{X}^k - J^{-1}({\mathbf{X}^k})\left(\mathbf{X}^k - \mathbf{X}_0 - \Delta t \left[G(\mathbf{X}^k)\right]\right)
+  \end{align}
+\end{subequations}
+
+The start index is denoted by $k=0$ and the starting term $X^0$ may be found by using the forward Euler method
+\begin{subequations}
+  \begin{align}
+    \mathbf{X}^0 = \mathbf{X}_{n-1} + \Delta t \left[G(\mathbf{X}_{n-1})\right]
+  \end{align}
+\end{subequations}
+
+with $X_{n-1}$ the result of the previous step.
+%-----------------------------------------------------------------------------%
+\section{Solution with Aircraft State-Space Equations}
+In matrix form the aircraft state-space equations are given as:
+\begin{equation}
+  \dot{\mathbf{X}} = A\mathbf{X} + B\mathbf{U}
+\end{equation}
+
+The backwards Euler method is then:
+\begin{subequations}
+  \begin{align}
+    F(\mathbf{X}_{n+1}) &= \mathbf{X}_{n+1} - \mathbf{X}_n - \Delta t \left[G\left(\mathbf{X}_{n+1}\right)\right] = 0 \\
+    F(\mathbf{X}_{n+1}) &= \mathbf{X}_{n+1} - \mathbf{X}_n - \Delta t \left[A \mathbf{X}_{n+1} + B \mathbf{U}\right] = 0
+  \end{align}
+\end{subequations}
+
+So that Newton's method is:
+\begin{equation}
+    \mathbf{X}^{k+1} = \mathbf{X}^k - J^{-1}({\mathbf{X}^k})\left(\mathbf{X}^k - \mathbf{X}_0 - \Delta t \left[A \mathbf{X}^k + B \mathbf{U}\right]\right)
+\end{equation}
+
+For the SPO model the Jacobian is:
+\begin{equation}
+  J =
+  \begin{bmatrix}
+    \frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} \\
+    \frac{\partial f_2}{\partial x_1} & \frac{\partial f_2}{\partial x_2}
+  \end{bmatrix}
+\end{equation}
+
+Expanding $F(\mathbf{X}_{n+1})$:
+\begin{equation}
+  F(\mathbf{X}_{n+1}) =
+  \mathbf{X}^k - \mathbf{X}_0 - \Delta t \left[A \mathbf{X}^k + B \mathbf{U}\right] =
+  \begin{bmatrix}
+    f_1 \\
+    f_2
+  \end{bmatrix} =
+  \begin{bmatrix}
+    {x_1}^k \\
+    {x_2}^k
+  \end{bmatrix} -
+  \begin{bmatrix}
+    {x_0}_1 \\
+    {x_0}_2
+  \end{bmatrix} - \Delta t \left[
+  \begin{bmatrix}
+    a_1 & a_2 \\
+    a_3 & a_4
+  \end{bmatrix}
+  \begin{bmatrix}
+    {x_1}^k \\
+    {x_2}^k
+  \end{bmatrix} +
+  \begin{bmatrix}
+    b_1 \\
+    b_2
+  \end{bmatrix}
+  u
+  \right]
+\end{equation}
+
+So that:
+\begin{subequations}
+  \begin{align}
+    f_1 &= {x_1}^k - {x_0}_1 - \Delta t\left[a_1{x_1}^k + a_2{x_2}^k + b_1 u \right] \\
+    f_2 &= {x_2}^k - {x_0}_2 - \Delta t\left[a_3{x_1}^k + a_4{x_2}^k + b_2 u \right]
+  \end{align}
+\end{subequations}
+\begin{subequations}
+  \begin{align}
+    \frac{\partial f_1}{\partial x_1} &= \frac{f_1(x_2, x_1+h) - f_1(x_2, x_1-h)}{2h} \\
+    \frac{\partial f_1}{\partial x_2} &= \frac{f_1(x_1, x_2+h) - f_1(x_1, x_2-h)}{2h} \\
+    \frac{\partial f_2}{\partial x_1} &= \frac{f_2(x_2, x_1+h) - f_2(x_2, x_1-h)}{2h} \\
+    \frac{\partial f_2}{\partial x_2} &= \frac{f_2(x_1, x_2+h) - f_2(x_1, x_2-h)}{2h}
+  \end{align}
+\end{subequations}
+
+$h$ should be chosen to be small e.g. $h=1e-6$.
+
+Given the inverse of a 2x2 matrix can be simply found, $J^{-1}$ is:
+\begin{equation}
+  J^{-1} = \frac{1}{\frac{\partial f_1}{\partial x_1}\frac{\partial f_2}{\partial x_2} - \frac{\partial f_1}{\partial x_2}\frac{\partial f_2}{\partial x_1}}
+  \begin{bmatrix}
+    \frac{\partial f_2}{\partial x_2} & -\frac{\partial f_1}{\partial x_2} \\
+    -\frac{\partial f_2}{\partial x_1} & \frac{\partial f_1}{\partial x_1}
+  \end{bmatrix}
+\end{equation}
+
+For when $u$ is dependent on the output of the state-space system (e.g feedback loop with PID controller), $u$ should be recalculated at each iteration step in Newton's method.
+
+% With the $(i,j)^{th}$ term in the Jacobian matrix given by:
+% \begin{subequations}
+%   \begin{align}
+%     \frac{\partial f_{i,j}}{\partial x_{i,j}} &\approx \frac{f(x_{i,j}+h) - f(x_{i,j}-h)}{2h} \\
+%     \frac{\partial f_{i,j}}{\partial x_{i,j}} &\approx \frac{\left[((X_{i,j})^k+h) - X_0 - \Delta t \left[A ((X_{i,j})^k+h) + B U\right]\right]}{2h} - \\ \nonumber
+%     &\quad \frac{\left[((X_{i,j})^k-h) - X_0 - \Delta t \left[A ((X_{i,j})^k-h) + B U\right]\right]}{2h}
+%   \end{align}
+% \end{subequations}
+%-----------------------------------------------------------------------------%
+\end{document}
+%-----------------------------------------------------------------------------%

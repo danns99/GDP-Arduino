@@ -1,7 +1,7 @@
 INITIALISATION SEQUENCE
 
 Initialise all Arduino modules
-Run control loop initialisation function
+Run control loop init function
 
 INTERRUPT SEQUENCE  (~1kHz)
 
@@ -62,7 +62,7 @@ Func: Safety Check
 		else
 			return FALSE
 
-Func: Initialise variables for the control loop
+Func: Control Loop Init
 	timestep size
 	timestep counter
 	u vector
@@ -81,22 +81,40 @@ Func: Initialise variables for the control loop
 		read in state-space matrices for the Scout
 		read in state-space matrices for the target aircraft
 
-Func: Run the control loop
-		Func: Store the current values of the x vectors and u vectors
-		Update the timestep counter
-		Func: Solve the target aircraft states
-		get the pitch rate output of the target aircraft
-		Func: Solve the modified Scout states
-			initialise the iteratation counter
-			Func: Forward Euler method to guess the new states
-			Do:
-				Func: Get the input into the modifed Scout using the PD controller
-				Func: Limit the control input to the permissable range of elevator inputs
-				Solve the inverse of the Jacobian matrix
-				Update the modified Scout states
-				Increment the iteration counter
-			While: max number of iterations has not been reached or the u vector into the modified Scout has not converged
-		Output the required elevator command
+Func: Control Loop
+	Func: Store the current values of the x vectors and u vectors
+		Write x vectors
+		Write u vetors
+	Update the timestep counter
+	Func: Solve the target aircraft states
+		Calculate inverse of (I-A) matrix
+		Calculate product of B matrix and u vector
+		Update x vector: product of inverse (I-A) matrix and B*u vector
+	get the pitch rate output of the target aircraft
+	Func: Solve the modified Scout states
+		initialise the iteratation counter
+		Func: Forward Euler method to guess the new states
+		Do:
+			Func: Get the input into the modifed Scout using the PD controller
+			Func: Limit the control input to the permissable range of elevator inputs
+			Solve the inverse of the Jacobian matrix
+			Update the modified Scout states
+			Increment the iteration counter
+		While: max number of iterations has not been reached or the u vector into the modified Scout has not converged
+	Output the required elevator command
 
-
+Func: Stick Force
+	Func: Calculate stick torque
+		Calculate the total lift coefficient
+		Calculate the fuselage datum angle of attack
+		Calculate the wing angle of attack
+		Calculate the tail effective angle of attack
+		Calculate the tail hinge moment coefficient
+		Calculate the hinge moment
+		Calculate the stick torque
+	Get force feedback servo torque
+	Func: Calculate required torque command
+		Subtract the servo torque from the stick torque
+		Correct the error with a PID controller
+		Saturate the torque command to +- 100 %
 	
