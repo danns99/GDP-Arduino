@@ -10,13 +10,14 @@ INTERRUPT SEQUENCE  (~1kHz)
 	if STATE =! OFF then
 		Run flight data update function
 		Run safety check function
-		if safety check function returns unsafe then
+		if safety check function returns FALSE then
 			Set system to OFF state
 			Light all LED's to inform pilots that system has been disabled
 			Record to SD card that system was disabled
 		else
 			Light dead mans switch LED to indicate depression of dead mans switches
-			Run control function
+			Run stick force function
+			Run control loop
 			Send updated position requirement to actuators
 
 LOOP SEQUENCE (~10Hz)
@@ -56,7 +57,7 @@ Func: Safety Check
 		Check flight speed not exceeded
 		Check aircraft angle of attack not exceeded
 		Check elevator deflection not exceeded
-		Check that dead mans switches are still pressed
+		Check that dead mans switches are still depressed
 		if all of the conditions are true
 			return TRUE
 		else
@@ -117,4 +118,3 @@ Func: Stick Force
 		Subtract the servo torque from the stick torque
 		Correct the error with a PID controller
 		Saturate the torque command to +- 100 %
-	
