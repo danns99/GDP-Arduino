@@ -1,12 +1,12 @@
 # GDP-Arduino
 This is a repository for all of the Arduino code for GDP Group 52 - Variable Stability Demonstrator
 
-## Control Model Testing
-The `Control_Model_Testing` folder contains the code for implementing and testing the control model in C.
+## Control Model
+The `Code_Modules/Control_flight_augmentation` folders contians the code for the control model.
 
 ### Source
 #### Code
-`source` contains all the C source code. The source code is organised into the following subfolders:
+`source` contains all the C++ source code. The source code is organised into the following subfolders:
 - `control`
   - PID controller
   - `control_loops`
@@ -14,10 +14,8 @@ The `Control_Model_Testing` folder contains the code for implementing and testin
     - Control loop for SPO model
   - Elevator saturation
   - Safety checks (not implemented)
-- `sim`
-  - Initilisation of the simulation
-  - Starting the simulation
-  - Running the simulation
+- `main`
+  - Control loop class
 - `state_space_equations`
   - `numerical_ode_solvers`
     - Analytic backwards Euler
@@ -25,6 +23,19 @@ The `Control_Model_Testing` folder contains the code for implementing and testin
     - Forward Euler
     - 4th order Runge-Kutta 
   - State-space equations
+- `util`
+  - Input/Output to external files
+
+## Control Model Testing
+The `Control_Model_Testing` folder contains the code for testing the control model locally on a PC.
+
+### Source
+#### Code
+`source` contains all the C++ source code. The source code is organised into the following subfolders:
+- `main`
+  - control loop class
+- `sim`
+  - Running the simulation
 - `util`
   - Input/Output to external files
   - Dynamic memory management
@@ -75,8 +86,8 @@ time scout/target_control_input_data modified_scout_control_input_data
 ```
 
 ### Building Executables
-At each level in the directory of the project there is a `CMakeLists.txt` file which is used for building the executable.
-`CMakeLists.txt` in `source` contains the instructions for building an executable.
+At the top directory of the project there is a `CMakeLists.txt` file which is used for building the executable.
+
 The preprocessor definition `STATE_SPACE_MATRIX_SIZE` is used for determining what system of state-space matrices are used when building and running a simulation target:
 - `4`: The full state-space longitudinal equations are used
 - `2`: The Short Period Oscillation (SPO) approximation of the state-space matrices is used.
@@ -86,7 +97,7 @@ The SPO approximation reduces the full longitudinal model state matrices to:
 <img src="https://latex.codecogs.com/svg.latex?\begin{bmatrix}\mathring{Z_w}%20&%20\mathring{Z_q}+mU_\infty%20\\\mathring{M_w}%20&%20\mathring{M_q}%20\\\end{bmatrix}\begin{bmatrix}w%20\\q\end{bmatrix}" title="SPO_matrices" />
 
 For the full longitudinal model the state-space equations are solved with a 4th order Runge-Kutta method.
-For the SPO model an analytic backwards Euler method is used for the target and scout equations.
+For the SPO model an analytic backwards Euler method is used for the target and Scout equations.
 With a backward Euler method that is solved with Newton's method for the modified Scout.
 
 ### Plotting Results
