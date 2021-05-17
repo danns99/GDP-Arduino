@@ -1,0 +1,42 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Arduino_Serial_Test"
+				}
+			],
+			"targets" : []
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Tests/Arduino_Serial_Testing/arduino_serial_test_LED.ino/build",
+		"source" : "D:/Andrew/Documents/Andrew University/Part IV/GDP/GDP-Arduino/Tests/Arduino_Serial_Testing/arduino_serial_test_LED.ino"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}
